@@ -40,4 +40,4 @@ jobs:
             src/pcap_analysis.py
 
       - name: Run tests
-        run: pytest -q
+        run: python -m pytest -q

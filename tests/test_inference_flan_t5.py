@@ -13,14 +13,14 @@ from src import inference_flan_t5 as inference
 
 
 def test_iso_to_epoch_formats_microseconds() -> None:
-    assert inference.iso_to_epoch("2026-06-22T10:37:58.400000Z") == "1782095878.400000"
+    assert inference.iso_to_epoch("2026-06-22T10:37:58.400000+08:00") == "1782095878.400000"
 
 
 def test_iter_log_rows_skips_blank_and_short_lines() -> None:
     lines = [
         "\n",
         "tiny\n",
-        "2026-06-22T10:30:00Z hostapd: wlan0: STA 3c:22:fb:10:24:38 authenticated\n",
+            "2026-06-22T10:30:00+08:00 hostapd: wlan0: STA 3c:22:fb:10:24:38 authenticated\n",
     ]
 
     rows = list(inference.iter_log_rows(lines))

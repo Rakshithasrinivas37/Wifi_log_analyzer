@@ -69,6 +69,24 @@ Then open the GitHub repository:
 No extra GitHub secret is required for GHCR publishing. The workflow uses the
 built-in `GITHUB_TOKEN`.
 
+## GitHub Actions Node24 Warning
+
+GitHub Actions runners use Node24 by default beginning June 16, 2026. This
+project uses Node24-compatible action versions:
+
+```text
+actions/checkout@v6
+actions/setup-python@v6
+docker/setup-buildx-action@v4
+docker/login-action@v4
+docker/build-push-action@v7
+```
+
+Do not set `ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true` unless you are forced
+to run an old action temporarily. For GitHub-hosted runners such as
+`ubuntu-latest`, no extra runner setup is required. For self-hosted runners,
+upgrade the runner to `v2.327.1` or newer.
+
 ## Docker Image
 
 The Docker image starts the API automatically:

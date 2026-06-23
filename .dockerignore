@@ -1,0 +1,22 @@
+.git
+.github
+.pytest_cache
+.pycache_tmp
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+.env
+.venv
+venv
+
+# Keep the image light. Mount or download these on RunPod instead.
+data/
+models/
+outputs/
+*.jsonl
+*.pcap
+*.pcapng
+*.log
+

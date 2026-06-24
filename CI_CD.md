@@ -146,6 +146,18 @@ Keep these separate. If the app code is copied under `/workspace`, a RunPod
 network volume mounted at `/workspace` can hide the code and cause
 `ModuleNotFoundError: No module named 'src'`.
 
+The Docker image also copies bundled `data/` and `models/` into `/app`, so the
+API can run with files already present in the container. Generated outputs still
+belong in `/workspace/wifi-log-analyzer`.
+
+Readable input paths are checked under the workspace first and then under the
+app directory:
+
+```text
+/workspace/wifi-log-analyzer/data/...
+/app/data/...
+```
+
 For FLAN-T5 inference, relative `model_dir` values are checked under the
 workspace first and then under the app directory:
 

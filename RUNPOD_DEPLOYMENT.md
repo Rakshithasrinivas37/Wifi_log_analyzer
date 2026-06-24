@@ -51,6 +51,18 @@ Runtime data lives in:
 ```
 
 This prevents the `/workspace` network volume from hiding the application code.
+The Docker image also includes bundled `data/` and `models/` under `/app`.
+Generated outputs should still be written under `/workspace/wifi-log-analyzer`
+so they survive pod restarts.
+
+Readable input files are checked under the workspace first and then under the
+app directory:
+
+```text
+/workspace/wifi-log-analyzer/data/inputs/wifi_events_3600.txt
+/app/data/inputs/wifi_events_3600.txt
+```
+
 For inference, `model_dir` may point to a model under the workspace or under
 the image app directory. A relative value such as
 `models/flan-t5-log-lora-model` is checked in this order:

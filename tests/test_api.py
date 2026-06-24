@@ -38,6 +38,23 @@ def test_resolve_model_dir_uses_app_root_when_workspace_model_is_missing(
     assert api.resolve_model_dir("models/flan-t5-log-lora-model") == model.resolve()
 
 
+def test_resolve_read_path_uses_app_root_when_workspace_file_is_missing(
+    monkeypatch,
+    tmp_path: Path,
+) -> None:
+    workspace = tmp_path / "workspace"
+    app = tmp_path / "app"
+    logfile = app / "data" / "inputs" / "wifi_events_3600.txt"
+    workspace.mkdir()
+    logfile.parent.mkdir(parents=True)
+    logfile.write_text("2026-06-22T10:30:00+08:00 hostapd: ok\n", encoding="utf-8")
+
+    monkeypatch.setattr(api, "WORKSPACE_ROOT", workspace)
+    monkeypatch.setattr(api, "APP_ROOT", app)
+
+    assert api.resolve_read_path("data/inputs/wifi_events_3600.txt", "logfile") == logfile.resolve()
+
+
 def test_background_job_endpoint(monkeypatch) -> None:
     def fake_execute_groq_diagnosis(request):
         return api.JsonlResponse(

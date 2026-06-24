@@ -11,12 +11,12 @@ __pycache__
 .venv
 venv
 
-# Keep the image light. Mount or download these on RunPod instead.
-data/
-models/
+# Runtime outputs should stay on the RunPod workspace/volume.
 outputs/
-*.jsonl
-*.pcap
-*.pcapng
 *.log
 
+# Keep training checkpoints out of the runtime image.
+models/**/checkpoint-*/
+models/**/optimizer.pt
+models/**/scheduler.pt
+models/**/rng_state.pth

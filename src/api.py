@@ -180,6 +180,38 @@ def resolve_path(path_text: str) -> Path:
     return resolved
 
 
+def resolve_read_path(
+    path_text: str,
+    label: str,
+    want_dir: bool | None = None,
+) -> Path:
+    """Resolve readable inputs from workspace first, then app directory."""
+
+    path = Path(path_text)
+    candidates = [path.resolve()] if path.is_absolute() else [
+        (WORKSPACE_ROOT / path).resolve(),
+        (APP_ROOT / path).resolve(),
+    ]
+    allowed_roots = (WORKSPACE_ROOT, APP_ROOT)
+
+    checked: list[str] = []
+    for candidate in candidates:
+        checked.append(str(candidate))
+        if not any(candidate == root or root in candidate.parents for root in allowed_roots):
+            continue
+        if not candidate.exists():
+            continue
+        return require_existing_path(candidate, label, want_dir=want_dir)
+
+    raise HTTPException(
+        status_code=400,
+        detail=(
+            f"{label} does not exist or is outside allowed roots. "
+            f"Checked: {', '.join(checked)}"
+        ),
+    )
+
+
 def resolve_model_dir(path_text: str) -> Path:
     """Resolve model_dir from workspace first, then the app directory."""
 
@@ -320,7 +352,7 @@ def jsonl_preview(path: Path, limit: int = 5) -> list[dict[str, Any]]:
 def execute_flan_t5_inference(request: InferenceRequest) -> InferenceResponse:
     """Execute FLAN-T5 inference from a request object."""
 
-    logfile = require_existing_path(resolve_path(request.logfile), "logfile", want_dir=False)
+    logfile = resolve_read_path(request.logfile, "logfile", want_dir=False)
     model_dir = resolve_model_dir(request.model_dir)
     output = resolve_path(request.output)
 
@@ -363,8 +395,8 @@ def execute_pcap_analysis(request: PcapAnalysisRequest) -> JsonlResponse:
     output = resolve_path(request.output)
     records = run_pcap_analysis_service(
         PcapAnalysisConfig(
-            errors_jsonl=resolve_path(request.errors_jsonl),
-            pcap=resolve_path(request.pcap),
+            errors_jsonl=resolve_read_path(request.errors_jsonl, "errors_jsonl", want_dir=False),
+            pcap=resolve_read_path(request.pcap, "pcap", want_dir=False),
             output=output,
             window_seconds=request.window_seconds,
         )
@@ -387,7 +419,7 @@ def execute_groq_diagnosis(request: GroqDiagnosisRequest) -> JsonlResponse:
     output = resolve_path(request.output)
     rows = run_groq_diagnosis_service(
         GroqDiagnosisConfig(
-            input=resolve_path(request.input),
+            input=resolve_read_path(request.input, "input", want_dir=False),
             output=output,
             model=request.model,
             temperature=request.temperature,
@@ -419,7 +451,7 @@ def execute_local_llm_diagnosis(request: LocalLlmDiagnosisRequest) -> JsonlRespo
     output = resolve_path(request.output)
     rows = run_local_llm_diagnosis_service(
         LocalLlmDiagnosisConfig(
-            input=resolve_path(request.input),
+            input=resolve_read_path(request.input, "input", want_dir=False),
             output=output,
             model=request.model,
             model_type=request.model_type,

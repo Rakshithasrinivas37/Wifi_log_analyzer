@@ -18,6 +18,8 @@ RUN python -m pip install --upgrade pip \
 COPY src ./src
 COPY tests ./tests
 COPY scripts ./scripts
+COPY data ./data
+COPY models ./models
 COPY README.md RUNPOD_DEPLOYMENT.md CI_CD.md ./
 
 EXPOSE 8000

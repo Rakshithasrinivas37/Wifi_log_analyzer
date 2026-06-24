@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import json
 import os
+import shutil
 import sys
 import traceback
 import uuid
@@ -23,7 +24,7 @@ from threading import Lock
 from time import time
 from typing import Any, Callable, Literal, TypeVar
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 
@@ -97,6 +98,8 @@ class FineTuningRequest(BaseModel):
     logging_steps: int = 20
     save_steps: int = 200
     eval_steps: int = 200
+    device: Literal["auto", "cuda", "cpu"] = "auto"
+    fp16: bool | None = None
 
 
 class PcapAnalysisRequest(BaseModel):
@@ -299,6 +302,21 @@ def require_existing_path(path: Path, label: str, want_dir: bool | None = None) 
     return path
 
 
+def save_upload_file(upload: UploadFile, subdir: str) -> str:
+    """Save an uploaded file under the workspace and return a relative path."""
+
+    original_name = Path(upload.filename or "uploaded_file").name
+    if not original_name or original_name in {".", ".."}:
+        original_name = "uploaded_file"
+    relative_path = Path("uploads") / subdir / f"{uuid.uuid4().hex}_{original_name}"
+    destination = resolve_path(str(relative_path))
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    upload.file.seek(0)
+    with destination.open("wb") as output_file:
+        shutil.copyfileobj(upload.file, output_file)
+    return str(relative_path)
+
+
 def run_service(action: Callable[[], T]) -> T:
     """Run service code and convert unexpected exceptions to HTTP 500."""
 
@@ -466,6 +484,8 @@ def execute_flan_t5_finetuning(request: FineTuningRequest) -> FineTuningResponse
             logging_steps=request.logging_steps,
             save_steps=request.save_steps,
             eval_steps=request.eval_steps,
+            device=request.device,
+            fp16=request.fp16,
         )
     )
     return FineTuningResponse(**result)
@@ -674,6 +694,35 @@ def submit_flan_t5_inference_job(request: InferenceRequest) -> JobSubmitResponse
     return submit_job("inference/flan-t5", lambda: execute_flan_t5_inference(request))
 
 
+@app.post("/jobs/inference/flan-t5/upload", response_model=JobSubmitResponse)
+def submit_flan_t5_inference_upload_job(
+    logfile: UploadFile = File(...),
+    model_dir: str = Form("models/flan-t5-log-lora-model"),
+    output: str = Form("outputs/output.jsonl"),
+    base_model: str = Form("google/flan-t5-small"),
+    max_source_length: int = Form(128),
+    max_new_tokens: int = Form(2),
+    batch_size: int = Form(16),
+    device: Literal["auto", "cuda", "cpu"] = Form("auto"),
+    dtype: Literal["auto", "fp16", "fp32"] = Form("auto"),
+) -> JobSubmitResponse:
+    """Upload a log file and submit FLAN-T5 inference as a background job."""
+
+    logfile_path = save_upload_file(logfile, "inference")
+    request = InferenceRequest(
+        logfile=logfile_path,
+        model_dir=model_dir,
+        output=output,
+        base_model=base_model,
+        max_source_length=max_source_length,
+        max_new_tokens=max_new_tokens,
+        batch_size=batch_size,
+        device=device,
+        dtype=dtype,
+    )
+    return submit_job("inference/flan-t5/upload", lambda: execute_flan_t5_inference(request))
+
+
 @app.post("/jobs/finetune/flan-t5", response_model=JobSubmitResponse)
 def submit_flan_t5_finetuning_job(request: FineTuningRequest) -> JobSubmitResponse:
     """Submit FLAN-T5 fine-tuning as a background job."""
@@ -686,6 +735,26 @@ def submit_pcap_analysis_job(request: PcapAnalysisRequest) -> JobSubmitResponse:
     """Submit PCAP analysis as a background job."""
 
     return submit_job("pcap/analyze", lambda: execute_pcap_analysis(request))
+
+
+@app.post("/jobs/pcap/analyze/upload", response_model=JobSubmitResponse)
+def submit_pcap_analysis_upload_job(
+    errors_jsonl: UploadFile = File(...),
+    pcap: UploadFile = File(...),
+    output: str = Form("outputs/diagnosis.jsonl"),
+    window_seconds: float = Form(3.0),
+) -> JobSubmitResponse:
+    """Upload inference JSONL and PCAP files, then submit PCAP analysis."""
+
+    errors_jsonl_path = save_upload_file(errors_jsonl, "pcap")
+    pcap_path = save_upload_file(pcap, "pcap")
+    request = PcapAnalysisRequest(
+        errors_jsonl=errors_jsonl_path,
+        pcap=pcap_path,
+        output=output,
+        window_seconds=window_seconds,
+    )
+    return submit_job("pcap/analyze/upload", lambda: execute_pcap_analysis(request))
 
 
 @app.post("/jobs/diagnosis/groq", response_model=JobSubmitResponse)

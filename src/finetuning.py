@@ -62,6 +62,8 @@ class FineTuningConfig:
     logging_steps: int = 20
     save_steps: int = 200
     eval_steps: int = 200
+    device: str = "auto"
+    fp16: bool | None = None
 
 
 def make_prompt(log_line: str) -> str:
@@ -238,7 +240,31 @@ def build_datasets(
     return train_dataset, validation_dataset, len(train_rows), len(validation_rows)
 
 
-def build_training_args(config: FineTuningConfig) -> Seq2SeqTrainingArguments:
+def resolve_device(device: str) -> str:
+    """Choose the training device and fail clearly when CUDA is requested."""
+
+    if device not in {"auto", "cuda", "cpu"}:
+        raise ValueError("device must be one of: auto, cuda, cpu")
+    if device == "cuda" and not torch.cuda.is_available():
+        raise RuntimeError("CUDA was requested for fine-tuning, but CUDA is not available")
+    if device == "auto":
+        return "cuda" if torch.cuda.is_available() else "cpu"
+    return device
+
+
+def resolve_fp16(fp16: bool | None, device: str) -> bool:
+    """Use fp16 by default on CUDA and never on CPU."""
+
+    if device != "cuda":
+        return False
+    return True if fp16 is None else fp16
+
+
+def build_training_args(
+    config: FineTuningConfig,
+    device: str,
+    use_fp16: bool,
+) -> Seq2SeqTrainingArguments:
     """Create Seq2Seq training arguments while handling Transformers versions."""
 
     if config.eval_strategy not in {"epoch", "steps"}:
@@ -263,13 +289,19 @@ def build_training_args(config: FineTuningConfig) -> Seq2SeqTrainingArguments:
         "generation_max_length": config.max_target_length,
         "report_to": "none",
         "seed": config.seed,
-        "fp16": True,                    # ✅ mixed precision
-        "dataloader_num_workers": 4,     # ✅ parallel loading
+        "fp16": use_fp16,
+        "dataloader_num_workers": 4,
         "dataloader_pin_memory": True,
     }
+    training_arg_params = inspect.signature(Seq2SeqTrainingArguments).parameters
+    if "use_cpu" in training_arg_params:
+        training_kwargs["use_cpu"] = device == "cpu"
+    elif "no_cuda" in training_arg_params:
+        training_kwargs["no_cuda"] = device == "cpu"
+
     strategy_name = (
         "eval_strategy"
-        if "eval_strategy" in inspect.signature(Seq2SeqTrainingArguments).parameters
+        if "eval_strategy" in training_arg_params
         else "evaluation_strategy"
     )
     training_kwargs[strategy_name] = config.eval_strategy
@@ -283,12 +315,18 @@ def fine_tune_flan_t5(config: FineTuningConfig) -> dict[str, Any]:
     """Train and save a FLAN-T5 LoRA adapter."""
 
     set_seed(config.seed)
+    device = resolve_device(config.device)
+    use_fp16 = resolve_fp16(config.fp16, device)
 
-    if torch.cuda.is_available():
-        print(f"✅ GPU detected: {torch.cuda.get_device_name(0)}")
-        print(f"✅ VRAM: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.1f} GB")
+    if device == "cuda":
+        print(f"fine-tuning device: cuda ({torch.cuda.get_device_name(0)})", flush=True)
+        print(
+            f"cuda total memory: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.1f} GB",
+            flush=True,
+        )
     else:
-        print("⚠️ No GPU found — running on CPU!")
+        print("fine-tuning device: cpu", flush=True)
+    print(f"fp16 enabled: {use_fp16}", flush=True)
 
     tokenizer = AutoTokenizer.from_pretrained(config.model)
     train_dataset, validation_dataset, train_count, validation_count = build_datasets(
@@ -296,7 +334,10 @@ def fine_tune_flan_t5(config: FineTuningConfig) -> dict[str, Any]:
         tokenizer,
     )
 
-    base_model = AutoModelForSeq2SeqLM.from_pretrained(config.model, device_map="auto")
+    base_model = AutoModelForSeq2SeqLM.from_pretrained(
+        config.model,
+        torch_dtype=torch.float16 if use_fp16 else torch.float32,
+    )
     lora_config = LoraConfig(
         task_type=TaskType.SEQ_2_SEQ_LM,
         r=config.lora_r,
@@ -306,10 +347,16 @@ def fine_tune_flan_t5(config: FineTuningConfig) -> dict[str, Any]:
         bias="none",
     )
     model = get_peft_model(base_model, lora_config)
+    model.to(device)
 
-    print(f"Model device: {next(model.parameters()).device}")
+    print(f"model parameter device: {next(model.parameters()).device}", flush=True)
+    if device == "cuda":
+        print(
+            f"cuda memory allocated after model load: {torch.cuda.memory_allocated() / 1024**2:.1f} MiB",
+            flush=True,
+        )
 
-    training_args = build_training_args(config)
+    training_args = build_training_args(config, device=device, use_fp16=use_fp16)
 
     trainer = Seq2SeqTrainer(
         model=model,
@@ -318,7 +365,7 @@ def fine_tune_flan_t5(config: FineTuningConfig) -> dict[str, Any]:
         eval_dataset=validation_dataset,
         data_collator=DataCollatorForSeq2Seq(tokenizer=tokenizer, model=model),
         compute_metrics=partial(compute_metrics, tokenizer=tokenizer),
-        callbacks=[EarlyStoppingCallback(early_stopping_patience=2)]
+        callbacks=[EarlyStoppingCallback(early_stopping_patience=2)],
     )
     trainer.train()
     metrics = trainer.evaluate()

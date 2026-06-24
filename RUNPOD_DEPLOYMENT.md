@@ -157,7 +157,9 @@ curl https://<your-runpod-proxy-url>/health
 
 - `POST /finetune/flan-t5`: fine-tune FLAN-T5 and save a LoRA adapter.
 - `POST /inference/flan-t5`: classify log lines and write `output.jsonl`.
+- `POST /jobs/inference/flan-t5/upload`: upload a log file and run inference.
 - `POST /pcap/analyze`: correlate error logs with PCAP teardown packets.
+- `POST /jobs/pcap/analyze/upload`: upload inference JSONL and PCAP files.
 - `POST /diagnosis/groq`: run Groq diagnosis.
 - `POST /diagnosis/local-llm`: run local open-source LLM diagnosis.
 - `POST /pipeline/groq`: run FLAN-T5 inference, PCAP analysis, and Groq diagnosis.
@@ -178,8 +180,35 @@ curl -X POST https://<your-runpod-proxy-url>/jobs/finetune/flan-t5 \
     "epochs": 5,
     "train_batch_size": 8,
     "eval_batch_size": 16,
-    "learning_rate": 0.0002
+    "learning_rate": 0.0002,
+    "device": "cuda",
+    "fp16": true
   }'
+```
+
+If CUDA is not visible in the container, `"device": "cuda"` makes the job fail
+with a clear error instead of silently training on CPU.
+
+Example inference request with a local uploaded log file:
+
+```bash
+curl -X POST https://<your-runpod-proxy-url>/jobs/inference/flan-t5/upload \
+  -F "logfile=@wifi_logs.txt" \
+  -F "model_dir=models/flan-t5-log-lora-model" \
+  -F "output=outputs/output.jsonl" \
+  -F "device=cuda" \
+  -F "dtype=fp16" \
+  -F "batch_size=16"
+```
+
+Example PCAP analysis request with local uploaded files:
+
+```bash
+curl -X POST https://<your-runpod-proxy-url>/jobs/pcap/analyze/upload \
+  -F "errors_jsonl=@output.jsonl" \
+  -F "pcap=@wifi_events_3600.pcap" \
+  -F "output=outputs/diagnosis.jsonl" \
+  -F "window_seconds=3.0"
 ```
 
 Example Groq pipeline request:

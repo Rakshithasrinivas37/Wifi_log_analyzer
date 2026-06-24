@@ -86,6 +86,105 @@ def test_background_job_endpoint(monkeypatch) -> None:
     assert status["result"]["row_count"] == 1
 
 
+def test_inference_upload_job_endpoint(monkeypatch, tmp_path: Path) -> None:
+    monkeypatch.setattr(api, "WORKSPACE_ROOT", tmp_path)
+
+    def fake_execute_flan_t5_inference(request):
+        uploaded_log = tmp_path / request.logfile
+        assert uploaded_log.is_file()
+        assert request.model_dir == "models/flan-t5-log-lora-model"
+        return api.InferenceResponse(
+            output="outputs/output.jsonl",
+            row_count=1,
+            elapsed_seconds=0.1,
+            generation_seconds=0.05,
+            memory_summary="ok",
+            preview=[{"prediction": "error"}],
+        )
+
+    monkeypatch.setattr(
+        api,
+        "execute_flan_t5_inference",
+        fake_execute_flan_t5_inference,
+    )
+    client = TestClient(api.app)
+
+    submit_response = client.post(
+        "/jobs/inference/flan-t5/upload",
+        data={
+            "model_dir": "models/flan-t5-log-lora-model",
+            "output": "outputs/output.jsonl",
+            "device": "cpu",
+        },
+        files={
+            "logfile": (
+                "wifi_logs.txt",
+                b"2026-06-22T10:30:00+08:00 hostapd: test\n",
+                "text/plain",
+            )
+        },
+    )
+
+    assert submit_response.status_code == 200
+    job_id = submit_response.json()["job_id"]
+
+    for _ in range(100):
+        status_response = client.get(f"/jobs/{job_id}")
+        assert status_response.status_code == 200
+        status = status_response.json()
+        if status["status"] == "succeeded":
+            break
+        sleep(0.01)
+
+    assert status["status"] == "succeeded"
+    assert status["result"]["row_count"] == 1
+
+
+def test_pcap_upload_job_endpoint(monkeypatch, tmp_path: Path) -> None:
+    monkeypatch.setattr(api, "WORKSPACE_ROOT", tmp_path)
+
+    def fake_execute_pcap_analysis(request):
+        uploaded_errors = tmp_path / request.errors_jsonl
+        uploaded_pcap = tmp_path / request.pcap
+        assert uploaded_errors.is_file()
+        assert uploaded_pcap.is_file()
+        return api.JsonlResponse(
+            output="outputs/diagnosis.jsonl",
+            row_count=1,
+            preview=[{"mac": "3c:22:fb:10:24:38"}],
+        )
+
+    monkeypatch.setattr(api, "execute_pcap_analysis", fake_execute_pcap_analysis)
+    client = TestClient(api.app)
+
+    submit_response = client.post(
+        "/jobs/pcap/analyze/upload",
+        data={"output": "outputs/diagnosis.jsonl", "window_seconds": "3.0"},
+        files={
+            "errors_jsonl": (
+                "output.jsonl",
+                b'{"timestamp":"1.000000","prediction":"error"}\n',
+                "application/json",
+            ),
+            "pcap": ("capture.pcap", b"\xd4\xc3\xb2\xa1", "application/vnd.tcpdump.pcap"),
+        },
+    )
+
+    assert submit_response.status_code == 200
+    job_id = submit_response.json()["job_id"]
+
+    for _ in range(100):
+        status_response = client.get(f"/jobs/{job_id}")
+        assert status_response.status_code == 200
+        status = status_response.json()
+        if status["status"] == "succeeded":
+            break
+        sleep(0.01)
+
+    assert status["status"] == "succeeded"
+    assert status["result"]["row_count"] == 1
+
+
 def test_finetuning_job_endpoint(monkeypatch) -> None:
     def fake_execute_flan_t5_finetuning(request):
         return api.FineTuningResponse(

@@ -196,7 +196,9 @@ For long-running work, use the background job endpoints:
 ```text
 POST /jobs/finetune/flan-t5
 POST /jobs/inference/flan-t5
+POST /jobs/inference/flan-t5/upload
 POST /jobs/pcap/analyze
+POST /jobs/pcap/analyze/upload
 POST /jobs/diagnosis/groq
 POST /jobs/diagnosis/local-llm
 POST /jobs/pipeline/groq

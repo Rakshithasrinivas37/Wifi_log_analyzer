@@ -52,3 +52,16 @@ def test_normalize_label_maps_generated_prefixes() -> None:
     assert finetuning.normalize_label("normal connection") == "normal"
     assert finetuning.normalize_label("ERROR timeout") == "error"
     assert finetuning.normalize_label("unknown") == "unknown"
+
+
+def test_resolve_device_rejects_cuda_when_unavailable(monkeypatch) -> None:
+    monkeypatch.setattr(finetuning.torch.cuda, "is_available", lambda: False)
+
+    with pytest.raises(RuntimeError, match="CUDA was requested"):
+        finetuning.resolve_device("cuda")
+
+
+def test_resolve_fp16_only_enables_on_cuda() -> None:
+    assert finetuning.resolve_fp16(None, "cuda") is True
+    assert finetuning.resolve_fp16(None, "cpu") is False
+    assert finetuning.resolve_fp16(False, "cuda") is False

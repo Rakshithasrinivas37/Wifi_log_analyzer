@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from pathlib import Path
 from time import sleep
 
 import pytest
@@ -19,6 +20,22 @@ def test_health_endpoint() -> None:
 
     assert response.status_code == 200
     assert response.json()["status"] == "ok"
+
+
+def test_resolve_model_dir_uses_app_root_when_workspace_model_is_missing(
+    monkeypatch,
+    tmp_path: Path,
+) -> None:
+    workspace = tmp_path / "workspace"
+    app = tmp_path / "app"
+    model = app / "models" / "flan-t5-log-lora-model"
+    workspace.mkdir()
+    model.mkdir(parents=True)
+
+    monkeypatch.setattr(api, "WORKSPACE_ROOT", workspace)
+    monkeypatch.setattr(api, "APP_ROOT", app)
+
+    assert api.resolve_model_dir("models/flan-t5-log-lora-model") == model.resolve()
 
 
 def test_background_job_endpoint(monkeypatch) -> None:

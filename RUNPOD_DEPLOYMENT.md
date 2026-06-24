@@ -51,6 +51,14 @@ Runtime data lives in:
 ```
 
 This prevents the `/workspace` network volume from hiding the application code.
+For inference, `model_dir` may point to a model under the workspace or under
+the image app directory. A relative value such as
+`models/flan-t5-log-lora-model` is checked in this order:
+
+```text
+/workspace/wifi-log-analyzer/models/flan-t5-log-lora-model
+/app/models/flan-t5-log-lora-model
+```
 
 See [CI_CD.md](CI_CD.md) for the full CI/CD flow.
 

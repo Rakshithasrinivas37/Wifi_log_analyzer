@@ -27,25 +27,9 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 
-from src.groq_diagnosis import (
-    GroqDiagnosisConfig,
-    run_groq_diagnosis as run_groq_diagnosis_service,
-)
-from src.inference_flan_t5 import (
-    InferenceConfig,
-    run_flan_t5_inference as run_flan_t5_inference_service,
-)
-from src.local_llm_diagnosis import (
-    LocalLlmDiagnosisConfig,
-    run_local_llm_diagnosis as run_local_llm_diagnosis_service,
-)
-from src.pcap_analysis import (
-    PcapAnalysisConfig,
-    run_pcap_analysis as run_pcap_analysis_service,
-)
-
 
 T = TypeVar("T")
+APP_ROOT = Path(os.environ.get("WIFI_ANALYZER_APP_DIR", Path.cwd())).resolve()
 WORKSPACE_ROOT = Path(os.environ.get("WIFI_ANALYZER_WORKSPACE", Path.cwd())).resolve()
 JOB_EXECUTOR = ThreadPoolExecutor(
     max_workers=int(os.environ.get("WIFI_ANALYZER_JOB_WORKERS", "2"))
@@ -196,6 +180,54 @@ def resolve_path(path_text: str) -> Path:
     return resolved
 
 
+def resolve_model_dir(path_text: str) -> Path:
+    """Resolve model_dir from workspace first, then the app directory."""
+
+    path = Path(path_text)
+    candidates = [path.resolve()] if path.is_absolute() else [
+        (WORKSPACE_ROOT / path).resolve(),
+        (APP_ROOT / path).resolve(),
+    ]
+    allowed_roots = (WORKSPACE_ROOT, APP_ROOT)
+
+    checked: list[str] = []
+    for candidate in candidates:
+        checked.append(str(candidate))
+        if not any(candidate == root or root in candidate.parents for root in allowed_roots):
+            continue
+        if candidate.is_dir():
+            return candidate
+
+    raise HTTPException(
+        status_code=400,
+        detail=(
+            "model_dir does not exist or is outside allowed roots. "
+            f"Checked: {', '.join(checked)}"
+        ),
+    )
+
+
+def require_existing_path(path: Path, label: str, want_dir: bool | None = None) -> Path:
+    """Return path when it exists, otherwise raise a clear request error."""
+
+    if not path.exists():
+        raise HTTPException(
+            status_code=400,
+            detail=f"{label} does not exist: {path}",
+        )
+    if want_dir is True and not path.is_dir():
+        raise HTTPException(
+            status_code=400,
+            detail=f"{label} must be a directory: {path}",
+        )
+    if want_dir is False and not path.is_file():
+        raise HTTPException(
+            status_code=400,
+            detail=f"{label} must be a file: {path}",
+        )
+    return path
+
+
 def run_service(action: Callable[[], T]) -> T:
     """Run service code and convert unexpected exceptions to HTTP 500."""
 
@@ -288,11 +320,19 @@ def jsonl_preview(path: Path, limit: int = 5) -> list[dict[str, Any]]:
 def execute_flan_t5_inference(request: InferenceRequest) -> InferenceResponse:
     """Execute FLAN-T5 inference from a request object."""
 
+    logfile = require_existing_path(resolve_path(request.logfile), "logfile", want_dir=False)
+    model_dir = resolve_model_dir(request.model_dir)
     output = resolve_path(request.output)
+
+    from src.inference_flan_t5 import (
+        InferenceConfig,
+        run_flan_t5_inference as run_flan_t5_inference_service,
+    )
+
     result = run_flan_t5_inference_service(
         InferenceConfig(
-            logfile=resolve_path(request.logfile),
-            model_dir=resolve_path(request.model_dir),
+            logfile=logfile,
+            model_dir=model_dir,
             output=output,
             base_model=request.base_model,
             max_source_length=request.max_source_length,
@@ -315,6 +355,11 @@ def execute_flan_t5_inference(request: InferenceRequest) -> InferenceResponse:
 def execute_pcap_analysis(request: PcapAnalysisRequest) -> JsonlResponse:
     """Execute PCAP analysis from a request object."""
 
+    from src.pcap_analysis import (
+        PcapAnalysisConfig,
+        run_pcap_analysis as run_pcap_analysis_service,
+    )
+
     output = resolve_path(request.output)
     records = run_pcap_analysis_service(
         PcapAnalysisConfig(
@@ -333,6 +378,11 @@ def execute_pcap_analysis(request: PcapAnalysisRequest) -> JsonlResponse:
 
 def execute_groq_diagnosis(request: GroqDiagnosisRequest) -> JsonlResponse:
     """Execute Groq diagnosis from a request object."""
+
+    from src.groq_diagnosis import (
+        GroqDiagnosisConfig,
+        run_groq_diagnosis as run_groq_diagnosis_service,
+    )
 
     output = resolve_path(request.output)
     rows = run_groq_diagnosis_service(
@@ -360,6 +410,11 @@ def execute_groq_diagnosis(request: GroqDiagnosisRequest) -> JsonlResponse:
 
 def execute_local_llm_diagnosis(request: LocalLlmDiagnosisRequest) -> JsonlResponse:
     """Execute local LLM diagnosis from a request object."""
+
+    from src.local_llm_diagnosis import (
+        LocalLlmDiagnosisConfig,
+        run_local_llm_diagnosis as run_local_llm_diagnosis_service,
+    )
 
     output = resolve_path(request.output)
     rows = run_local_llm_diagnosis_service(

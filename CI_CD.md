@@ -146,6 +146,14 @@ Keep these separate. If the app code is copied under `/workspace`, a RunPod
 network volume mounted at `/workspace` can hide the code and cause
 `ModuleNotFoundError: No module named 'src'`.
 
+For FLAN-T5 inference, relative `model_dir` values are checked under the
+workspace first and then under the app directory:
+
+```text
+/workspace/wifi-log-analyzer/models/...
+/app/models/...
+```
+
 It exposes:
 
 ```text

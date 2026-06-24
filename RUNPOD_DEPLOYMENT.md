@@ -155,6 +155,7 @@ curl https://<your-runpod-proxy-url>/health
 
 ## FastAPI Endpoints
 
+- `POST /finetune/flan-t5`: fine-tune FLAN-T5 and save a LoRA adapter.
 - `POST /inference/flan-t5`: classify log lines and write `output.jsonl`.
 - `POST /pcap/analyze`: correlate error logs with PCAP teardown packets.
 - `POST /diagnosis/groq`: run Groq diagnosis.
@@ -163,6 +164,23 @@ curl https://<your-runpod-proxy-url>/health
 - `POST /jobs/...`: run the same long-running operations in the background.
 - `GET /jobs/{job_id}`: poll a background job.
 - `GET /files?path=...`: download an output file from the workspace.
+
+Example fine-tuning job request:
+
+```bash
+curl -X POST https://<your-runpod-proxy-url>/jobs/finetune/flan-t5 \
+  -H "Content-Type: application/json" \
+  -d '{
+    "train_csv": "data/datasets/training.csv",
+    "validation_csv": "data/datasets/validation.csv",
+    "output_dir": "models/flan-t5-log-lora-model",
+    "model": "google/flan-t5-small",
+    "epochs": 5,
+    "train_batch_size": 8,
+    "eval_batch_size": 16,
+    "learning_rate": 0.0002
+  }'
+```
 
 Example Groq pipeline request:
 

@@ -84,3 +84,43 @@ def test_background_job_endpoint(monkeypatch) -> None:
 
     assert status["status"] == "succeeded"
     assert status["result"]["row_count"] == 1
+
+
+def test_finetuning_job_endpoint(monkeypatch) -> None:
+    def fake_execute_flan_t5_finetuning(request):
+        return api.FineTuningResponse(
+            output_dir="models/flan-t5-log-lora-model",
+            train_rows=10,
+            validation_rows=2,
+            metrics={"eval_accuracy": 1.0},
+        )
+
+    monkeypatch.setattr(
+        api,
+        "execute_flan_t5_finetuning",
+        fake_execute_flan_t5_finetuning,
+    )
+    client = TestClient(api.app)
+
+    submit_response = client.post(
+        "/jobs/finetune/flan-t5",
+        json={
+            "train_csv": "data/datasets/training.csv",
+            "validation_csv": "data/datasets/validation.csv",
+            "output_dir": "models/flan-t5-log-lora-model",
+        },
+    )
+
+    assert submit_response.status_code == 200
+    job_id = submit_response.json()["job_id"]
+
+    for _ in range(100):
+        status_response = client.get(f"/jobs/{job_id}")
+        assert status_response.status_code == 200
+        status = status_response.json()
+        if status["status"] == "succeeded":
+            break
+        sleep(0.01)
+
+    assert status["status"] == "succeeded"
+    assert status["result"]["train_rows"] == 10

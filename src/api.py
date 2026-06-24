@@ -69,6 +69,36 @@ class InferenceOptions(BaseModel):
     dtype: Literal["auto", "fp16", "fp32"] = "auto"
 
 
+class FineTuningRequest(BaseModel):
+    """Request body for FLAN-T5 LoRA fine-tuning."""
+
+    train_csv: str = "data/datasets/training.csv"
+    validation_csv: str | None = "data/datasets/validation.csv"
+    model: str = "google/flan-t5-small"
+    output_dir: str = "models/flan-t5-log-lora-model"
+    text_field: str = "input"
+    label_field: str = "label"
+    validation_ratio: float = 0.15
+    max_source_length: int = 256
+    max_target_length: int = 4
+    epochs: float = 5.0
+    learning_rate: float = 2e-4
+    train_batch_size: int = 8
+    eval_batch_size: int = 16
+    gradient_accumulation_steps: int = 1
+    weight_decay: float = 0.01
+    warmup_ratio: float = 0.06
+    seed: int = 42
+    lora_r: int = 8
+    lora_alpha: int = 16
+    lora_dropout: float = 0.05
+    target_modules: list[str] = Field(default_factory=lambda: ["q", "v"])
+    eval_strategy: Literal["epoch", "steps"] = "epoch"
+    logging_steps: int = 20
+    save_steps: int = 200
+    eval_steps: int = 200
+
+
 class PcapAnalysisRequest(BaseModel):
     """Request body for PCAP/log correlation."""
 
@@ -134,6 +164,15 @@ class InferenceResponse(BaseModel):
     generation_seconds: float
     memory_summary: str
     preview: list[dict[str, Any]]
+
+
+class FineTuningResponse(BaseModel):
+    """Response from FLAN-T5 fine-tuning."""
+
+    output_dir: str
+    train_rows: int
+    validation_rows: int
+    metrics: dict[str, Any]
 
 
 class JsonlResponse(BaseModel):
@@ -384,6 +423,54 @@ def execute_flan_t5_inference(request: InferenceRequest) -> InferenceResponse:
     )
 
 
+def execute_flan_t5_finetuning(request: FineTuningRequest) -> FineTuningResponse:
+    """Execute FLAN-T5 LoRA fine-tuning from a request object."""
+
+    train_csv = resolve_read_path(request.train_csv, "train_csv", want_dir=False)
+    validation_csv = (
+        resolve_read_path(request.validation_csv, "validation_csv", want_dir=False)
+        if request.validation_csv
+        else None
+    )
+    output_dir = resolve_path(request.output_dir)
+
+    from src.finetuning import (
+        FineTuningConfig,
+        fine_tune_flan_t5 as fine_tune_flan_t5_service,
+    )
+
+    result = fine_tune_flan_t5_service(
+        FineTuningConfig(
+            train_csv=train_csv,
+            validation_csv=validation_csv,
+            model=request.model,
+            output_dir=output_dir,
+            text_field=request.text_field,
+            label_field=request.label_field,
+            validation_ratio=request.validation_ratio,
+            max_source_length=request.max_source_length,
+            max_target_length=request.max_target_length,
+            epochs=request.epochs,
+            learning_rate=request.learning_rate,
+            train_batch_size=request.train_batch_size,
+            eval_batch_size=request.eval_batch_size,
+            gradient_accumulation_steps=request.gradient_accumulation_steps,
+            weight_decay=request.weight_decay,
+            warmup_ratio=request.warmup_ratio,
+            seed=request.seed,
+            lora_r=request.lora_r,
+            lora_alpha=request.lora_alpha,
+            lora_dropout=request.lora_dropout,
+            target_modules=request.target_modules,
+            eval_strategy=request.eval_strategy,
+            logging_steps=request.logging_steps,
+            save_steps=request.save_steps,
+            eval_steps=request.eval_steps,
+        )
+    )
+    return FineTuningResponse(**result)
+
+
 def execute_pcap_analysis(request: PcapAnalysisRequest) -> JsonlResponse:
     """Execute PCAP analysis from a request object."""
 
@@ -545,6 +632,13 @@ def run_flan_t5_inference(request: InferenceRequest) -> InferenceResponse:
     return run_service(lambda: execute_flan_t5_inference(request))
 
 
+@app.post("/finetune/flan-t5", response_model=FineTuningResponse)
+def run_flan_t5_finetuning(request: FineTuningRequest) -> FineTuningResponse:
+    """Fine-tune FLAN-T5 with LoRA and save an adapter."""
+
+    return run_service(lambda: execute_flan_t5_finetuning(request))
+
+
 @app.post("/pcap/analyze", response_model=JsonlResponse)
 def run_pcap_analysis(request: PcapAnalysisRequest) -> JsonlResponse:
     """Correlate inference error rows with PCAP teardown evidence."""
@@ -578,6 +672,13 @@ def submit_flan_t5_inference_job(request: InferenceRequest) -> JobSubmitResponse
     """Submit FLAN-T5 inference as a background job."""
 
     return submit_job("inference/flan-t5", lambda: execute_flan_t5_inference(request))
+
+
+@app.post("/jobs/finetune/flan-t5", response_model=JobSubmitResponse)
+def submit_flan_t5_finetuning_job(request: FineTuningRequest) -> JobSubmitResponse:
+    """Submit FLAN-T5 fine-tuning as a background job."""
+
+    return submit_job("finetune/flan-t5", lambda: execute_flan_t5_finetuning(request))
 
 
 @app.post("/jobs/pcap/analyze", response_model=JobSubmitResponse)

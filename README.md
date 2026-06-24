@@ -194,6 +194,7 @@ For inference models, relative `model_dir` values are checked in this order:
 For long-running work, use the background job endpoints:
 
 ```text
+POST /jobs/finetune/flan-t5
 POST /jobs/inference/flan-t5
 POST /jobs/pcap/analyze
 POST /jobs/diagnosis/groq

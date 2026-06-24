@@ -17,6 +17,7 @@ from typing import Any
 
 import numpy as np
 from datasets import Dataset
+import torch
 from peft import LoraConfig, TaskType, get_peft_model
 from transformers import (
     AutoModelForSeq2SeqLM,
@@ -24,6 +25,7 @@ from transformers import (
     DataCollatorForSeq2Seq,
     Seq2SeqTrainer,
     Seq2SeqTrainingArguments,
+    EarlyStoppingCallback,
     set_seed,
 )
 
@@ -45,9 +47,9 @@ class FineTuningConfig:
     max_source_length: int = 256
     max_target_length: int = 4
     epochs: float = 5.0
-    learning_rate: float = 2e-4
-    train_batch_size: int = 8
-    eval_batch_size: int = 16
+    learning_rate: float = 1e-4
+    train_batch_size: int = 32
+    eval_batch_size: int = 32
     gradient_accumulation_steps: int = 1
     weight_decay: float = 0.01
     warmup_ratio: float = 0.06
@@ -261,6 +263,9 @@ def build_training_args(config: FineTuningConfig) -> Seq2SeqTrainingArguments:
         "generation_max_length": config.max_target_length,
         "report_to": "none",
         "seed": config.seed,
+        "fp16": True,                    # ✅ mixed precision
+        "dataloader_num_workers": 4,     # ✅ parallel loading
+        "dataloader_pin_memory": True,
     }
     strategy_name = (
         "eval_strategy"
@@ -278,13 +283,20 @@ def fine_tune_flan_t5(config: FineTuningConfig) -> dict[str, Any]:
     """Train and save a FLAN-T5 LoRA adapter."""
 
     set_seed(config.seed)
+
+    if torch.cuda.is_available():
+        print(f"✅ GPU detected: {torch.cuda.get_device_name(0)}")
+        print(f"✅ VRAM: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.1f} GB")
+    else:
+        print("⚠️ No GPU found — running on CPU!")
+
     tokenizer = AutoTokenizer.from_pretrained(config.model)
     train_dataset, validation_dataset, train_count, validation_count = build_datasets(
         config,
         tokenizer,
     )
 
-    base_model = AutoModelForSeq2SeqLM.from_pretrained(config.model)
+    base_model = AutoModelForSeq2SeqLM.from_pretrained(config.model, device_map="auto")
     lora_config = LoraConfig(
         task_type=TaskType.SEQ_2_SEQ_LM,
         r=config.lora_r,
@@ -294,6 +306,9 @@ def fine_tune_flan_t5(config: FineTuningConfig) -> dict[str, Any]:
         bias="none",
     )
     model = get_peft_model(base_model, lora_config)
+
+    print(f"Model device: {next(model.parameters()).device}")
+
     training_args = build_training_args(config)
 
     trainer = Seq2SeqTrainer(
@@ -303,6 +318,7 @@ def fine_tune_flan_t5(config: FineTuningConfig) -> dict[str, Any]:
         eval_dataset=validation_dataset,
         data_collator=DataCollatorForSeq2Seq(tokenizer=tokenizer, model=model),
         compute_metrics=partial(compute_metrics, tokenizer=tokenizer),
+        callbacks=[EarlyStoppingCallback(early_stopping_patience=2)]
     )
     trainer.train()
     metrics = trainer.evaluate()

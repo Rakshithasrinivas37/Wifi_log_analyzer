@@ -1,0 +1,11 @@
+{
+  "input": {
+    "task": "inference",
+    "logfile": "data/inputs/wifi_events_3600.txt",
+    "model_dir": "models/flan-t5-log-lora-model",
+    "output": "outputs/output.jsonl",
+    "device": "cuda",
+    "dtype": "fp16",
+    "batch_size": 16
+  }
+}

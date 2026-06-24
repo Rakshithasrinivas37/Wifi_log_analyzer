@@ -5,7 +5,7 @@ ENV PYTHONUNBUFFERED=1
 ENV WIFI_ANALYZER_WORKSPACE=/workspace/wifi-log-analyzer
 ENV WIFI_ANALYZER_JOB_WORKERS=1
 
-WORKDIR /workspace/wifi-log-analyzer
+WORKDIR /app
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends git curl \
@@ -17,9 +17,9 @@ RUN python -m pip install --upgrade pip \
 
 COPY src ./src
 COPY tests ./tests
-COPY README.md RUNPOD_DEPLOYMENT.md ./
+COPY scripts ./scripts
+COPY README.md RUNPOD_DEPLOYMENT.md CI_CD.md ./
 
 EXPOSE 8000
 
 CMD ["uvicorn", "src.api:app", "--host", "0.0.0.0", "--port", "8000"]
-

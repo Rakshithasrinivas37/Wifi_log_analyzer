@@ -38,7 +38,35 @@ Use that image in a RunPod custom template and expose port `8000`.
 The image does not include `data/`, `models/`, or generated outputs. Mount a
 persistent volume at `/workspace` and upload/download those files there.
 
+In the Docker image, project code lives in:
+
+```text
+/app
+```
+
+Runtime data lives in:
+
+```text
+/workspace/wifi-log-analyzer
+```
+
+This prevents the `/workspace` network volume from hiding the application code.
+
 See [CI_CD.md](CI_CD.md) for the full CI/CD flow.
+
+## Runtime Secrets
+
+Set Groq credentials on the RunPod Pod/template, not inside the Docker image.
+The API reads the key from this environment variable:
+
+```text
+GROQ_API_KEY
+```
+
+GitHub Actions secrets do not automatically appear inside RunPod. If you add
+`GROQ_API_KEY` to GitHub Actions, that only makes it available to GitHub
+workflows. You still need to add `GROQ_API_KEY` in RunPod as a Pod/template
+environment variable or RunPod secret.
 
 ## Install Dependencies
 
@@ -81,6 +109,11 @@ export WIFI_ANALYZER_WORKSPACE=/workspace/wifi-log-analyzer
 export WIFI_ANALYZER_JOB_WORKERS=1
 uvicorn src.api:app --host 0.0.0.0 --port 8000
 ```
+
+If you are using the custom Docker image, the API starts automatically from
+`/app`. You should not need to run `uvicorn` manually. If you open a shell in
+that container, run code checks from `/app`, while keeping inputs, models, and
+outputs under `/workspace/wifi-log-analyzer`.
 
 Open the RunPod HTTP service URL and visit:
 

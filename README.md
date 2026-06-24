@@ -169,6 +169,12 @@ https://<your-runpod-url>/docs
 See [RUNPOD_DEPLOYMENT.md](RUNPOD_DEPLOYMENT.md) for the full RunPod setup.
 See [CI_CD.md](CI_CD.md) for GitHub Actions and Docker image publishing.
 
+With the custom Docker image, application code runs from `/app`. Keep
+`/workspace/wifi-log-analyzer` for runtime data such as logs, PCAPs, models, and
+outputs. Mounting a RunPod volume at `/workspace` can hide files that were baked
+into the image under `/workspace`, so the Docker image keeps code outside that
+mount.
+
 For long-running work, use the background job endpoints:
 
 ```text

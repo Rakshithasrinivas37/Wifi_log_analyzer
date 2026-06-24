@@ -69,6 +69,41 @@ Then open the GitHub repository:
 No extra GitHub secret is required for GHCR publishing. The workflow uses the
 built-in `GITHUB_TOKEN`.
 
+## GitHub Actions Secrets
+
+Add secrets in GitHub only when a workflow needs to use that value. The current
+CI and Docker workflows do not need `GROQ_API_KEY`, because tests mock Groq
+calls and the Docker image should not contain API keys.
+
+To add a secret in GitHub:
+
+1. Open your GitHub repository.
+2. Go to **Settings**.
+3. Go to **Secrets and variables**.
+4. Choose **Actions**.
+5. Click **New repository secret**.
+6. Add the name and value.
+
+Useful names:
+
+```text
+GROQ_API_KEY
+RUNPOD_API_KEY
+```
+
+`GROQ_API_KEY` is only needed in GitHub Actions if you later add an integration
+test or deployment step that calls Groq from the workflow.
+
+Example workflow usage:
+
+```yaml
+env:
+  GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+```
+
+Do not pass `GROQ_API_KEY` as a Docker build argument or write it into the image.
+The Docker image may be reused, cached, pushed to GHCR, and inspected later.
+
 ## GitHub Actions Node24 Warning
 
 GitHub Actions runners use Node24 by default beginning June 16, 2026. This
@@ -94,6 +129,22 @@ The Docker image starts the API automatically:
 ```bash
 uvicorn src.api:app --host 0.0.0.0 --port 8000
 ```
+
+Inside the Docker image, application code lives in:
+
+```text
+/app
+```
+
+Runtime files live in the mounted RunPod workspace:
+
+```text
+/workspace/wifi-log-analyzer
+```
+
+Keep these separate. If the app code is copied under `/workspace`, a RunPod
+network volume mounted at `/workspace` can hide the code and cause
+`ModuleNotFoundError: No module named 'src'`.
 
 It exposes:
 
@@ -140,6 +191,11 @@ WIFI_ANALYZER_JOB_WORKERS=1
 GROQ_API_KEY=<your_groq_api_key>
 ```
 
+GitHub Actions secrets are not automatically available inside RunPod. Add
+`GROQ_API_KEY` separately in the RunPod Pod/template environment variables or
+RunPod secrets. That is what makes `/diagnosis/groq` and `/pipeline/groq` work
+at runtime.
+
 If the GHCR image is private, make the package public or configure RunPod with
 GitHub Container Registry credentials.
 
@@ -167,12 +223,13 @@ For example:
 After the Pod starts, open a terminal and run:
 
 ```bash
-cd /workspace/wifi-log-analyzer
+cd /app
 bash scripts/runpod_smoke_test.sh
 ```
 
 If you are using the Docker image and only mounted data/models, the source code
-is already inside the image. If you cloned the repo manually instead, run:
+is already inside the image at `/app`. If you cloned the repo manually instead,
+run the checks from that cloned repo directory:
 
 ```bash
 pip install -r requirements.txt

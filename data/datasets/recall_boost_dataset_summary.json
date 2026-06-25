@@ -1,0 +1,39 @@
+{
+  "added_category_counts_total": {
+    "recall_dhcpnak": 180,
+    "recall_disconnected": 180,
+    "recall_eapol_timeout": 360
+  },
+  "added_category_counts_training": {
+    "recall_dhcpnak": 144,
+    "recall_disconnected": 144,
+    "recall_eapol_timeout": 288
+  },
+  "added_category_counts_validation": {
+    "recall_dhcpnak": 36,
+    "recall_disconnected": 36,
+    "recall_eapol_timeout": 72
+  },
+  "added_error_examples_total": 720,
+  "added_error_examples_training": 576,
+  "added_error_examples_validation": 144,
+  "base_training_csv": "data/datasets/training_edge_cases_hard_negatives.csv",
+  "base_validation_csv": "data/datasets/validation_edge_cases_hard_negatives.csv",
+  "files": {
+    "training_csv": "data/datasets/training_edge_cases_recall_boost.csv",
+    "training_jsonl": "data/datasets/training_edge_cases_recall_boost.jsonl",
+    "validation_csv": "data/datasets/validation_edge_cases_recall_boost.csv",
+    "validation_jsonl": "data/datasets/validation_edge_cases_recall_boost.jsonl"
+  },
+  "purpose": "hard-negative dataset plus recall boost for missed EAPOL timeout, disconnect, and DHCPNAK errors",
+  "training_label_counts": {
+    "error": 2816,
+    "normal": 2708
+  },
+  "training_rows": 5524,
+  "validation_label_counts": {
+    "error": 704,
+    "normal": 677
+  },
+  "validation_rows": 1381
+}

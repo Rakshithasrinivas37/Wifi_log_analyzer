@@ -176,6 +176,7 @@ class FineTuningResponse(BaseModel):
     train_rows: int
     validation_rows: int
     metrics: dict[str, Any]
+    prediction_samples: list[dict[str, Any]] = Field(default_factory=list)
 
 
 class JsonlResponse(BaseModel):

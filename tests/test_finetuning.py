@@ -62,6 +62,7 @@ def test_resolve_device_rejects_cuda_when_unavailable(monkeypatch) -> None:
 
 
 def test_resolve_fp16_only_enables_on_cuda() -> None:
-    assert finetuning.resolve_fp16(None, "cuda") is True
+    assert finetuning.resolve_fp16(None, "cuda") is False
     assert finetuning.resolve_fp16(None, "cpu") is False
+    assert finetuning.resolve_fp16(True, "cuda") is True
     assert finetuning.resolve_fp16(False, "cuda") is False

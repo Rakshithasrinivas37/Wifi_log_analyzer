@@ -182,12 +182,14 @@ curl -X POST https://<your-runpod-proxy-url>/jobs/finetune/flan-t5 \
     "eval_batch_size": 16,
     "learning_rate": 0.0002,
     "device": "cuda",
-    "fp16": true
+    "fp16": false
   }'
 ```
 
 If CUDA is not visible in the container, `"device": "cuda"` makes the job fail
-with a clear error instead of silently training on CPU.
+with a clear error instead of silently training on CPU. Keep `"fp16": false`
+for the first stable baseline; enable it only after confirming the loss is not
+`NaN`.
 
 Example inference request with a local uploaded log file:
 

@@ -240,6 +240,41 @@ def build_datasets(
     return train_dataset, validation_dataset, len(train_rows), len(validation_rows)
 
 
+def prediction_preview(
+    trainer: Any,
+    tokenizer: Any,
+    validation_dataset: Dataset,
+    limit: int = 10,
+) -> list[dict[str, str]]:
+    """Generate a few decoded prediction/label pairs for debugging."""
+
+    sample_count = min(limit, len(validation_dataset))
+    if sample_count == 0:
+        return []
+
+    sample_dataset = validation_dataset.select(range(sample_count))
+    prediction_output = trainer.predict(sample_dataset)
+    predictions = prediction_output.predictions
+    labels = prediction_output.label_ids
+    if isinstance(predictions, tuple):
+        predictions = predictions[0]
+    labels = np.where(labels != -100, labels, tokenizer.pad_token_id)
+
+    decoded_predictions = tokenizer.batch_decode(
+        predictions,
+        skip_special_tokens=True,
+    )
+    decoded_labels = tokenizer.batch_decode(labels, skip_special_tokens=True)
+    return [
+        {
+            "prediction_raw": prediction.strip(),
+            "prediction_normalized": normalize_label(prediction),
+            "label": normalize_label(label),
+        }
+        for prediction, label in zip(decoded_predictions, decoded_labels)
+    ]
+
+
 def resolve_device(device: str) -> str:
     """Choose the training device and fail clearly when CUDA is requested."""
 
@@ -257,7 +292,7 @@ def resolve_fp16(fp16: bool | None, device: str) -> bool:
 
     if device != "cuda":
         return False
-    return True if fp16 is None else fp16
+    return False if fp16 is None else fp16
 
 
 def build_training_args(
@@ -334,10 +369,7 @@ def fine_tune_flan_t5(config: FineTuningConfig) -> dict[str, Any]:
         tokenizer,
     )
 
-    base_model = AutoModelForSeq2SeqLM.from_pretrained(
-        config.model,
-        torch_dtype=torch.float16 if use_fp16 else torch.float32,
-    )
+    base_model = AutoModelForSeq2SeqLM.from_pretrained(config.model)
     lora_config = LoraConfig(
         task_type=TaskType.SEQ_2_SEQ_LM,
         r=config.lora_r,
@@ -368,6 +400,11 @@ def fine_tune_flan_t5(config: FineTuningConfig) -> dict[str, Any]:
     )
     trainer.train()
     metrics = trainer.evaluate()
+    prediction_samples = prediction_preview(
+        trainer=trainer,
+        tokenizer=tokenizer,
+        validation_dataset=validation_dataset,
+    )
 
     config.output_dir.mkdir(parents=True, exist_ok=True)
     trainer.save_model(str(config.output_dir))
@@ -380,9 +417,14 @@ def fine_tune_flan_t5(config: FineTuningConfig) -> dict[str, Any]:
         json.dumps(metrics, indent=2, sort_keys=True),
         encoding="utf-8",
     )
+    (config.output_dir / "prediction_samples.json").write_text(
+        json.dumps(prediction_samples, indent=2, sort_keys=True),
+        encoding="utf-8",
+    )
     return {
         "output_dir": str(config.output_dir),
         "train_rows": train_count,
         "validation_rows": validation_count,
         "metrics": metrics,
+        "prediction_samples": prediction_samples,
     }

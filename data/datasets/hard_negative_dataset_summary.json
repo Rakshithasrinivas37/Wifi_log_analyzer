@@ -1,0 +1,23 @@
+{
+  "files": {
+    "training_csv": "data/datasets/training_edge_cases_hard_negatives.csv",
+    "training_jsonl": "data/datasets/training_edge_cases_hard_negatives.jsonl",
+    "validation_csv": "data/datasets/validation_edge_cases_hard_negatives.csv",
+    "validation_jsonl": "data/datasets/validation_edge_cases_hard_negatives.jsonl"
+  },
+  "hard_negative_pattern": "did not acknowledge keepalive, retry scheduled",
+  "hard_negatives_added_to_train": 468,
+  "hard_negatives_added_to_validation": 117,
+  "hard_negatives_total": 585,
+  "source_prediction_file": "output_edge_cases.jsonl",
+  "training_label_counts": {
+    "error": 2240,
+    "normal": 2708
+  },
+  "training_rows": 4948,
+  "validation_label_counts": {
+    "error": 560,
+    "normal": 677
+  },
+  "validation_rows": 1237
+}

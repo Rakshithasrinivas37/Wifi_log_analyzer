@@ -365,7 +365,6 @@ def fine_tune_flan_t5(config: FineTuningConfig) -> dict[str, Any]:
         eval_dataset=validation_dataset,
         data_collator=DataCollatorForSeq2Seq(tokenizer=tokenizer, model=model),
         compute_metrics=partial(compute_metrics, tokenizer=tokenizer),
-        callbacks=[EarlyStoppingCallback(early_stopping_patience=2)],
     )
     trainer.train()
     metrics = trainer.evaluate()

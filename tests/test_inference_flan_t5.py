@@ -69,3 +69,47 @@ def test_total_inference_time_decorator_updates_result() -> None:
     result = fake_run()
 
     assert result.elapsed_seconds >= 0
+
+
+def test_monitor_inference_run_emits_structured_events(
+    tmp_path: Path,
+    capsys: pytest.CaptureFixture[str],
+) -> None:
+    logfile = tmp_path / "wifi.txt"
+    logfile.write_text(
+        "\n".join(
+            [
+                "tiny",
+                "2026-06-22T10:30:00+08:00 hostapd: wlan0: STA 3c:22:fb:10:24:38 failed",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    config = inference.InferenceConfig(
+        logfile=logfile,
+        model_dir=tmp_path / "model",
+        output=tmp_path / "output.jsonl",
+    )
+
+    @inference.monitor_inference_run
+    def fake_run(config: inference.InferenceConfig) -> inference.InferenceResult:
+        return inference.InferenceResult(
+            rows=[{"prediction": "error"}],
+            elapsed_seconds=1.25,
+            generation_seconds=0.75,
+            output=str(config.output),
+            memory_summary="memory ok",
+        )
+
+    result = fake_run(config)
+    events = [
+        json.loads(line)
+        for line in capsys.readouterr().err.splitlines()
+        if line.strip()
+    ]
+
+    assert result.rows == [{"prediction": "error"}]
+    assert [event["status"] for event in events] == ["started", "succeeded"]
+    assert events[0]["candidate_lines"] == 1
+    assert events[1]["error_rows"] == 1
+    assert events[1]["generation_seconds"] == 0.75

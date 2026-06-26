@@ -14,7 +14,7 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from functools import wraps
 from pathlib import Path
-from time import perf_counter
+from time import perf_counter, time
 from typing import Any, TypeVar
 
 import torch
@@ -62,6 +62,96 @@ def measure_total_inference_time(func: F) -> F:
         started_at = perf_counter()
         result = func(*args, **kwargs)
         result.elapsed_seconds = perf_counter() - started_at
+        return result
+
+    return wrapper  # type: ignore[return-value]
+
+
+def count_candidate_log_lines(logfile: Path) -> int:
+    """Count non-empty input lines long enough to be considered for inference."""
+
+    with logfile.open("r", encoding="utf-8") as file:
+        return sum(1 for line in file if len(line.strip()) > 10)
+
+
+def get_inference_config(args: tuple[Any, ...], kwargs: dict[str, Any]) -> InferenceConfig | None:
+    """Find an InferenceConfig passed to a decorated inference function."""
+
+    if args and isinstance(args[0], InferenceConfig):
+        return args[0]
+    config = kwargs.get("config")
+    if isinstance(config, InferenceConfig):
+        return config
+    return None
+
+
+def print_monitoring_event(event: dict[str, object]) -> None:
+    """Emit one structured monitoring event for server/container logs."""
+
+    print(json.dumps(event, sort_keys=True), file=sys.stderr)
+
+
+def monitor_inference_run(func: F) -> F:
+    """Decorate inference with structured start/success/failure monitoring."""
+
+    @wraps(func)
+    def wrapper(*args: Any, **kwargs: Any) -> Any:
+        config = get_inference_config(args, kwargs)
+        started_at = perf_counter()
+        base_event: dict[str, object] = {
+            "event": "flan_t5_inference",
+            "status": "started",
+            "timestamp": time(),
+        }
+        if config is not None:
+            candidate_lines: int | str
+            try:
+                candidate_lines = count_candidate_log_lines(config.logfile)
+            except OSError as error:
+                candidate_lines = f"unavailable: {error}"
+            base_event.update(
+                {
+                    "logfile": str(config.logfile),
+                    "model_dir": str(config.model_dir),
+                    "output": str(config.output) if config.output else None,
+                    "base_model": config.base_model,
+                    "batch_size": config.batch_size,
+                    "device": config.device,
+                    "dtype": config.dtype,
+                    "candidate_lines": candidate_lines,
+                }
+            )
+        print_monitoring_event(base_event)
+
+        try:
+            result = func(*args, **kwargs)
+        except Exception as error:
+            failed_event = dict(base_event)
+            failed_event.update(
+                {
+                    "status": "failed",
+                    "elapsed_seconds": perf_counter() - started_at,
+                    "error_type": type(error).__name__,
+                    "error": str(error),
+                }
+            )
+            if torch.cuda.is_available():
+                failed_event["memory_summary"] = cuda_memory_summary("after failed inference")
+            print_monitoring_event(failed_event)
+            raise
+
+        succeeded_event = dict(base_event)
+        succeeded_event.update(
+            {
+                "status": "succeeded",
+                "elapsed_seconds": getattr(result, "elapsed_seconds", perf_counter() - started_at),
+                "generation_seconds": getattr(result, "generation_seconds", None),
+                "error_rows": len(getattr(result, "rows", [])),
+                "result_output": getattr(result, "output", None),
+                "memory_summary": getattr(result, "memory_summary", None),
+            }
+        )
+        print_monitoring_event(succeeded_event)
         return result
 
     return wrapper  # type: ignore[return-value]
@@ -351,6 +441,7 @@ def write_jsonl(rows: Iterable[dict[str, object]], output: Path) -> None:
             file.write(json.dumps(row, sort_keys=True) + "\n")
 
 
+@monitor_inference_run
 @measure_total_inference_time
 def run_flan_t5_inference(config: InferenceConfig) -> InferenceResult:
     """Load the model, run inference, optionally write JSONL, and return rows."""

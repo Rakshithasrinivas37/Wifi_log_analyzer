@@ -1,0 +1,173 @@
+{
+  "dataset": "all_cases_v2",
+  "error_cases": [
+    "wpa_handshake_error",
+    "deauth_disassoc_error",
+    "dhcp_error",
+    "radius_8021x_error",
+    "rf_link_error",
+    "driver_firmware_error",
+    "association_error",
+    "keepalive_failure_error"
+  ],
+  "files": {
+    "train_csv": "data/datasets/training_all_cases_v2.csv",
+    "train_jsonl": "data/datasets/training_all_cases_v2.jsonl",
+    "validation_csv": "data/datasets/validation_all_cases_v2.csv",
+    "validation_jsonl": "data/datasets/validation_all_cases_v2.jsonl"
+  },
+  "normal_cases": [
+    "auth_assoc_normal",
+    "eapol_normal",
+    "dhcp_normal",
+    "power_save_normal",
+    "keepalive_recovery_normal",
+    "pmksa_cache_normal",
+    "signal_normal",
+    "roaming_normal",
+    "radius_normal",
+    "accounting_normal",
+    "suspicious_but_normal"
+  ],
+  "purpose": "WiFi normal/error dataset covering previous false positives and failure cases.",
+  "required_rows": [
+    {
+      "input": "kernel: wlan0: station 0c:8b:fd:61:c2:14 power save mode disabled",
+      "label": "normal",
+      "present_in_training": true
+    },
+    {
+      "input": "kernel: wlan0: station 0c:8b:fd:61:c2:14 power save mode enabled",
+      "label": "normal",
+      "present_in_training": true
+    },
+    {
+      "input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 keepalive response received",
+      "label": "normal",
+      "present_in_training": true
+    },
+    {
+      "input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 accounting session updated rx_bytes=23124 tx_bytes=31242",
+      "label": "normal",
+      "present_in_training": true
+    },
+    {
+      "input": "wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=0c:8b:fd:61:c2:14 above=1 signal=-61 noise=-95 txrate=144.4 Mb/s",
+      "label": "normal",
+      "present_in_training": true
+    },
+    {
+      "input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 RSN: PMKSA cache hit",
+      "label": "normal",
+      "present_in_training": true
+    },
+    {
+      "input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: did not acknowledge keepalive, retry scheduled",
+      "label": "normal",
+      "present_in_training": true
+    },
+    {
+      "input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 keepalive retry succeeded",
+      "label": "normal",
+      "present_in_training": true
+    },
+    {
+      "input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 keepalive response received after retry",
+      "label": "normal",
+      "present_in_training": true
+    },
+    {
+      "input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 disconnected after repeated keepalive failures",
+      "label": "error",
+      "present_in_training": true
+    },
+    {
+      "input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 deauthenticated after keepalive timeout reason=4",
+      "label": "error",
+      "present_in_training": true
+    },
+    {
+      "input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 excessive frame retries, disconnecting station",
+      "label": "error",
+      "present_in_training": true
+    }
+  ],
+  "split_strategy": "60% normal / 40% error in both training and validation.",
+  "train": {
+    "categories": {
+      "accounting_normal": 108,
+      "association_error": 168,
+      "auth_assoc_normal": 395,
+      "deauth_disassoc_error": 431,
+      "dhcp_error": 288,
+      "dhcp_normal": 395,
+      "driver_firmware_error": 192,
+      "eapol_normal": 359,
+      "keepalive_failure_error": 240,
+      "keepalive_recovery_normal": 575,
+      "pmksa_cache_normal": 467,
+      "power_save_normal": 610,
+      "radius_8021x_error": 335,
+      "radius_normal": 144,
+      "required_seed": 12,
+      "rf_link_error": 216,
+      "roaming_normal": 179,
+      "signal_normal": 251,
+      "suspicious_but_normal": 108,
+      "wpa_handshake_error": 527
+    },
+    "error_excessive_frame_retries": 92,
+    "error_keepalive_timeout": 97,
+    "error_repeated_keepalive_failures": 49,
+    "exact_duplicates": 0,
+    "labels": {
+      "error": 2400,
+      "normal": 3600
+    },
+    "normal_keepalive_response_after_retry": 97,
+    "normal_keepalive_retry_scheduled": 97,
+    "normal_keepalive_retry_succeeded": 97,
+    "normal_pmksa_cache_hit": 95,
+    "normal_power_save_disabled": 204,
+    "normal_power_save_enabled": 204,
+    "total": 6000
+  },
+  "validation": {
+    "categories": {
+      "accounting_normal": 27,
+      "association_error": 42,
+      "auth_assoc_normal": 99,
+      "deauth_disassoc_error": 108,
+      "dhcp_error": 72,
+      "dhcp_normal": 99,
+      "driver_firmware_error": 48,
+      "eapol_normal": 90,
+      "keepalive_failure_error": 60,
+      "keepalive_recovery_normal": 144,
+      "pmksa_cache_normal": 117,
+      "power_save_normal": 153,
+      "radius_8021x_error": 84,
+      "radius_normal": 36,
+      "rf_link_error": 54,
+      "roaming_normal": 45,
+      "signal_normal": 63,
+      "suspicious_but_normal": 27,
+      "wpa_handshake_error": 132
+    },
+    "error_excessive_frame_retries": 23,
+    "error_keepalive_timeout": 24,
+    "error_repeated_keepalive_failures": 12,
+    "exact_duplicates": 0,
+    "labels": {
+      "error": 600,
+      "normal": 900
+    },
+    "normal_keepalive_response_after_retry": 24,
+    "normal_keepalive_retry_scheduled": 24,
+    "normal_keepalive_retry_succeeded": 24,
+    "normal_pmksa_cache_hit": 24,
+    "normal_power_save_disabled": 51,
+    "normal_power_save_enabled": 50,
+    "total": 1500
+  }
+}

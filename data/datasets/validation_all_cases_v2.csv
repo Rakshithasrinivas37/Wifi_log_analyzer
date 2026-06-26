@@ -1,0 +1,1501 @@
+label,input
+error,hostapd: wlan0: STA b8:27:eb:6d:45:f2 RADIUS: Access-Reject received session=101238
+error,kernel: wlan0: connection lost from 18:64:72:2f:8a:c3 after beacon timeout station=64:5a:04:a9:33:e1 seq=101337
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: pairwise key handshake completed (RSN) event_id=val-95
+error,hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: pairwise key installation failed keyidx=2 event_id=val-954
+error,wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=28:cf:e9:5b:73:a4 bssid=18:64:72:2f:8a:c3 reason=34 locally_generated=0 seq=101137
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f signal poll updated signal=-63 noise=-95
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 RSN: using cached PMKSA for fast reconnect cache_id=100604
+error,hostapd: wlan0: STA 64:5a:04:a9:33:e1 disconnected after repeated keepalive failures retry_count=13
+error,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) d8:bb:c1:07:90:ac ignored because address pool exhausted pool=5
+normal,kernel: wlan0: station 64:5a:04:a9:33:e1 data rate updated to 300 Mbps mcs=3
+normal,kernel: wlan0: station 64:5a:04:a9:33:e1 power save mode enabled after association interval=81s
+error,hostapd: wlan0: STA 88:66:5a:d1:72:0c IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101038
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 EAP: peer certificate verified serial=200834
+error,hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100934
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 keepalive response received sequence=100512
+error,dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.5.123 9c:b6:d0:13:7e:64 xid=101183
+normal,dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.131 d8:bb:c1:07:90:ac
+error,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101075
+error,hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key timeout after message 3/4 retry=2 event_id=val-962
+normal,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.110 6c:5a:b0:2e:91:c8 xid=100220
+normal,hostapd: wlan0: STA e4:5f:01:aa:3b:77 RSN: PMKSA cache hit cache_id=100645
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 keepalive retry succeeded retry=2 event_id=val-544
+error,"kernel: wlan0: station f4:f5:d8:7a:19:2b beacon loss detected, connection unstable seq=101330"
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 changed power save mode: off ps_seq=100438
+error,hostapd: wlan0: STA 64:5a:04:a9:33:e1 IEEE 802.11: authentication failed status_code=13 attempt=101427
+error,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101054
+error,hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key timeout after message 1/4 retry=3 event_id=val-1023
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: pairwise key handshake completed (RSN) event_id=val-71
+error,hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: authentication failed status_code=13 attempt=101437
+error,dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.3.133 64:5a:04:a9:33:e1 xid=101193
+error,hostapd: wlan0: STA 3c:22:fb:10:24:38 RADIUS: Access-Reject received session=101286
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 keepalive response received sequence=100530
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: EAPOL-Key message 4/4 received replay_counter=100163
+error,hostapd: wlan0: STA 2c:54:cf:92:10:bd IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101080
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 RSN: PMKSA cache entry refreshed cache_id=100602
+normal,kernel: wlan0: station 5c:e9:1e:33:8f:a1 power save mode disabled after traffic idle interval=86s
+normal,dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) 3c:22:fb:10:24:38 xid=100260
+error,wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS station=2c:54:cf:92:10:bd bssid=18:64:72:2f:8a:c3 seq=101296
+error,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 denied by MAC ACL policy acl_rule=4
+normal,kernel: wlan0: station e4:5f:01:aa:3b:77 power save mode enabled ps_seq=100429
+error,hostapd: wlan0: STA b8:27:eb:6d:45:f2 disconnected due to excessive frame retries retry_count=8
+error,radiusd[822]: Login incorrect: [70:3a:cb:51:2d:88] invalid password from client ap-1 event_id=val-1289
+normal,"hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-495"
+error,hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101040
+normal,kernel: wlan0: station d8:bb:c1:07:90:ac data rate updated to 866.7 Mbps mcs=11 event_id=val-763
+error,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 IEEE 802.11: association rejected unsupported rates status_code=18 attempt=101421
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: pairwise key handshake completed (RSN)
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 RSN: using cached PMKSA for fast reconnect cache_id=100694
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: EAPOL-Key message 2/4 received replay_counter=100161
+error,hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101034
+normal,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.80 5c:e9:1e:33:8f:a1 xid=100190
+error,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101129
+error,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 EAP-TLS: client certificate validation failed serial=201291
+error,hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key timeout after message 3/4 retry=2 event_id=val-974
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: EAPOL-Key message 3/4 sent replay_counter=100180
+error,"hostapd: wlan0: STA 70:3a:cb:51:2d:88 excessive frame retries, disconnecting station retry_count=15"
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac changed power save mode: on ps_seq=100421
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 authorized vlan=2 event_id=val-46
+error,hostapd: wlan0: STA a8:6d:aa:42:bc:09 RADIUS: server timeout during authentication session=101212
+error,kernel: wlan0: tx queue stuck for station 48:5f:99:c0:21:6a; firmware recovery triggered queue=7
+normal,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.1X: authentication completed successfully session=100813
+error,hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key timeout after message 3/4 retry=2
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: EAPOL-Key message 3/4 sent replay_counter=100162
+normal,hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: associated (aid 50)
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 changed power save mode: on ps_seq=100373
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=e4:5f:01:aa:3b:77 scan_id=100789
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: EAPOL-Key message 1/4 sent replay_counter=100136
+error,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 denied by MAC ACL policy acl_rule=9
+normal,dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.135 70:3a:cb:51:2d:88 client-5
+normal,hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key message received replay_counter=100177
+normal,kernel: wlan0: station 48:5f:99:c0:21:6a data rate updated to 72.2 Mbps mcs=7
+error,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101043
+error,"hostapd: wlan0: STA 0c:8b:fd:61:c2:14 keepalive timeout exceeded, station removed reason=4 retry_count=13"
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 keepalive response received sequence=100554
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: authenticated auth_seq=100062
+error,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: received EAPOL-Key with invalid MIC replay_counter=100971
+error,"hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 keepalive timeout exceeded, station removed reason=4 retry_count=12"
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: authenticated auth_seq=100026
+normal,dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.107 a0:36:9f:71:b5:2e
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=b8:27:eb:6d:45:f2 above=1 signal=-63 noise=-95 txrate=54 Mb/s
+normal,kernel: wlan0: station 64:5a:04:a9:33:e1 retry count high but frame delivered retry_count=2
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: EAPOL-Key message 3/4 sent replay_counter=100114
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 reassociated successfully aid=63
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f keepalive response received sequence=100506
+error,hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: received EAPOL-Key with invalid MIC replay_counter=100929
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 RSN: PMKSA cache hit cache_id=100620
+normal,kernel: wlan0: station 3c:22:fb:10:24:38 power save mode disabled ps_seq=100296
+error,hostapd: wlan0: STA a8:6d:aa:42:bc:09 RADIUS: server timeout during authentication session=101266
+normal,hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key message received replay_counter=100135
+normal,dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.161 a0:36:9f:71:b5:2e
+normal,hostapd: wlan0: STA e4:5f:01:aa:3b:77 RSN: PMKSA cache entry refreshed cache_id=100627
+error,dnsmasq-dhcp[411]: bad DHCP request from 70:3a:cb:51:2d:88: requested address outside subnet xid=101199
+error,"hostapd: wlan0: STA dc:a6:32:48:91:0f keepalive timeout exceeded, station removed reason=4 retry_count=14"
+error,"kernel: wlan0: station 48:5f:99:c0:21:6a beacon loss detected, connection unstable seq=101305"
+error,hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key timeout after message 3/4 retry=0 event_id=val-1028
+normal,wpa_supplicant: wlan0: CTRL-EVENT-ROAMED bssid=00:25:9c:7a:10:01 station=b8:27:eb:6d:45:f2 roam_seq=100788
+normal,kernel: wlan0: station 48:5f:99:c0:21:6a power save mode enabled ps_seq=100297
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 keepalive retry succeeded retry=2 event_id=val-514
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac changed power save mode: on ps_seq=100385
+normal,wpa_supplicant: wlan0: CTRL-EVENT-ROAMED bssid=64:70:02:9a:bc:11 station=3c:22:fb:10:24:38 roam_seq=100800
+normal,kernel: wlan0: station 0c:8b:fd:61:c2:14 power save mode enabled after association interval=105s
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: EAPOL-Key message 1/4 sent replay_counter=100184
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 keepalive response received after retry retry=0 event_id=val-551
+error,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 IEEE 802.1X: EAP timeout waiting for response session=101252
+error,hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: association rejected unsupported rates status_code=18 attempt=101436
+error,hostapd: wlan0: STA d8:bb:c1:07:90:ac IEEE 802.11: association rejected unsupported rates status_code=18 attempt=101411
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 FT authentication completed r0kh_id=ap-7
+error,hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: received EAPOL-Key with invalid MIC replay_counter=101001
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 changed power save mode: on ps_seq=100337
+error,kernel: wlan0: firmware crashed during key install for station e4:5f:01:aa:3b:77 crash_id=101365
+normal,kernel: wlan0: station dc:a6:32:48:91:0f power save mode disabled ps_seq=100326
+error,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.1X: authentication failed session=101263
+error,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100904
+error,kernel: wlan0: connection lost from 64:70:02:9a:bc:11 after beacon timeout station=3c:22:fb:10:24:38 seq=101322
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 temporary keepalive miss recovered without disconnect retry=2 event_id=val-535
+error,hostapd: wlan0: STA f4:f5:d8:7a:19:2b IEEE 802.1X: EAP timeout waiting for response session=101222
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c changed power save mode: off ps_seq=100390
+normal,kernel: wlan0: station 3c:22:fb:10:24:38 power save mode disabled ps_seq=100404
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 EAP: peer certificate verified serial=200838
+normal,dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) 3c:22:fb:10:24:38 xid=100206
+error,hostapd: wlan0: STA 3c:22:fb:10:24:38 RADIUS: Access-Reject received session=101250
+error,kernel: wlan0: driver failed to install pairwise key for station a8:6d:aa:42:bc:09 keyidx=0
+normal,hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: associated (aid 14)
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 RADIUS: Access-Accept received session=100820
+normal,dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.148 a8:6d:aa:42:bc:09
+normal,radiusd[822]: Login OK: [0c:8b:fd:61:c2:14] from client ap-3 port 1827
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=a8:6d:aa:42:bc:09 above=1 signal=-56 noise=-95 txrate=433.3 Mb/s
+normal,kernel: wlan0: station 0c:8b:fd:61:c2:14 power save mode enabled after association interval=111s
+normal,wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=64:70:02:9a:bc:11 id=0 ssid=OfficeWiFi-Guest station=d8:bb:c1:07:90:ac
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 temporary keepalive miss recovered without disconnect retry=2 event_id=val-553
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 accounting session stopped normally session=100851
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac temporary keepalive miss recovered without disconnect retry=2 event_id=val-493
+error,dnsmasq-dhcp[411]: no address available for DHCP request from 9c:b6:d0:13:7e:64 pool=5
+error,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key timeout after message 1/4 retry=3 event_id=val-975
+error,dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.3.103 70:3a:cb:51:2d:88 xid=101163
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b keepalive retry succeeded retry=2 event_id=val-538
+error,hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: group key handshake timeout retry=1 event_id=val-1009
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd transient low ACK rate recovered ack_rate=52
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 keepalive response received after retry retry=0
+error,radiusd[822]: Login incorrect: [70:3a:cb:51:2d:88] invalid password from client ap-1
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 keepalive response received sequence=100446
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 changed power save mode: on ps_seq=100409
+error,dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.1.143 e4:5f:01:aa:3b:77 xid=101203
+error,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: group key handshake timeout retry=1 event_id=val-985
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 keepalive response received after retry retry=0 event_id=val-497
+error,wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=3c:22:fb:10:24:38 bssid=00:25:9c:7a:10:02 reason=34 locally_generated=0 seq=101052
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: pairwise key handshake completed (RSN) event_id=val-53
+normal,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 RSN: PMKSA cache entry added cache_id=100651
+error,kernel: wlan0: connection lost from 00:25:9c:7a:10:01 after beacon timeout station=70:3a:cb:51:2d:88 seq=101307
+error,wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS station=0c:8b:fd:61:c2:14 bssid=00:25:9c:7a:10:02 seq=101331
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 RSN: PMKSA cache lookup succeeded cache_id=100683
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 EAP: peer certificate verified serial=200818
+error,hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key timeout after message 1/4 retry=1 event_id=val-1017
+normal,kernel: wlan0: station 48:5f:99:c0:21:6a retry count high but frame delivered retry_count=3
+error,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 IEEE 802.1X: EAP timeout waiting for response session=101246
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 RSN: using cached PMKSA for fast reconnect cache_id=100679
+normal,kernel: wlan0: station dc:a6:32:48:91:0f power save mode disabled ps_seq=100434
+error,hostapd: wlan0: STA a0:36:9f:71:b5:2e EAP-TLS: client certificate validation failed serial=201243
+error,hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: group key handshake timeout retry=1 event_id=val-937
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e changed power save mode: on ps_seq=100361
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 changed power save mode: on ps_seq=100355
+normal,wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=18:64:72:2f:8a:c3 id=0 ssid=Corp-8021X station=a0:36:9f:71:b5:2e
+error,kernel: wlan0: firmware crashed during key install for station 88:66:5a:d1:72:0c crash_id=101380
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: pairwise key handshake completed (RSN) event_id=val-35
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac temporary keepalive miss recovered without disconnect retry=2 event_id=val-529
+error,radiusd[822]: Login incorrect: [64:5a:04:a9:33:e1] invalid password from client ap-3
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e RSN: PMKSA cache entry refreshed cache_id=100667
+error,radiusd[822]: Login incorrect: [0c:8b:fd:61:c2:14] invalid password from client ap-1
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd RADIUS: Access-Accept received session=100828
+error,hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: received EAPOL-Key with invalid MIC replay_counter=100941
+error,kernel: wlan0: firmware crashed while processing association response station=3c:22:fb:10:24:38 crash_id=101376
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key message sent replay_counter=100152
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 RSN: PMKSA cache lookup succeeded cache_id=100618
+error,wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=0c:8b:fd:61:c2:14 bssid=18:64:72:2f:8a:c3 reason=34 locally_generated=0 seq=101097
+normal,dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.115 48:5f:99:c0:21:6a lease=12h
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 accounting interim update sent session=100854
+error,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 disconnected after repeated keepalive failures retry_count=10
+normal,wpa_supplicant: wlan0: CTRL-EVENT-ROAMED bssid=18:64:72:2f:8a:c3 station=6c:5a:b0:2e:91:c8 roam_seq=100796
+normal,kernel: wlan0: station e4:5f:01:aa:3b:77 power save mode enabled ps_seq=100357
+error,hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100988
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 keepalive response received sequence=100584
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 keepalive response received sequence=100458
+error,dnsmasq-dhcp[411]: no address available for DHCP request from 70:3a:cb:51:2d:88 pool=3
+error,hostapd: wlan0: STA d8:bb:c1:07:90:ac disconnected due to excessive frame retries retry_count=15
+normal,dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.125 a0:36:9f:71:b5:2e
+normal,kernel: wlan0: station 0c:8b:fd:61:c2:14 retry count high but frame delivered retry_count=2
+normal,kernel: wlan0: station a0:36:9f:71:b5:2e low signal warning cleared signal=-67
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c EAP: peer certificate verified serial=200822
+normal,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: associated (aid 62)
+normal,kernel: wlan0: station f4:f5:d8:7a:19:2b power save mode disabled after traffic idle interval=110s
+error,dnsmasq-dhcp[411]: no address available for DHCP request from 2c:54:cf:92:10:bd pool=4
+normal,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: associated (aid 54)
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 RSN: using cached PMKSA for fast reconnect cache_id=100644
+error,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: received EAPOL-Key with invalid MIC replay_counter=101025
+normal,dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.154 88:66:5a:d1:72:0c
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=70:3a:cb:51:2d:88 scan_id=100785
+error,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=101012
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 RSN: PMKSA cache entry refreshed cache_id=100677
+normal,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.170 5c:e9:1e:33:8f:a1 xid=100280
+normal,"hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-555"
+error,radiusd[822]: Login incorrect: [0c:8b:fd:61:c2:14] invalid password from client ap-7 event_id=val-1295
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e temporary keepalive miss recovered without disconnect retry=2 event_id=val-523
+error,hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key timeout after message 1/4 retry=3 event_id=val-999
+error,kernel: wlan0: firmware crashed while processing association response station=64:5a:04:a9:33:e1 crash_id=101391
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f accounting interim update sent session=100866
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 retry counter reset after successful frame ack retry_count=2
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 keepalive response received after retry retry=0 event_id=val-503
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 RSN: PMKSA cache entry added cache_id=100701
+error,hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key timeout after message 1/4 retry=3 event_id=val-987
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd changed power save mode: off ps_seq=100414
+normal,dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.89 a0:36:9f:71:b5:2e
+normal,kernel: wlan0: station 3c:22:fb:10:24:38 power save mode disabled ps_seq=100350
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 keepalive response received sequence=100536
+error,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 disconnected after repeated keepalive failures retry_count=8
+error,hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: received EAPOL-Key with invalid MIC replay_counter=100995
+normal,wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=00:25:9c:7a:10:02 id=0 ssid=OfficeWiFi-Guest station=a0:36:9f:71:b5:2e
+error,hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key timeout after message 3/4 retry=2 event_id=val-938
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c retry counter reset after successful frame ack retry_count=0 event_id=val-516
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: EAPOL-Key message 1/4 sent replay_counter=100166
+error,"hostapd: wlan0: STA b8:27:eb:6d:45:f2 no keepalive ACK after retries, deauthenticating reason=4 retry_count=14"
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: group key handshake completed (RSN) gtk=2 event_id=val-78
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: authenticated auth_seq=100056
+error,dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.1.83 48:5f:99:c0:21:6a xid=101143
+normal,kernel: wlan0: station 0c:8b:fd:61:c2:14 power save mode enabled after association interval=57s
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: EAPOL-Key message 2/4 received replay_counter=100167
+normal,"hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-501"
+normal,dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.142 2c:54:cf:92:10:bd
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: group key handshake completed (RSN) gtk=2 event_id=val-90
+error,kernel: wlan0: driver failed to install pairwise key for station d8:bb:c1:07:90:ac keyidx=1
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: pairwise key handshake completed (RSN)
+normal,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 RSN: PMKSA cache hit cache_id=100615
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f RSN: PMKSA cache entry refreshed cache_id=100632
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd RSN: PMKSA cache lookup succeeded cache_id=100648
+normal,dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) dc:a6:32:48:91:0f xid=100218
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e temporary keepalive miss recovered without disconnect retry=2 event_id=val-487
+normal,dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.100 88:66:5a:d1:72:0c
+error,"hostapd: wlan0: STA b8:27:eb:6d:45:f2 excessive frame retries, disconnecting station retry_count=8"
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 keepalive retry succeeded retry=2 event_id=val-460
+error,hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key timeout after message 3/4 retry=2
+error,"hostapd: wlan0: STA 88:66:5a:d1:72:0c excessive frame retries, disconnecting station retry_count=12"
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b transient low ACK rate recovered ack_rate=68
+normal,kernel: wlan0: station 28:cf:e9:5b:73:a4 power save mode enabled ps_seq=100291
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b authorized vlan=2 event_id=val-88
+normal,dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.139 e4:5f:01:aa:3b:77 lease=12h
+normal,kernel: wlan0: station a0:36:9f:71:b5:2e retry count high but frame delivered retry_count=4
+error,dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.2.108 f4:f5:d8:7a:19:2b xid=101168
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd reassociated successfully aid=39
+normal,kernel: wlan0: station 9c:b6:d0:13:7e:64 retry count high but frame delivered retry_count=4
+normal,kernel: wlan0: station 48:5f:99:c0:21:6a power save mode enabled ps_seq=100387
+normal,kernel: wlan0: station 3c:22:fb:10:24:38 power save mode disabled ps_seq=100368
+error,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 denied by MAC ACL policy acl_rule=9
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f keepalive response received sequence=100560
+normal,hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: associated (aid 20)
+error,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) a0:36:9f:71:b5:2e ignored because address pool exhausted pool=5
+error,"hostapd: wlan0: STA 70:3a:cb:51:2d:88 no keepalive ACK after retries, deauthenticating reason=4 retry_count=13"
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: EAPOL-Key message 3/4 sent replay_counter=100168
+error,dnsmasq-dhcp[411]: bad DHCP request from f4:f5:d8:7a:19:2b: requested address outside subnet xid=101204
+error,dnsmasq-dhcp[411]: bad DHCP request from a8:6d:aa:42:bc:09: requested address outside subnet xid=101194
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=d8:bb:c1:07:90:ac scan_id=100781
+error,hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: disassociated due to inactivity reason=4 seq=101136
+normal,kernel: wlan0: station 64:5a:04:a9:33:e1 power save mode enabled after association interval=99s
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c changed power save mode: off ps_seq=100408
+normal,hostapd: wlan0: STA e4:5f:01:aa:3b:77 accounting session updated rx_bytes=1331193 tx_bytes=1742637
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 retry counter reset after successful frame ack retry_count=2 event_id=val-582
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd changed power save mode: off ps_seq=100324
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 RSN: PMKSA cache lookup succeeded cache_id=100638
+error,kernel: wlan0: hardware restart required after station 3c:22:fb:10:24:38 transmit timeout queue=6
+normal,kernel: wlan0: station 64:5a:04:a9:33:e1 power save mode enabled after association interval=117s
+normal,"hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-471"
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 single missed ack recovered on retry retry_count=1
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 RSN: PMKSA cache lookup succeeded cache_id=100698
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd accounting session started session=100864
+error,kernel: wlan0: tx queue stuck for station 28:cf:e9:5b:73:a4; firmware recovery triggered queue=5
+error,dnsmasq-dhcp[411]: no address available for DHCP request from f4:f5:d8:7a:19:2b pool=2
+error,hostapd: wlan0: STA f4:f5:d8:7a:19:2b IEEE 802.1X: EAP timeout waiting for response session=101258
+normal,kernel: wlan0: station f4:f5:d8:7a:19:2b power save mode disabled after traffic idle interval=74s
+error,"hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 keepalive timeout exceeded, station removed reason=4 retry_count=10"
+error,hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: pairwise key installation failed keyidx=0 event_id=val-948
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 IEEE 802.1X: authentication completed successfully session=100821
+error,hostapd: wlan0: STA dc:a6:32:48:91:0f RADIUS: Access-Reject received session=101226
+error,wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS station=48:5f:99:c0:21:6a bssid=64:70:02:9a:bc:11 seq=101341
+error,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: group key handshake timeout retry=3
+normal,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 FT authentication completed r0kh_id=ap-3
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 transient low ACK rate recovered ack_rate=56
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: group key handshake completed (RSN) gtk=0 event_id=val-72
+normal,kernel: wlan0: station 0c:8b:fd:61:c2:14 low signal warning cleared signal=-67
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 changed power save mode: off ps_seq=100384
+error,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100928
+error,hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key timeout after message 1/4 retry=1 event_id=val-969
+error,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: received EAPOL-Key with invalid MIC replay_counter=100953
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f keepalive response received sequence=100452
+normal,kernel: wlan0: station e4:5f:01:aa:3b:77 low signal warning cleared signal=-63
+normal,kernel: wlan0: station 64:5a:04:a9:33:e1 low signal warning cleared signal=-51
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 accounting session started session=100868
+error,hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101113
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 RSN: PMKSA cache hit cache_id=100625
+error,hostapd: wlan0: STA 3c:22:fb:10:24:38 RADIUS: Access-Reject received session=101214
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac RSN: PMKSA cache entry refreshed cache_id=100637
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e changed power save mode: on ps_seq=100343
+normal,wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=18:64:72:2f:8a:c3 id=0 ssid=IoT-Net station=a0:36:9f:71:b5:2e
+error,hostapd: wlan0: STA d8:bb:c1:07:90:ac IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101033
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: authenticated auth_seq=100098
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 temporary keepalive miss recovered without disconnect retry=2 event_id=val-499
+error,kernel: wlan0: hardware restart required after station 9c:b6:d0:13:7e:64 transmit timeout queue=3
+error,dnsmasq-dhcp[411]: bad DHCP request from dc:a6:32:48:91:0f: requested address outside subnet xid=101154
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 signal poll updated signal=-61 noise=-95
+error,wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=f4:f5:d8:7a:19:2b bssid=64:70:02:9a:bc:11 reason=34 locally_generated=0 seq=101042
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 single missed ack recovered on retry retry_count=1
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: group key handshake completed (RSN) gtk=0 event_id=val-84
+error,hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: pairwise key installation failed keyidx=2
+error,dnsmasq-dhcp[411]: no address available for DHCP request from 88:66:5a:d1:72:0c pool=4
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: EAPOL-Key message 1/4 sent replay_counter=100124
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: pairwise key handshake completed (RSN) event_id=val-47
+error,hostapd: wlan0: STA f4:f5:d8:7a:19:2b IEEE 802.11: association denied status_code=17 AP full attempt=101420
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd retry counter reset after successful frame ack retry_count=2 event_id=val-558
+error,hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: pairwise key installation failed keyidx=0 event_id=val-1008
+normal,hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: associated (aid 2)
+error,dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.4.98 a8:6d:aa:42:bc:09 xid=101158
+normal,dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) b8:27:eb:6d:45:f2 xid=100266
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 authorized vlan=2 event_id=val-76
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c RSN: using cached PMKSA for fast reconnect cache_id=100624
+error,hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.1X: authentication failed session=101257
+normal,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.86 f4:f5:d8:7a:19:2b xid=100196
+error,hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101088
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 RSN: PMKSA cache entry added cache_id=100611
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd changed power save mode: off ps_seq=100360
+error,hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: group key handshake timeout retry=3
+normal,dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.94 a8:6d:aa:42:bc:09
+error,wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS station=88:66:5a:d1:72:0c bssid=00:25:9c:7a:10:01 seq=101326
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 authorized vlan=2
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd signal poll updated signal=-67 noise=-95
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: EAPOL-Key message 1/4 sent replay_counter=100130
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 keepalive retry succeeded retry=2 event_id=val-496
+error,hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: group key handshake timeout retry=1 event_id=val-973
+error,hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100916
+normal,kernel: wlan0: station 5c:e9:1e:33:8f:a1 power save mode disabled after traffic idle interval=104s
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b keepalive retry succeeded retry=2 event_id=val-574
+normal,dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) dc:a6:32:48:91:0f xid=100272
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 keepalive response received sequence=100572
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 RSN: PMKSA cache hit cache_id=100640
+normal,hostapd: wlan0: STA e4:5f:01:aa:3b:77 RSN: PMKSA cache lookup succeeded cache_id=100663
+error,"kernel: wlan0: station 70:3a:cb:51:2d:88 beacon loss detected, connection unstable seq=101325"
+error,hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=101006
+error,hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: pairwise key installation failed keyidx=2 event_id=val-978
+error,kernel: wlan0: connection lost from 00:25:9c:7a:10:02 after beacon timeout station=f4:f5:d8:7a:19:2b seq=101312
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 keepalive retry succeeded retry=2 event_id=val-472
+error,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 3c:22:fb:10:24:38 ignored because address pool exhausted pool=0
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 keepalive response received sequence=100476
+normal,kernel: wlan0: station 48:5f:99:c0:21:6a power save mode enabled ps_seq=100315
+error,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 48:5f:99:c0:21:6a ignored because address pool exhausted pool=1
+error,hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101095
+error,hostapd: wlan0: STA 88:66:5a:d1:72:0c RADIUS: server timeout during authentication session=101254
+error,hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: received EAPOL-Key with invalid MIC replay_counter=100959
+error,wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=9c:b6:d0:13:7e:64 bssid=18:64:72:2f:8a:c3 reason=34 locally_generated=0 seq=101057
+error,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100976
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 RADIUS: Access-Accept received session=100832
+normal,hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key message received replay_counter=100141
+normal,dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.88 2c:54:cf:92:10:bd
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 RSN: PMKSA cache entry added cache_id=100676
+error,dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.2.138 5c:e9:1e:33:8f:a1 xid=101198
+normal,hostapd: wlan0: STA 48:5f:99:c0:21:6a RSN: PMKSA cache lookup succeeded cache_id=100693
+normal,wpa_supplicant: wlan0: CTRL-EVENT-ROAMED bssid=64:70:02:9a:bc:11 station=88:66:5a:d1:72:0c roam_seq=100804
+normal,dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.99 70:3a:cb:51:2d:88 client-49
+error,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 disconnected due to excessive frame retries retry_count=9
+error,wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=64:5a:04:a9:33:e1 bssid=00:25:9c:7a:10:01 reason=34 locally_generated=0 seq=101067
+error,"kernel: wlan0: station a0:36:9f:71:b5:2e beacon loss detected, connection unstable seq=101315"
+normal,kernel: wlan0: station 6c:5a:b0:2e:91:c8 power save mode disabled after traffic idle interval=110s
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 keepalive retry succeeded retry=2 event_id=val-568
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 RSN: PMKSA cache hit cache_id=100680
+normal,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.164 6c:5a:b0:2e:91:c8 xid=100274
+error,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 64:5a:04:a9:33:e1 ignored because address pool exhausted pool=3
+error,hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: pairwise key installation failed keyidx=2 event_id=val-1002
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e RSN: PMKSA cache lookup succeeded cache_id=100613
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd RSN: PMKSA cache hit cache_id=100630
+normal,kernel: wlan0: station 5c:e9:1e:33:8f:a1 power save mode disabled after traffic idle interval=14s
+error,hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: association denied status_code=17 AP full attempt=101400
+error,wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=d8:bb:c1:07:90:ac bssid=00:25:9c:7a:10:01 reason=34 locally_generated=0 seq=101087
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: EAPOL-Key message 4/4 received replay_counter=100181
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 reassociated successfully aid=31
+normal,kernel: wlan0: station 6c:5a:b0:2e:91:c8 power save mode disabled after traffic idle interval=44s
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd EAP: peer certificate verified serial=200810
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 RSN: using cached PMKSA for fast reconnect cache_id=100659
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 keepalive retry succeeded retry=2 event_id=val-526
+error,hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key timeout after message 1/4 retry=3 event_id=val-951
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: group key handshake completed (RSN) gtk=2
+error,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100940
+normal,dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) b8:27:eb:6d:45:f2 xid=100212
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c signal poll updated signal=-55 noise=-95
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 temporary keepalive miss recovered without disconnect retry=2 event_id=val-481
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 authorized vlan=2 event_id=val-82
+normal,hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: associated (aid 60)
+error,kernel: wlan0: hardware restart required after station 2c:54:cf:92:10:bd transmit timeout queue=0
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac RSN: using cached PMKSA for fast reconnect cache_id=100619
+normal,kernel: wlan0: station f4:f5:d8:7a:19:2b power save mode disabled after traffic idle interval=38s
+normal,"hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-513"
+error,"hostapd: wlan0: STA f4:f5:d8:7a:19:2b no keepalive ACK after retries, deauthenticating reason=4 retry_count=10"
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f RADIUS: Access-Accept received session=100812
+error,hostapd: wlan0: STA 88:66:5a:d1:72:0c disconnected due to excessive frame retries retry_count=12
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e temporary keepalive miss recovered without disconnect retry=2 event_id=val-505
+normal,"hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-465"
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b authorized vlan=2 event_id=val-52
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 authorized vlan=2 event_id=val-40
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 FT authentication completed r0kh_id=ap-3
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: pairwise key handshake completed (RSN) event_id=val-23
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=dc:a6:32:48:91:0f above=1 signal=-51 noise=-95 txrate=54 Mb/s
+normal,dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.95 d8:bb:c1:07:90:ac
+normal,kernel: wlan0: station 28:cf:e9:5b:73:a4 power save mode enabled ps_seq=100381
+error,dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.2.150 6c:5a:b0:2e:91:c8 lease conflict detected xid=101210
+error,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101039
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b authorized vlan=2
+error,"hostapd: wlan0: STA 64:5a:04:a9:33:e1 keepalive timeout exceeded, station removed reason=4 retry_count=15"
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 keepalive response received after retry retry=0 event_id=val-527
+normal,dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.101 9c:b6:d0:13:7e:64
+error,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100922
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 RSN: PMKSA cache hit cache_id=100590
+error,hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101130
+normal,kernel: wlan0: station 5c:e9:1e:33:8f:a1 power save mode disabled after traffic idle interval=98s
+error,hostapd: wlan0: STA d8:bb:c1:07:90:ac disconnected after repeated keepalive failures retry_count=9
+error,hostapd: wlan0: STA 70:3a:cb:51:2d:88 IEEE 802.11: disassociated due to inactivity reason=4 seq=101091
+error,radiusd[822]: Login incorrect: [0c:8b:fd:61:c2:14] invalid password from client ap-3
+error,wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=6c:5a:b0:2e:91:c8 bssid=64:70:02:9a:bc:11 reason=34 locally_generated=0 seq=101102
+error,hostapd: wlan0: STA a8:6d:aa:42:bc:09 RADIUS: server timeout during authentication session=101284
+error,hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: pairwise key installation failed keyidx=2 event_id=val-1014
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: EAPOL-Key message 2/4 received replay_counter=100131
+normal,hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: associated (aid 56)
+normal,wpa_supplicant: wlan0: CTRL-EVENT-ROAMED bssid=00:25:9c:7a:10:01 station=88:66:5a:d1:72:0c roam_seq=100768
+error,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.1X: authentication failed session=101227
+error,hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.1X: authentication failed session=101233
+error,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=101018
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 RSN: PMKSA cache hit cache_id=100665
+error,hostapd: wlan0: STA 88:66:5a:d1:72:0c IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101128
+error,hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: pairwise key installation failed keyidx=2
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: EAPOL-Key message 2/4 received replay_counter=100101
+error,hostapd: wlan0: STA a8:6d:aa:42:bc:09 disconnected due to excessive frame retries retry_count=10
+error,hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key timeout after message 1/4 retry=1 event_id=val-1005
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: authenticated auth_seq=100092
+error,hostapd: wlan0: STA 2c:54:cf:92:10:bd RADIUS: server timeout during authentication session=101260
+error,kernel: wlan0: driver failed to install pairwise key for station 0c:8b:fd:61:c2:14 keyidx=3
+error,hostapd: wlan0: STA f4:f5:d8:7a:19:2b IEEE 802.1X: EAP timeout waiting for response session=101240
+error,hostapd: wlan0: STA 2c:54:cf:92:10:bd denied by MAC ACL policy acl_rule=4
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 signal poll updated signal=-71 noise=-95
+normal,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.116 5c:e9:1e:33:8f:a1 xid=100226
+error,kernel: wlan0: tx queue stuck for station 70:3a:cb:51:2d:88; firmware recovery triggered queue=3
+normal,dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.136 88:66:5a:d1:72:0c
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac RSN: PMKSA cache hit cache_id=100655
+error,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 IEEE 802.11: authentication failed status_code=13 attempt=101432
+error,hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: group key handshake timeout retry=3 event_id=val-979
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 RSN: PMKSA cache entry refreshed cache_id=100617
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: group key handshake completed (RSN) gtk=0
+error,hostapd: wlan0: STA d8:bb:c1:07:90:ac denied by MAC ACL policy acl_rule=9
+error,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 IEEE 802.11: association rejected unsupported rates status_code=18 attempt=101426
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 RADIUS: Access-Accept received session=100824
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c retry counter reset after successful frame ack retry_count=2 event_id=val-498
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: EAPOL-Key message 4/4 received replay_counter=100115
+error,hostapd: wlan0: STA d8:bb:c1:07:90:ac EAP-TLS: client certificate validation failed serial=201231
+normal,dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.118 88:66:5a:d1:72:0c
+error,hostapd: wlan0: STA 88:66:5a:d1:72:0c RADIUS: server timeout during authentication session=101218
+normal,kernel: wlan0: station e4:5f:01:aa:3b:77 power save mode enabled ps_seq=100303
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e FT authentication completed r0kh_id=ap-7
+error,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) b8:27:eb:6d:45:f2 ignored because address pool exhausted pool=0
+normal,dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.105 0c:8b:fd:61:c2:14 client-55
+error,radiusd[822]: Login incorrect: [70:3a:cb:51:2d:88] invalid password from client ap-3
+error,kernel: wlan0: hardware restart required after station 64:5a:04:a9:33:e1 transmit timeout queue=5
+normal,kernel: wlan0: station 64:5a:04:a9:33:e1 data rate updated to 300 Mbps mcs=3 event_id=val-743
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 accounting session started session=100872
+error,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101108
+normal,radiusd[822]: Login OK: [64:5a:04:a9:33:e1] from client ap-7 port 1815
+error,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 disconnected after repeated keepalive failures retry_count=11
+error,kernel: wlan0: firmware crashed while processing association response station=a8:6d:aa:42:bc:09 crash_id=101356
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 RSN: PMKSA cache entry added cache_id=100636
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b EAP: peer certificate verified serial=200826
+error,"hostapd: wlan0: STA d8:bb:c1:07:90:ac keepalive timeout exceeded, station removed reason=4 retry_count=11"
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 keepalive response received after retry retry=0 event_id=val-467
+error,kernel: wlan0: firmware crashed during key install for station 6c:5a:b0:2e:91:c8 crash_id=101390
+error,dnsmasq-dhcp[411]: no address available for DHCP request from 64:5a:04:a9:33:e1 pool=3
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 reassociated successfully aid=7
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b RSN: PMKSA cache lookup succeeded cache_id=100628
+error,kernel: wlan0: driver failed to install pairwise key for station b8:27:eb:6d:45:f2 keyidx=2
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b keepalive retry succeeded retry=2 event_id=val-484
+error,hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key timeout after message 3/4 retry=2 event_id=val-998
+normal,"hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1"
+error,hostapd: wlan0: STA dc:a6:32:48:91:0f RADIUS: Access-Reject received session=101244
+error,hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: pairwise key installation failed keyidx=2
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b RSN: PMKSA cache entry added cache_id=100646
+normal,kernel: wlan0: station 64:5a:04:a9:33:e1 power save mode enabled after association interval=45s
+error,hostapd: wlan0: STA a8:6d:aa:42:bc:09 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101068
+error,dnsmasq-dhcp[411]: bad DHCP request from d8:bb:c1:07:90:ac: requested address outside subnet xid=101159
+error,hostapd: wlan0: STA b8:27:eb:6d:45:f2 RADIUS: Access-Reject received session=101274
+error,hostapd: wlan0: STA 70:3a:cb:51:2d:88 PMF required but client did not negotiate management frame protection attempt=101433
+normal,wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=00:25:9c:7a:10:01 id=0 ssid=IoT-Net station=d8:bb:c1:07:90:ac
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 accounting session started session=100860
+normal,kernel: wlan0: station d8:bb:c1:07:90:ac low signal warning cleared signal=-59
+error,hostapd: wlan0: STA a0:36:9f:71:b5:2e disconnected due to excessive frame retries retry_count=13
+error,"hostapd: wlan0: STA f4:f5:d8:7a:19:2b excessive frame retries, disconnecting station retry_count=12"
+normal,kernel: wlan0: station 48:5f:99:c0:21:6a data rate updated to 72.2 Mbps mcs=7 event_id=val-747
+error,kernel: wlan0: connection lost from 00:25:9c:7a:10:01 after beacon timeout station=9c:b6:d0:13:7e:64 seq=101327
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f RSN: PMKSA cache hit cache_id=100650
+error,"hostapd: wlan0: STA a8:6d:aa:42:bc:09 no keepalive ACK after retries, deauthenticating reason=4 retry_count=8"
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key message sent replay_counter=100140
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c changed power save mode: off ps_seq=100336
+normal,radiusd[822]: Login OK: [9c:b6:d0:13:7e:64] from client ap-7 port 1823
+normal,kernel: wlan0: station b8:27:eb:6d:45:f2 power save mode disabled ps_seq=100320
+error,wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=a8:6d:aa:42:bc:09 bssid=64:70:02:9a:bc:11 reason=34 locally_generated=0 seq=101122
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c temporary queue timeout recovered queue=4
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=dc:a6:32:48:91:0f above=1 signal=-52 noise=-95 txrate=54 Mb/s
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 RSN: PMKSA cache entry added cache_id=100616
+error,wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS station=e4:5f:01:aa:3b:77 bssid=00:25:9c:7a:10:02 seq=101311
+error,hostapd: wlan0: STA a0:36:9f:71:b5:2e deauthenticated after keepalive timeout reason=4 retry_count=9
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c reassociated successfully aid=51
+normal,kernel: wlan0: station e4:5f:01:aa:3b:77 power save mode enabled ps_seq=100321
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 RSN: using cached PMKSA for fast reconnect cache_id=100589
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 keepalive response received after retry retry=0 event_id=val-473
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: EAPOL-Key message 2/4 received replay_counter=100155
+error,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 IEEE 802.1X: EAP timeout waiting for response session=101264
+normal,"hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-567"
+normal,kernel: wlan0: station 28:cf:e9:5b:73:a4 power save mode enabled ps_seq=100309
+error,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key timeout after message 1/4 retry=3
+normal,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.158 f4:f5:d8:7a:19:2b xid=100268
+normal,kernel: wlan0: station 48:5f:99:c0:21:6a power save mode enabled ps_seq=100351
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 changed power save mode: on ps_seq=100391
+error,hostapd: wlan0: STA dc:a6:32:48:91:0f RADIUS: Access-Reject received session=101280
+normal,"hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-483"
+normal,kernel: wlan0: station 28:cf:e9:5b:73:a4 data rate updated to 72.2 Mbps mcs=7
+error,"hostapd: wlan0: STA 88:66:5a:d1:72:0c keepalive timeout exceeded, station removed reason=4 retry_count=8"
+error,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) dc:a6:32:48:91:0f ignored because address pool exhausted pool=0
+normal,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.152 5c:e9:1e:33:8f:a1 xid=100262
+error,hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101053
+error,radiusd[822]: Login incorrect: [64:5a:04:a9:33:e1] invalid password from client ap-7
+error,"hostapd: wlan0: STA a0:36:9f:71:b5:2e excessive frame retries, disconnecting station retry_count=13"
+error,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 disconnected due to excessive frame retries retry_count=14
+error,"hostapd: wlan0: STA 9c:b6:d0:13:7e:64 keepalive timeout exceeded, station removed reason=4 retry_count=13"
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac temporary keepalive miss recovered without disconnect retry=2 event_id=val-511
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: EAPOL-Key message 1/4 sent replay_counter=100106
+error,hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: group key handshake timeout retry=1
+normal,dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.124 2c:54:cf:92:10:bd
+error,dnsmasq-dhcp[411]: no address available for DHCP request from b8:27:eb:6d:45:f2 pool=0
+error,wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=f4:f5:d8:7a:19:2b bssid=00:25:9c:7a:10:02 reason=34 locally_generated=0 seq=101132
+normal,kernel: wlan0: station d8:bb:c1:07:90:ac low signal warning cleared signal=-55
+error,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101115
+error,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: group key handshake timeout retry=1 event_id=val-1021
+normal,hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key message received replay_counter=100117
+normal,kernel: wlan0: station e4:5f:01:aa:3b:77 power save mode enabled ps_seq=100411
+error,hostapd: wlan0: STA f4:f5:d8:7a:19:2b disconnected due to excessive frame retries retry_count=12
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=0c:8b:fd:61:c2:14 scan_id=100809
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 temporary queue timeout recovered queue=0
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 RSN: PMKSA cache lookup succeeded cache_id=100653
+error,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101065
+error,hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101124
+normal,kernel: wlan0: station 28:cf:e9:5b:73:a4 data rate updated to 72.2 Mbps mcs=7 event_id=val-759
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b RSN: PMKSA cache hit cache_id=100700
+normal,hostapd: wlan0: STA e4:5f:01:aa:3b:77 FT authentication completed r0kh_id=ap-3
+error,hostapd: wlan0: STA a0:36:9f:71:b5:2e IEEE 802.11: disassociated due to inactivity reason=4 seq=101081
+normal,dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.133 48:5f:99:c0:21:6a lease=12h
+normal,dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) dc:a6:32:48:91:0f xid=100254
+error,wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=28:cf:e9:5b:73:a4 bssid=00:25:9c:7a:10:01 reason=34 locally_generated=0 seq=101047
+error,wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=88:66:5a:d1:72:0c bssid=00:25:9c:7a:10:02 reason=34 locally_generated=0 seq=101092
+normal,dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.172 88:66:5a:d1:72:0c
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 accounting session stopped normally session=100863
+error,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101084
+error,hostapd: wlan0: STA d8:bb:c1:07:90:ac EAP-TLS: client certificate validation failed serial=201213
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 reassociated successfully aid=43
+error,hostapd: wlan0: STA d8:bb:c1:07:90:ac EAP-TLS: client certificate validation failed serial=201285
+error,hostapd: wlan0: STA a8:6d:aa:42:bc:09 RADIUS: server timeout during authentication session=101248
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 authorized vlan=2 event_id=val-94
+error,kernel: wlan0: station 88:66:5a:d1:72:0c link failed due to poor channel conditions signal=-82
+error,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=101030
+error,dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.5.135 d8:bb:c1:07:90:ac lease conflict detected xid=101195
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 FT authentication completed r0kh_id=ap-3
+error,hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key timeout after message 3/4 retry=0 event_id=val-980
+normal,kernel: wlan0: station b8:27:eb:6d:45:f2 power save mode disabled ps_seq=100374
+error,hostapd: wlan0: STA f4:f5:d8:7a:19:2b PMF required but client did not negotiate management frame protection attempt=101438
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=a0:36:9f:71:b5:2e scan_id=100793
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: EAPOL-Key message 4/4 received replay_counter=100121
+normal,kernel: wlan0: station 5c:e9:1e:33:8f:a1 power save mode disabled after traffic idle interval=116s
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 keepalive response received after retry retry=0 event_id=val-557
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f keepalive response received sequence=100524
+normal,hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: associated (aid 42)
+error,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 deauthenticated after keepalive timeout reason=4 retry_count=14
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 accounting session started session=100856
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd changed power save mode: off ps_seq=100378
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd RSN: PMKSA cache entry refreshed cache_id=100612
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 RSN: PMKSA cache lookup succeeded cache_id=100593
+error,hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: disassociated due to inactivity reason=4 seq=101046
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f RSN: PMKSA cache lookup succeeded cache_id=100668
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: EAPOL-Key message 3/4 sent replay_counter=100120
+normal,kernel: wlan0: station b8:27:eb:6d:45:f2 power save mode disabled ps_seq=100392
+error,hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: received EAPOL-Key with invalid MIC replay_counter=100977
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 keepalive response received after retry retry=0 event_id=val-461
+normal,wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=18:64:72:2f:8a:c3 id=0 ssid=OfficeWiFi station=a0:36:9f:71:b5:2e
+error,kernel: wlan0: hardware restart required after station 5c:e9:1e:33:8f:a1 transmit timeout queue=2
+error,hostapd: wlan0: STA d8:bb:c1:07:90:ac IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101069
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=f4:f5:d8:7a:19:2b above=1 signal=-48 noise=-95 txrate=144.4 Mb/s
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac changed power save mode: on ps_seq=100403
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 keepalive response received sequence=100518
+error,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: group key handshake timeout retry=1 event_id=val-949
+normal,hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key message received replay_counter=100099
+error,wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=5c:e9:1e:33:8f:a1 bssid=00:25:9c:7a:10:02 reason=34 locally_generated=0 seq=101072
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: authenticated auth_seq=100068
+error,hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101100
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 signal poll updated signal=-47 noise=-95
+error,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key timeout after message 1/4 retry=1 event_id=val-957
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 transient low ACK rate recovered ack_rate=48
+error,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key timeout after message 1/4 retry=1 event_id=val-993
+normal,kernel: wlan0: station 70:3a:cb:51:2d:88 power save mode enabled after association interval=15s
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd changed power save mode: off ps_seq=100342
+normal,hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: associated (aid 38)
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e IEEE 802.1X: authentication completed successfully session=100829
+normal,"hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-519"
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: authenticated auth_seq=100086
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 temporary keepalive miss recovered without disconnect retry=2 event_id=val-517
+error,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101079
+normal,kernel: wlan0: station a0:36:9f:71:b5:2e data rate updated to 866.7 Mbps mcs=11 event_id=val-739
+error,hostapd: wlan0: STA 48:5f:99:c0:21:6a disconnected due to excessive frame retries retry_count=11
+normal,kernel: wlan0: station 3c:22:fb:10:24:38 power save mode disabled ps_seq=100386
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b keepalive retry succeeded retry=2 event_id=val-466
+normal,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 RSN: using cached PMKSA for fast reconnect cache_id=100669
+normal,dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.123 0c:8b:fd:61:c2:14 client-73
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 RSN: PMKSA cache lookup succeeded cache_id=100623
+normal,wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=00:25:9c:7a:10:02 id=0 ssid=Lab-WPA2 station=9c:b6:d0:13:7e:64
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 keepalive response received after retry retry=0 event_id=val-569
+error,hostapd: wlan0: STA 64:5a:04:a9:33:e1 denied by MAC ACL policy acl_rule=9
+error,wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS station=5c:e9:1e:33:8f:a1 bssid=00:25:9c:7a:10:01 seq=101306
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 changed power save mode: off ps_seq=100348
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f keepalive response received sequence=100542
+error,hostapd: wlan0: STA 2c:54:cf:92:10:bd IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101098
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: EAPOL-Key message 3/4 sent replay_counter=100156
+error,hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: pairwise key installation failed keyidx=0 event_id=val-972
+error,hostapd: wlan0: STA b8:27:eb:6d:45:f2 disconnected after repeated keepalive failures retry_count=10
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 authorized vlan=2 event_id=val-64
+error,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 IEEE 802.1X: EAP timeout waiting for response session=101270
+error,hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: group key handshake timeout retry=3 event_id=val-1015
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 RSN: PMKSA cache hit cache_id=100600
+error,kernel: wlan0: firmware crashed during key install for station d8:bb:c1:07:90:ac crash_id=101375
+normal,kernel: wlan0: station dc:a6:32:48:91:0f power save mode disabled ps_seq=100362
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 keepalive response received after retry retry=0 event_id=val-533
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key message sent replay_counter=100158
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c RSN: PMKSA cache lookup succeeded cache_id=100588
+error,wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS station=6c:5a:b0:2e:91:c8 bssid=18:64:72:2f:8a:c3 seq=101336
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: EAPOL-Key message 3/4 sent replay_counter=100150
+error,radiusd[822]: Login incorrect: [70:3a:cb:51:2d:88] invalid password from client ap-5
+error,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 IEEE 802.1X: EAP timeout waiting for response session=101216
+error,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: received EAPOL-Key with invalid MIC replay_counter=100935
+error,radiusd[822]: Login incorrect: [64:5a:04:a9:33:e1] invalid password from client ap-5
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac changed power save mode: on ps_seq=100313
+normal,dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.159 0c:8b:fd:61:c2:14 client-29
+normal,hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key message received replay_counter=100171
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: EAPOL-Key message 2/4 received replay_counter=100173
+normal,hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key message received replay_counter=100105
+error,hostapd: wlan0: STA d8:bb:c1:07:90:ac EAP-TLS: client certificate validation failed serial=201249
+error,hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: received EAPOL-Key with invalid MIC replay_counter=100947
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: authenticated auth_seq=100050
+error,wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=b8:27:eb:6d:45:f2 bssid=00:25:9c:7a:10:02 reason=34 locally_generated=0 seq=101112
+normal,kernel: wlan0: station 70:3a:cb:51:2d:88 power save mode enabled after association interval=99s
+error,dnsmasq-dhcp[411]: bad DHCP request from 0c:8b:fd:61:c2:14: requested address outside subnet xid=101169
+normal,kernel: wlan0: station 0c:8b:fd:61:c2:14 data rate updated to 300 Mbps mcs=3 event_id=val-755
+error,hostapd: wlan0: STA f4:f5:d8:7a:19:2b IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101114
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e accounting session stopped normally session=100847
+normal,wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=64:70:02:9a:bc:11 id=0 ssid=OfficeWiFi-Guest station=a0:36:9f:71:b5:2e
+error,hostapd: wlan0: STA 88:66:5a:d1:72:0c IEEE 802.11: association rejected unsupported rates status_code=18 attempt=101416
+normal,hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: associated (aid 32)
+error,dnsmasq-dhcp[411]: bad DHCP request from 6c:5a:b0:2e:91:c8: requested address outside subnet xid=101174
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key message sent replay_counter=100104
+error,dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.2.90 f4:f5:d8:7a:19:2b lease conflict detected xid=101150
+normal,dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.113 d8:bb:c1:07:90:ac
+normal,kernel: wlan0: station a0:36:9f:71:b5:2e low signal warning cleared signal=-51
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: EAPOL-Key message 1/4 sent replay_counter=100160
+error,hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key timeout after message 1/4 retry=1 event_id=val-945
+error,hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key timeout after message 3/4 retry=0 event_id=val-1004
+normal,kernel: wlan0: station 9c:b6:d0:13:7e:64 data rate updated to 866.7 Mbps mcs=11
+error,radiusd[822]: Login incorrect: [64:5a:04:a9:33:e1] invalid password from client ap-1
+normal,"hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-543"
+normal,dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) 3c:22:fb:10:24:38 xid=100224
+error,kernel: wlan0: connection lost from 00:25:9c:7a:10:01 after beacon timeout station=e4:5f:01:aa:3b:77 seq=101347
+normal,radiusd[822]: Login OK: [48:5f:99:c0:21:6a] from client ap-3 port 1819
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=6c:5a:b0:2e:91:c8 above=1 signal=-72 noise=-95 txrate=144.4 Mb/s
+normal,dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.111 64:5a:04:a9:33:e1 client-61
+error,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: received EAPOL-Key with invalid MIC replay_counter=101007
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: EAPOL-Key message 3/4 sent replay_counter=100126
+error,hostapd: wlan0: STA 48:5f:99:c0:21:6a PMF required but client did not negotiate management frame protection attempt=101413
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: EAPOL-Key message 4/4 received replay_counter=100157
+error,hostapd: wlan0: STA f4:f5:d8:7a:19:2b IEEE 802.11: disassociated due to inactivity reason=4 seq=101096
+error,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101138
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 keepalive response received after retry retry=0 event_id=val-563
+normal,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 RSN: PMKSA cache entry refreshed cache_id=100687
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=5c:e9:1e:33:8f:a1 above=1 signal=-60 noise=-95 txrate=144.4 Mb/s
+error,dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.4.110 2c:54:cf:92:10:bd lease conflict detected xid=101170
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 temporary queue timeout recovered queue=4
+error,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 0c:8b:fd:61:c2:14 ignored because address pool exhausted pool=3
+error,hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key timeout after message 3/4 retry=0 event_id=val-1016
+error,kernel: wlan0: firmware crashed while processing association response station=28:cf:e9:5b:73:a4 crash_id=101371
+error,dnsmasq-dhcp[411]: no address available for DHCP request from 3c:22:fb:10:24:38 pool=0
+normal,"hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-531"
+normal,hostapd: wlan0: STA e4:5f:01:aa:3b:77 RSN: using cached PMKSA for fast reconnect cache_id=100699
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=b8:27:eb:6d:45:f2 above=1 signal=-64 noise=-95 txrate=54 Mb/s
+normal,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.104 f4:f5:d8:7a:19:2b xid=100214
+error,hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: group key handshake timeout retry=3 event_id=val-1027
+error,hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key timeout after message 3/4 retry=2 event_id=val-950
+error,hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: group key handshake timeout retry=3
+error,hostapd: wlan0: STA f4:f5:d8:7a:19:2b IEEE 802.1X: EAP timeout waiting for response session=101294
+error,hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key timeout after message 3/4 retry=0
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 keepalive retry succeeded retry=2 event_id=val-478
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 RSN: PMKSA cache entry refreshed cache_id=100652
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 changed power save mode: off ps_seq=100294
+normal,hostapd: wlan0: STA e4:5f:01:aa:3b:77 RSN: PMKSA cache entry added cache_id=100681
+normal,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.122 f4:f5:d8:7a:19:2b xid=100232
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 single missed ack recovered on retry retry_count=1
+error,hostapd: wlan0: STA 88:66:5a:d1:72:0c IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101074
+normal,kernel: wlan0: station 0c:8b:fd:61:c2:14 power save mode enabled after association interval=39s
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b RSN: PMKSA cache entry refreshed cache_id=100682
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e temporary keepalive miss recovered without disconnect retry=2 event_id=val-559
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: EAPOL-Key message 2/4 received replay_counter=100179
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: pairwise key handshake completed (RSN) event_id=val-29
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac RSN: PMKSA cache entry added cache_id=100691
+normal,dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) b8:27:eb:6d:45:f2 xid=100230
+normal,kernel: wlan0: station 70:3a:cb:51:2d:88 low signal warning cleared signal=-59
+error,hostapd: wlan0: STA 88:66:5a:d1:72:0c IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101110
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 reassociated successfully aid=3
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac temporary keepalive miss recovered without disconnect retry=2
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 keepalive retry succeeded retry=2
+normal,kernel: wlan0: station f4:f5:d8:7a:19:2b power save mode disabled after traffic idle interval=20s
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b RADIUS: Access-Accept received session=100844
+normal,dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) dc:a6:32:48:91:0f xid=100236
+error,hostapd: wlan0: STA a0:36:9f:71:b5:2e disconnected after repeated keepalive failures retry_count=15
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f reassociated successfully aid=59
+error,kernel: wlan0: driver failed to install pairwise key for station dc:a6:32:48:91:0f keyidx=0
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 retry counter reset after successful frame ack retry_count=0 event_id=val-564
+error,wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS station=64:5a:04:a9:33:e1 bssid=64:70:02:9a:bc:11 seq=101301
+error,dnsmasq-dhcp[411]: bad DHCP request from b8:27:eb:6d:45:f2: requested address outside subnet xid=101184
+error,wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=e4:5f:01:aa:3b:77 bssid=18:64:72:2f:8a:c3 reason=34 locally_generated=0 seq=101077
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: pairwise key handshake completed (RSN) event_id=val-77
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 signal poll updated signal=-69 noise=-95
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 changed power save mode: on ps_seq=100319
+error,hostapd: wlan0: STA dc:a6:32:48:91:0f RADIUS: Access-Reject received session=101262
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e changed power save mode: on ps_seq=100289
+error,kernel: wlan0: hardware restart required after station d8:bb:c1:07:90:ac transmit timeout queue=1
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c changed power save mode: off ps_seq=100426
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: group key handshake completed (RSN) gtk=0 event_id=val-96
+error,kernel: wlan0: firmware crashed while processing association response station=2c:54:cf:92:10:bd crash_id=101386
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: group key handshake completed (RSN) gtk=2 event_id=val-42
+error,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 EAP-TLS: client certificate validation failed serial=201255
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac accounting session updated rx_bytes=1331089 tx_bytes=1742501
+error,"hostapd: wlan0: STA 2c:54:cf:92:10:bd no keepalive ACK after retries, deauthenticating reason=4 retry_count=14"
+error,"hostapd: wlan0: STA 28:cf:e9:5b:73:a4 excessive frame retries, disconnecting station retry_count=9"
+normal,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key message received replay_counter=100165
+error,"kernel: wlan0: station 3c:22:fb:10:24:38 beacon loss detected, connection unstable seq=101340"
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 accounting session started session=100852
+error,hostapd: wlan0: STA a8:6d:aa:42:bc:09 PMF required but client did not negotiate management frame protection attempt=101428
+error,hostapd: wlan0: STA e4:5f:01:aa:3b:77 denied by MAC ACL policy acl_rule=9
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e RSN: using cached PMKSA for fast reconnect cache_id=100649
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=2c:54:cf:92:10:bd above=1 signal=-67 noise=-95 txrate=433.3 Mb/s
+error,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 IEEE 802.1X: EAP timeout waiting for response session=101288
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 changed power save mode: off ps_seq=100402
+normal,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.98 5c:e9:1e:33:8f:a1 xid=100208
+error,hostapd: wlan0: STA b8:27:eb:6d:45:f2 RADIUS: Access-Reject received session=101292
+error,dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.3.115 64:5a:04:a9:33:e1 lease conflict detected xid=101175
+normal,hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: associated (aid 48)
+normal,dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.112 a8:6d:aa:42:bc:09
+error,hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.1X: authentication failed session=101293
+normal,dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.106 2c:54:cf:92:10:bd
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f EAP: peer certificate verified serial=200830
+normal,kernel: wlan0: station b8:27:eb:6d:45:f2 power save mode disabled ps_seq=100428
+normal,dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) 3c:22:fb:10:24:38 xid=100278
+normal,radiusd[822]: Login OK: [d8:bb:c1:07:90:ac] from client ap-3 port 1835
+error,hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: received EAPOL-Key with invalid MIC replay_counter=100983
+error,dnsmasq-dhcp[411]: bad DHCP request from a0:36:9f:71:b5:2e: requested address outside subnet xid=101189
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: pairwise key handshake completed (RSN)
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e RSN: PMKSA cache hit cache_id=100595
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: group key handshake completed (RSN) gtk=0
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c retry counter reset after successful frame ack retry_count=0 event_id=val-552
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: EAPOL-Key message 2/4 received replay_counter=100149
+error,hostapd: wlan0: STA dc:a6:32:48:91:0f deauthenticated after keepalive timeout reason=4 retry_count=8
+error,"hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 excessive frame retries, disconnecting station retry_count=14"
+error,"kernel: wlan0: station 6c:5a:b0:2e:91:c8 beacon loss detected, connection unstable seq=101300"
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 accounting session stopped normally session=100859
+error,hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101035
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 RSN: PMKSA cache entry added cache_id=100671
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e temporary keepalive miss recovered without disconnect retry=2 event_id=val-469
+error,"hostapd: wlan0: STA dc:a6:32:48:91:0f excessive frame retries, disconnecting station retry_count=10"
+normal,kernel: wlan0: station 3c:22:fb:10:24:38 power save mode disabled ps_seq=100440
+normal,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.134 5c:e9:1e:33:8f:a1 xid=100244
+error,kernel: wlan0: firmware crashed while processing association response station=a0:36:9f:71:b5:2e crash_id=101351
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: EAPOL-Key message 4/4 received replay_counter=100187
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 RSN: PMKSA cache lookup succeeded cache_id=100643
+error,hostapd: wlan0: STA 88:66:5a:d1:72:0c denied by MAC ACL policy acl_rule=4
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 keepalive retry succeeded retry=2 event_id=val-532
+error,hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.1X: authentication failed session=101269
+error,hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: received EAPOL-Key with invalid MIC replay_counter=100965
+error,hostapd: wlan0: STA 64:5a:04:a9:33:e1 IEEE 802.11: disassociated due to inactivity reason=4 seq=101121
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac temporary keepalive miss recovered without disconnect retry=2 event_id=val-547
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e changed power save mode: on ps_seq=100379
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac changed power save mode: on ps_seq=100367
+error,radiusd[822]: Login incorrect: [70:3a:cb:51:2d:88] invalid password from client ap-7
+normal,kernel: wlan0: station 64:5a:04:a9:33:e1 low signal warning cleared signal=-55
+normal,kernel: wlan0: station 9c:b6:d0:13:7e:64 data rate updated to 866.7 Mbps mcs=11 event_id=val-751
+error,hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: pairwise key installation failed keyidx=0 event_id=val-984
+error,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 IEEE 802.11: disassociated due to inactivity reason=4 seq=101066
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: pairwise key handshake completed (RSN) event_id=val-41
+error,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 PMF required but client did not negotiate management frame protection attempt=101408
+normal,wpa_supplicant: wlan0: CTRL-EVENT-ROAMED bssid=64:70:02:9a:bc:11 station=5c:e9:1e:33:8f:a1 roam_seq=100784
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: authenticated auth_seq=100020
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f keepalive response received sequence=100578
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key message sent replay_counter=100164
+normal,dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.175 e4:5f:01:aa:3b:77 lease=12h
+error,hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=101024
+error,hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: received EAPOL-Key with invalid MIC replay_counter=100911
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd changed power save mode: off ps_seq=100306
+error,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: group key handshake timeout retry=1
+error,hostapd: wlan0: STA 2c:54:cf:92:10:bd IEEE 802.11: disassociated due to inactivity reason=4 seq=101116
+error,"kernel: wlan0: station b8:27:eb:6d:45:f2 beacon loss detected, connection unstable seq=101310"
+error,kernel: wlan0: station dc:a6:32:48:91:0f link failed due to poor channel conditions signal=-87
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b signal poll updated signal=-59 noise=-95
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e changed power save mode: on ps_seq=100307
+error,wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS station=d8:bb:c1:07:90:ac bssid=64:70:02:9a:bc:11 seq=101321
+normal,kernel: wlan0: station 0c:8b:fd:61:c2:14 power save mode enabled after association interval=75s
+error,hostapd: wlan0: STA f4:f5:d8:7a:19:2b IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101078
+error,kernel: wlan0: firmware crashed during key install for station 64:5a:04:a9:33:e1 crash_id=101355
+normal,wpa_supplicant: wlan0: CTRL-EVENT-ROAMED bssid=18:64:72:2f:8a:c3 station=dc:a6:32:48:91:0f roam_seq=100776
+error,hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100952
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: EAPOL-Key message 4/4 received replay_counter=100175
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd retry counter reset after successful frame ack retry_count=2 event_id=val-486
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key message sent replay_counter=100134
+error,wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=70:3a:cb:51:2d:88 bssid=00:25:9c:7a:10:01 reason=34 locally_generated=0 seq=101127
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c changed power save mode: off ps_seq=100300
+error,hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: group key handshake timeout retry=1
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: EAPOL-Key message 3/4 sent replay_counter=100174
+error,"hostapd: wlan0: STA a8:6d:aa:42:bc:09 excessive frame retries, disconnecting station retry_count=10"
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: EAPOL-Key message 1/4 sent replay_counter=100112
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: EAPOL-Key message 3/4 sent replay_counter=100102
+normal,kernel: wlan0: station 6c:5a:b0:2e:91:c8 power save mode disabled after traffic idle interval=8s
+normal,kernel: wlan0: station 5c:e9:1e:33:8f:a1 power save mode disabled after traffic idle interval=50s
+normal,dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.117 70:3a:cb:51:2d:88 client-67
+normal,kernel: wlan0: station 70:3a:cb:51:2d:88 low signal warning cleared signal=-63
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: EAPOL-Key message 4/4 received replay_counter=100145
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: group key handshake completed (RSN) gtk=2
+error,kernel: wlan0: tx queue stuck for station f4:f5:d8:7a:19:2b; firmware recovery triggered queue=0
+error,hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: pairwise key installation failed keyidx=0
+normal,dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.160 2c:54:cf:92:10:bd
+normal,dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.153 70:3a:cb:51:2d:88 client-23
+normal,dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.119 9c:b6:d0:13:7e:64
+normal,hostapd: wlan0: STA 48:5f:99:c0:21:6a RSN: PMKSA cache entry added cache_id=100621
+error,hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: association rejected unsupported rates status_code=18 attempt=101431
+error,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101048
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: EAPOL-Key message 3/4 sent replay_counter=100108
+error,dnsmasq-dhcp[411]: no address available for DHCP request from 28:cf:e9:5b:73:a4 pool=1
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b RSN: PMKSA cache entry refreshed cache_id=100592
+normal,kernel: wlan0: station a0:36:9f:71:b5:2e data rate updated to 866.7 Mbps mcs=11
+error,kernel: wlan0: tx queue stuck for station 6c:5a:b0:2e:91:c8; firmware recovery triggered queue=2
+error,hostapd: wlan0: STA d8:bb:c1:07:90:ac EAP-TLS: client certificate validation failed serial=201267
+error,"hostapd: wlan0: STA 3c:22:fb:10:24:38 no keepalive ACK after retries, deauthenticating reason=4 retry_count=12"
+normal,hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.1X: authentication completed successfully session=100825
+error,hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: association rejected unsupported rates status_code=18 attempt=101401
+normal,dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.91 28:cf:e9:5b:73:a4 lease=12h
+error,hostapd: wlan0: STA a0:36:9f:71:b5:2e IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101045
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f RSN: using cached PMKSA for fast reconnect cache_id=100614
+normal,kernel: wlan0: station 6c:5a:b0:2e:91:c8 power save mode disabled after traffic idle interval=62s
+error,kernel: wlan0: station 0c:8b:fd:61:c2:14 link failed due to poor channel conditions signal=-87
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f signal poll updated signal=-57 noise=-95
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 RSN: PMKSA cache entry refreshed cache_id=100662
+error,hostapd: wlan0: STA e4:5f:01:aa:3b:77 disconnected after repeated keepalive failures retry_count=15
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 retry counter reset after successful frame ack retry_count=0 event_id=val-492
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 keepalive response received after retry retry=0 event_id=val-521
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: EAPOL-Key message 3/4 sent replay_counter=100138
+normal,kernel: wlan0: station 64:5a:04:a9:33:e1 power save mode enabled after association interval=27s
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 RSN: using cached PMKSA for fast reconnect cache_id=100674
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 transient low ACK rate recovered ack_rate=44
+normal,dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.157 e4:5f:01:aa:3b:77 lease=12h
+error,hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: disassociated due to inactivity reason=4 seq=101131
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 keepalive retry succeeded retry=2
+normal,dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.166 a8:6d:aa:42:bc:09
+error,hostapd: wlan0: STA a8:6d:aa:42:bc:09 IEEE 802.11: disassociated due to inactivity reason=4 seq=101086
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 RSN: PMKSA cache hit cache_id=100605
+normal,kernel: wlan0: station e4:5f:01:aa:3b:77 power save mode enabled ps_seq=100393
+error,dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.1.113 28:cf:e9:5b:73:a4 xid=101173
+error,dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.3.145 0c:8b:fd:61:c2:14 lease conflict detected xid=101205
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 RSN: PMKSA cache entry refreshed cache_id=100607
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c accounting interim update sent session=100858
+normal,wpa_supplicant: wlan0: CTRL-EVENT-ROAMED bssid=64:70:02:9a:bc:11 station=a8:6d:aa:42:bc:09 roam_seq=100780
+error,hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101059
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 retry counter reset after successful frame ack retry_count=2 event_id=val-510
+error,hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key timeout after message 3/4 retry=0
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=2c:54:cf:92:10:bd above=1 signal=-68 noise=-95 txrate=433.3 Mb/s
+error,hostapd: wlan0: STA b8:27:eb:6d:45:f2 PMF required but client did not negotiate management frame protection attempt=101418
+error,hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101058
+normal,kernel: wlan0: station 28:cf:e9:5b:73:a4 power save mode enabled ps_seq=100399
+normal,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key message received replay_counter=100147
+error,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 88:66:5a:d1:72:0c ignored because address pool exhausted pool=4
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: EAPOL-Key message 2/4 received replay_counter=100137
+error,kernel: wlan0: driver failed to install pairwise key for station 48:5f:99:c0:21:6a keyidx=1
+normal,dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.143 a0:36:9f:71:b5:2e
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: group key handshake completed (RSN) gtk=0 event_id=val-36
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f keepalive response received sequence=100488
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 RADIUS: Access-Accept received session=100816
+error,kernel: wlan0: firmware crashed while processing association response station=70:3a:cb:51:2d:88 crash_id=101361
+normal,kernel: wlan0: station 28:cf:e9:5b:73:a4 low signal warning cleared signal=-55
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e temporary keepalive miss recovered without disconnect retry=2 event_id=val-541
+normal,kernel: wlan0: station 28:cf:e9:5b:73:a4 power save mode enabled ps_seq=100435
+normal,dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) 3c:22:fb:10:24:38 xid=100242
+error,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 2c:54:cf:92:10:bd ignored because address pool exhausted pool=4
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 signal poll updated signal=-45 noise=-95
+error,kernel: wlan0: tx queue stuck for station b8:27:eb:6d:45:f2; firmware recovery triggered queue=4
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key message sent replay_counter=100146
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e temporary keepalive miss recovered without disconnect retry=2 event_id=val-577
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 keepalive response received after retry retry=0 event_id=val-509
+error,dnsmasq-dhcp[411]: bad DHCP request from 28:cf:e9:5b:73:a4: requested address outside subnet xid=101209
+normal,wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=00:25:9c:7a:10:02 id=0 ssid=Lab-WPA2 station=a0:36:9f:71:b5:2e
+error,dnsmasq-dhcp[411]: no address available for DHCP request from 48:5f:99:c0:21:6a pool=1
+error,hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101064
+normal,kernel: wlan0: station dc:a6:32:48:91:0f power save mode disabled ps_seq=100344
+error,hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key timeout after message 1/4 retry=3
+normal,hostapd: wlan0: STA e4:5f:01:aa:3b:77 RSN: PMKSA cache entry added cache_id=100591
+normal,kernel: wlan0: station e4:5f:01:aa:3b:77 retry count high but frame delivered retry_count=3
+normal,dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.177 0c:8b:fd:61:c2:14 client-47
+error,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101133
+normal,kernel: wlan0: station 5c:e9:1e:33:8f:a1 power save mode disabled after traffic idle interval=32s
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: group key handshake completed (RSN) gtk=0
+error,dnsmasq-dhcp[411]: no address available for DHCP request from d8:bb:c1:07:90:ac pool=5
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 changed power save mode: off ps_seq=100330
+error,kernel: wlan0: tx queue stuck for station a0:36:9f:71:b5:2e; firmware recovery triggered queue=1
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 RSN: PMKSA cache entry added cache_id=100661
+normal,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.176 f4:f5:d8:7a:19:2b xid=100286
+error,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: group key handshake timeout retry=3 event_id=val-1003
+error,hostapd: wlan0: STA 2c:54:cf:92:10:bd disconnected after repeated keepalive failures retry_count=8
+error,hostapd: wlan0: STA 48:5f:99:c0:21:6a disconnected after repeated keepalive failures retry_count=13
+error,hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key timeout after message 3/4 retry=0 event_id=val-956
+error,hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: pairwise key installation failed keyidx=0 event_id=val-960
+normal,dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) b8:27:eb:6d:45:f2 xid=100284
+error,dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.0.88 b8:27:eb:6d:45:f2 xid=101148
+error,hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key timeout after message 3/4 retry=2 event_id=val-1010
+error,hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: pairwise key installation failed keyidx=0 event_id=val-996
+normal,hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key message received replay_counter=100123
+normal,kernel: wlan0: station b8:27:eb:6d:45:f2 power save mode disabled ps_seq=100338
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd changed power save mode: off ps_seq=100288
+error,dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.4.128 2c:54:cf:92:10:bd xid=101188
+normal,dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.93 64:5a:04:a9:33:e1 client-43
+error,wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=a0:36:9f:71:b5:2e bssid=18:64:72:2f:8a:c3 reason=34 locally_generated=0 seq=101117
+error,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 IEEE 802.11: disassociated due to inactivity reason=4 seq=101111
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: authenticated auth_seq=100014
+error,kernel: wlan0: driver failed to install pairwise key for station 70:3a:cb:51:2d:88 keyidx=1
+error,hostapd: wlan0: STA dc:a6:32:48:91:0f denied by MAC ACL policy acl_rule=4
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b signal poll updated signal=-53 noise=-95
+error,kernel: wlan0: station e4:5f:01:aa:3b:77 link failed due to poor channel conditions signal=-82
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: EAPOL-Key message 3/4 sent replay_counter=100132
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: authenticated auth_seq=100074
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: authenticated auth_seq=100032
+error,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: disassociated due to inactivity reason=4 seq=101101
+normal,wpa_supplicant: wlan0: CTRL-EVENT-ROAMED bssid=00:25:9c:7a:10:02 station=f4:f5:d8:7a:19:2b roam_seq=100772
+error,dnsmasq-dhcp[411]: no address available for DHCP request from 6c:5a:b0:2e:91:c8 pool=2
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e changed power save mode: on ps_seq=100397
+error,dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.0.148 dc:a6:32:48:91:0f xid=101208
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: group key handshake completed (RSN) gtk=0 event_id=val-48
+error,hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101094
+error,kernel: wlan0: tx queue stuck for station 3c:22:fb:10:24:38; firmware recovery triggered queue=2
+normal,kernel: wlan0: station 6c:5a:b0:2e:91:c8 power save mode disabled after traffic idle interval=98s
+normal,wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=00:25:9c:7a:10:01 id=0 ssid=Corp-8021X station=9c:b6:d0:13:7e:64
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c RSN: PMKSA cache entry added cache_id=100606
+error,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key timeout after message 1/4 retry=3 event_id=val-939
+error,kernel: wlan0: station 5c:e9:1e:33:8f:a1 link failed due to poor channel conditions signal=-92
+normal,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.92 6c:5a:b0:2e:91:c8 xid=100202
+normal,kernel: wlan0: station 70:3a:cb:51:2d:88 power save mode enabled after association interval=69s
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac accounting session stopped normally session=100871
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: EAPOL-Key message 4/4 received replay_counter=100133
+error,kernel: wlan0: station 2c:54:cf:92:10:bd link failed due to poor channel conditions signal=-82
+normal,dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.149 d8:bb:c1:07:90:ac
+normal,dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.147 64:5a:04:a9:33:e1 client-17
+normal,hostapd: wlan0: STA 48:5f:99:c0:21:6a RSN: PMKSA cache entry refreshed cache_id=100657
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=48:5f:99:c0:21:6a scan_id=100801
+error,hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: group key handshake timeout retry=3 event_id=val-991
+error,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 IEEE 802.11: disassociated due to inactivity reason=4 seq=101126
+error,hostapd: wlan0: STA 70:3a:cb:51:2d:88 disconnected due to excessive frame retries retry_count=15
+error,wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=70:3a:cb:51:2d:88 bssid=18:64:72:2f:8a:c3 reason=34 locally_generated=0 seq=101037
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c RSN: PMKSA cache entry added cache_id=100696
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 keepalive response received after retry retry=0 event_id=val-485
+normal,kernel: wlan0: station 6c:5a:b0:2e:91:c8 power save mode disabled after traffic idle interval=116s
+error,"kernel: wlan0: station 9c:b6:d0:13:7e:64 beacon loss detected, connection unstable seq=101345"
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 keepalive response received after retry retry=0 event_id=val-539
+normal,kernel: wlan0: station 70:3a:cb:51:2d:88 retry count high but frame delivered retry_count=2
+error,kernel: wlan0: hardware restart required after station e4:5f:01:aa:3b:77 transmit timeout queue=7
+error,dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.4.80 a8:6d:aa:42:bc:09 lease conflict detected xid=101140
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=48:5f:99:c0:21:6a scan_id=100765
+error,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100994
+normal,kernel: wlan0: station dc:a6:32:48:91:0f power save mode disabled ps_seq=100308
+normal,wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=00:25:9c:7a:10:01 id=0 ssid=OfficeWiFi station=9c:b6:d0:13:7e:64
+error,hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key timeout after message 1/4 retry=3 event_id=val-963
+error,hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key timeout after message 1/4 retry=3
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=3c:22:fb:10:24:38 above=1 signal=-75 noise=-95 txrate=54 Mb/s
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd changed power save mode: off ps_seq=100432
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac FT authentication completed r0kh_id=ap-7
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd retry counter reset after successful frame ack retry_count=0 event_id=val-504
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c signal poll updated signal=-49 noise=-95
+normal,wpa_supplicant: wlan0: CTRL-EVENT-ROAMED bssid=00:25:9c:7a:10:02 station=2c:54:cf:92:10:bd roam_seq=100792
+error,dnsmasq-dhcp[411]: no address available for DHCP request from a8:6d:aa:42:bc:09 pool=4
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: EAPOL-Key message 1/4 sent replay_counter=100100
+normal,hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key message received replay_counter=100153
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e RSN: PMKSA cache hit cache_id=100685
+normal,dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.121 e4:5f:01:aa:3b:77 lease=12h
+normal,radiusd[822]: Login OK: [e4:5f:01:aa:3b:77] from client ap-3 port 1843
+error,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 IEEE 802.11: disassociated due to inactivity reason=4 seq=101061
+error,kernel: wlan0: firmware crashed during key install for station 48:5f:99:c0:21:6a crash_id=101395
+error,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: group key handshake timeout retry=3 event_id=val-967
+error,hostapd: wlan0: STA a0:36:9f:71:b5:2e EAP-TLS: client certificate validation failed serial=201261
+normal,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: associated (aid 26)
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 keepalive response received after retry retry=0 event_id=val-581
+error,"hostapd: wlan0: STA 9c:b6:d0:13:7e:64 no keepalive ACK after retries, deauthenticating reason=4 retry_count=9"
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key message sent replay_counter=100176
+error,hostapd: wlan0: STA 2c:54:cf:92:10:bd IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101044
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 authorized vlan=2 event_id=val-22
+normal,kernel: wlan0: station dc:a6:32:48:91:0f power save mode disabled ps_seq=100380
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac IEEE 802.1X: authentication completed successfully session=100817
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e RSN: PMKSA cache entry added cache_id=100631
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key message sent replay_counter=100110
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 authorized vlan=2 event_id=val-58
+normal,kernel: wlan0: station 64:5a:04:a9:33:e1 power save mode enabled after association interval=111s
+error,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 IEEE 802.1X: EAP timeout waiting for response session=101234
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 keepalive retry succeeded retry=2 event_id=val-490
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 RSN: using cached PMKSA for fast reconnect cache_id=100629
+error,kernel: wlan0: firmware crashed during key install for station 2c:54:cf:92:10:bd crash_id=101350
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: pairwise key handshake completed (RSN) event_id=val-59
+normal,kernel: wlan0: station 48:5f:99:c0:21:6a power save mode enabled ps_seq=100333
+normal,kernel: wlan0: station b8:27:eb:6d:45:f2 power save mode disabled ps_seq=100356
+normal,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.128 6c:5a:b0:2e:91:c8 xid=100238
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 RSN: using cached PMKSA for fast reconnect cache_id=100654
+normal,hostapd: wlan0: STA 48:5f:99:c0:21:6a RSN: PMKSA cache hit cache_id=100585
+error,kernel: wlan0: connection lost from 64:70:02:9a:bc:11 after beacon timeout station=a8:6d:aa:42:bc:09 seq=101302
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c RSN: PMKSA cache lookup succeeded cache_id=100678
+error,hostapd: wlan0: STA f4:f5:d8:7a:19:2b IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101060
+error,hostapd: wlan0: STA 64:5a:04:a9:33:e1 deauthenticated after keepalive timeout reason=4 retry_count=9
+error,hostapd: wlan0: STA f4:f5:d8:7a:19:2b IEEE 802.11: authentication failed status_code=13 attempt=101402
+normal,kernel: wlan0: station 28:cf:e9:5b:73:a4 power save mode enabled ps_seq=100363
+normal,kernel: wlan0: station 9c:b6:d0:13:7e:64 low signal warning cleared signal=-63
+normal,kernel: wlan0: station 3c:22:fb:10:24:38 power save mode disabled ps_seq=100422
+error,"hostapd: wlan0: STA 0c:8b:fd:61:c2:14 excessive frame retries, disconnecting station retry_count=9"
+normal,kernel: wlan0: station 3c:22:fb:10:24:38 power save mode disabled ps_seq=100332
+normal,hostapd: wlan0: STA 48:5f:99:c0:21:6a RSN: using cached PMKSA for fast reconnect cache_id=100639
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=3c:22:fb:10:24:38 above=1 signal=-76 noise=-95 txrate=54 Mb/s
+normal,"hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-537"
+normal,kernel: wlan0: station 70:3a:cb:51:2d:88 power save mode enabled after association interval=105s
+error,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.1X: authentication failed session=101281
+error,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 EAP-TLS: client certificate validation failed serial=201237
+normal,"hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-489"
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 RSN: PMKSA cache entry refreshed cache_id=100622
+normal,dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.79 48:5f:99:c0:21:6a lease=12h
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 keepalive response received sequence=100482
+error,"hostapd: wlan0: STA e4:5f:01:aa:3b:77 keepalive timeout exceeded, station removed reason=4 retry_count=9"
+normal,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: associated (aid 44)
+normal,dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.81 70:3a:cb:51:2d:88 client-31
+error,hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: authentication failed status_code=13 attempt=101412
+error,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 5c:e9:1e:33:8f:a1 ignored because address pool exhausted pool=2
+normal,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key message received replay_counter=100111
+error,hostapd: wlan0: STA 70:3a:cb:51:2d:88 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101055
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: EAPOL-Key message 2/4 received replay_counter=100125
+error,kernel: wlan0: driver failed to install pairwise key for station 88:66:5a:d1:72:0c keyidx=2
+error,hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key timeout after message 3/4 retry=0 event_id=val-944
+error,kernel: wlan0: firmware crashed during key install for station 0c:8b:fd:61:c2:14 crash_id=101385
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: EAPOL-Key message 4/4 received replay_counter=100109
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 RSN: using cached PMKSA for fast reconnect cache_id=100599
+normal,kernel: wlan0: station f4:f5:d8:7a:19:2b power save mode disabled after traffic idle interval=56s
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 keepalive retry succeeded retry=2 event_id=val-508
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 signal poll updated signal=-65 noise=-95
+error,hostapd: wlan0: STA 70:3a:cb:51:2d:88 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101109
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key message sent replay_counter=100128
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=64:5a:04:a9:33:e1 scan_id=100797
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 RSN: PMKSA cache entry refreshed cache_id=100672
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f temporary queue timeout recovered queue=4
+normal,hostapd: wlan0: STA e4:5f:01:aa:3b:77 RSN: using cached PMKSA for fast reconnect cache_id=100609
+error,hostapd: wlan0: STA a8:6d:aa:42:bc:09 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101050
+normal,hostapd: wlan0: STA e4:5f:01:aa:3b:77 single missed ack recovered on retry retry_count=1
+error,dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.4.140 88:66:5a:d1:72:0c lease conflict detected xid=101200
+error,dnsmasq-dhcp[411]: bad DHCP request from e4:5f:01:aa:3b:77: requested address outside subnet xid=101149
+error,hostapd: wlan0: STA 3c:22:fb:10:24:38 RADIUS: Access-Reject received session=101268
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 keepalive response received after retry retry=0 event_id=val-479
+error,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101083
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: EAPOL-Key message 2/4 received replay_counter=100143
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 reassociated successfully aid=47
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 keepalive response received after retry retry=0
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c retry counter reset after successful frame ack retry_count=2
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key message sent replay_counter=100188
+error,wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=a8:6d:aa:42:bc:09 bssid=00:25:9c:7a:10:02 reason=34 locally_generated=0 seq=101032
+error,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 IEEE 802.1X: EAP timeout waiting for response session=101282
+error,"hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 no keepalive ACK after retries, deauthenticating reason=4 retry_count=12"
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=88:66:5a:d1:72:0c above=1 signal=-44 noise=-95 txrate=433.3 Mb/s
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 RSN: PMKSA cache entry added cache_id=100626
+normal,dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.83 9c:b6:d0:13:7e:64
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e temporary keepalive miss recovered without disconnect retry=2
+error,hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.1X: authentication failed session=101275
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b authorized vlan=2 event_id=val-34
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac changed power save mode: on ps_seq=100295
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 temporary keepalive miss recovered without disconnect retry=2 event_id=val-463
+error,hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key timeout after message 3/4 retry=2 event_id=val-986
+normal,dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.151 48:5f:99:c0:21:6a lease=12h
+error,"hostapd: wlan0: STA d8:bb:c1:07:90:ac excessive frame retries, disconnecting station retry_count=15"
+error,hostapd: wlan0: STA 64:5a:04:a9:33:e1 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101049
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac RSN: PMKSA cache entry added cache_id=100601
+error,kernel: wlan0: driver failed to install pairwise key for station 6c:5a:b0:2e:91:c8 keyidx=0
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: group key handshake completed (RSN) gtk=2 event_id=val-54
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 RSN: using cached PMKSA for fast reconnect cache_id=100689
+error,hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: pairwise key installation failed keyidx=0
+normal,dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.127 28:cf:e9:5b:73:a4 lease=12h
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 signal poll updated signal=-51 noise=-95
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 IEEE 802.1X: authentication completed successfully session=100845
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c changed power save mode: off ps_seq=100354
+error,hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: disassociated due to inactivity reason=4 seq=101106
+error,hostapd: wlan0: STA 2c:54:cf:92:10:bd RADIUS: server timeout during authentication session=101242
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=6c:5a:b0:2e:91:c8 above=1 signal=-71 noise=-95 txrate=144.4 Mb/s
+error,hostapd: wlan0: STA 88:66:5a:d1:72:0c RADIUS: server timeout during authentication session=101272
+error,hostapd: wlan0: STA a0:36:9f:71:b5:2e IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101135
+normal,dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.171 70:3a:cb:51:2d:88 client-41
+error,hostapd: wlan0: STA e4:5f:01:aa:3b:77 deauthenticated after keepalive timeout reason=4 retry_count=11
+normal,"hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-579"
+error,hostapd: wlan0: STA 3c:22:fb:10:24:38 deauthenticated after keepalive timeout reason=4 retry_count=10
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac changed power save mode: on ps_seq=100439
+normal,kernel: wlan0: station 48:5f:99:c0:21:6a power save mode enabled ps_seq=100405
+normal,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 RSN: PMKSA cache entry refreshed cache_id=100597
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=0c:8b:fd:61:c2:14 scan_id=100773
+error,kernel: wlan0: hardware restart required after station 28:cf:e9:5b:73:a4 transmit timeout queue=1
+error,hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.1X: authentication failed session=101239
+error,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) e4:5f:01:aa:3b:77 ignored because address pool exhausted pool=1
+error,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101119
+error,kernel: wlan0: driver failed to install pairwise key for station a0:36:9f:71:b5:2e keyidx=3
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: EAPOL-Key message 4/4 received replay_counter=100169
+normal,wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=64:70:02:9a:bc:11 id=0 ssid=Lab-WPA2 station=d8:bb:c1:07:90:ac
+error,hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key timeout after message 3/4 retry=0 event_id=val-992
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c transient low ACK rate recovered ack_rate=64
+normal,dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.82 88:66:5a:d1:72:0c
+normal,"hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-561"
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c retry counter reset after successful frame ack retry_count=2 event_id=val-534
+error,hostapd: wlan0: STA 2c:54:cf:92:10:bd IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101134
+normal,kernel: wlan0: station 28:cf:e9:5b:73:a4 low signal warning cleared signal=-51
+normal,dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.137 9c:b6:d0:13:7e:64
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 keepalive retry succeeded retry=2 event_id=val-562
+normal,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key message received replay_counter=100129
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 RSN: PMKSA cache lookup succeeded cache_id=100658
+normal,kernel: wlan0: station b8:27:eb:6d:45:f2 power save mode disabled ps_seq=100410
+normal,dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.155 9c:b6:d0:13:7e:64
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac temporary keepalive miss recovered without disconnect retry=2 event_id=val-565
+error,dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.0.130 dc:a6:32:48:91:0f lease conflict detected xid=101190
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 RSN: PMKSA cache entry refreshed cache_id=100587
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c changed power save mode: off ps_seq=100318
+normal,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key message received replay_counter=100183
+normal,kernel: wlan0: station 70:3a:cb:51:2d:88 data rate updated to 300 Mbps mcs=3
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 RSN: PMKSA cache entry refreshed cache_id=100692
+error,kernel: wlan0: station 28:cf:e9:5b:73:a4 link failed due to poor channel conditions signal=-82
+normal,kernel: wlan0: station 0c:8b:fd:61:c2:14 power save mode enabled after association interval=3s
+error,hostapd: wlan0: STA d8:bb:c1:07:90:ac IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101105
+normal,wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=18:64:72:2f:8a:c3 id=0 ssid=Corp-8021X station=d8:bb:c1:07:90:ac
+error,hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: group key handshake timeout retry=1 event_id=val-961
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 keepalive response received after retry retry=0 event_id=val-491
+normal,hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key message received replay_counter=100159
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd retry counter reset after successful frame ack retry_count=0 event_id=val-576
+normal,kernel: wlan0: station e4:5f:01:aa:3b:77 low signal warning cleared signal=-67
+normal,"hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-507"
+error,hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key timeout after message 3/4 retry=2
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b RSN: PMKSA cache hit cache_id=100610
+normal,dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.145 28:cf:e9:5b:73:a4 lease=12h
+error,hostapd: wlan0: STA a0:36:9f:71:b5:2e EAP-TLS: client certificate validation failed serial=201279
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 temporary keepalive miss recovered without disconnect retry=2 event_id=val-571
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 RSN: PMKSA cache hit cache_id=100670
+normal,dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.141 0c:8b:fd:61:c2:14 client-11
+error,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=101000
+normal,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: associated (aid 8)
+error,"kernel: wlan0: station 28:cf:e9:5b:73:a4 beacon loss detected, connection unstable seq=101335"
+error,hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: pairwise key installation failed keyidx=2 event_id=val-942
+error,"hostapd: wlan0: STA 64:5a:04:a9:33:e1 no keepalive ACK after retries, deauthenticating reason=4 retry_count=11"
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b keepalive retry succeeded retry=2 event_id=val-556
+normal,kernel: wlan0: station 5c:e9:1e:33:8f:a1 power save mode disabled after traffic idle interval=68s
+error,"kernel: wlan0: station a8:6d:aa:42:bc:09 beacon loss detected, connection unstable seq=101320"
+normal,dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.173 9c:b6:d0:13:7e:64
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key message sent replay_counter=100170
+normal,hostapd: wlan0: STA 48:5f:99:c0:21:6a RSN: PMKSA cache hit cache_id=100675
+error,hostapd: wlan0: STA f4:f5:d8:7a:19:2b deauthenticated after keepalive timeout reason=4 retry_count=8
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: EAPOL-Key message 1/4 sent replay_counter=100118
+error,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100958
+error,hostapd: wlan0: STA d8:bb:c1:07:90:ac IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101123
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd changed power save mode: off ps_seq=100396
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b keepalive retry succeeded retry=2
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b RSN: using cached PMKSA for fast reconnect cache_id=100664
+error,kernel: wlan0: connection lost from 00:25:9c:7a:10:02 after beacon timeout station=2c:54:cf:92:10:bd seq=101332
+error,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 deauthenticated after keepalive timeout reason=4 retry_count=15
+error,hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: disassociated due to inactivity reason=4 seq=101071
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 RSN: PMKSA cache entry added cache_id=100641
+normal,kernel: wlan0: station 0c:8b:fd:61:c2:14 data rate updated to 300 Mbps mcs=3
+normal,kernel: wlan0: station e4:5f:01:aa:3b:77 data rate updated to 72.2 Mbps mcs=7
+error,hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: received EAPOL-Key with invalid MIC replay_counter=101019
+error,dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.5.105 9c:b6:d0:13:7e:64 lease conflict detected xid=101165
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd retry counter reset after successful frame ack retry_count=2
+error,hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100970
+error,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key timeout after message 1/4 retry=1 event_id=val-1029
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 changed power save mode: on ps_seq=100427
+error,kernel: wlan0: station 3c:22:fb:10:24:38 link failed due to poor channel conditions signal=-87
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 keepalive response received after retry retry=0 event_id=val-515
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f RSN: PMKSA cache entry added cache_id=100596
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b keepalive retry succeeded retry=2 event_id=val-502
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac changed power save mode: on ps_seq=100331
+error,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 IEEE 802.1X: EAP timeout waiting for response session=101228
+normal,"hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-459"
+error,wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=2c:54:cf:92:10:bd bssid=64:70:02:9a:bc:11 reason=34 locally_generated=0 seq=101062
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 RSN: PMKSA cache entry refreshed cache_id=100697
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e changed power save mode: on ps_seq=100415
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: EAPOL-Key message 1/4 sent replay_counter=100142
+normal,dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.87 0c:8b:fd:61:c2:14 client-37
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 RSN: PMKSA cache hit cache_id=100635
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 RSN: PMKSA cache lookup succeeded cache_id=100688
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: EAPOL-Key message 2/4 received replay_counter=100107
+error,hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: pairwise key installation failed keyidx=0 event_id=val-936
+error,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key timeout after message 1/4 retry=1
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: EAPOL-Key message 2/4 received replay_counter=100185
+normal,dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.167 d8:bb:c1:07:90:ac
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=9c:b6:d0:13:7e:64 scan_id=100805
+error,hostapd: wlan0: STA 88:66:5a:d1:72:0c PMF required but client did not negotiate management frame protection attempt=101398
+error,kernel: wlan0: firmware crashed while processing association response station=9c:b6:d0:13:7e:64 crash_id=101381
+normal,kernel: wlan0: station 3c:22:fb:10:24:38 power save mode disabled ps_seq=100314
+normal,kernel: wlan0: station 0c:8b:fd:61:c2:14 power save mode enabled after association interval=21s
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd RSN: using cached PMKSA for fast reconnect cache_id=100684
+error,hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key timeout after message 3/4 retry=0 event_id=val-968
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 changed power save mode: off ps_seq=100420
+normal,kernel: wlan0: station d8:bb:c1:07:90:ac data rate updated to 866.7 Mbps mcs=11
+error,kernel: wlan0: connection lost from 18:64:72:2f:8a:c3 after beacon timeout station=28:cf:e9:5b:73:a4 seq=101317
+normal,kernel: wlan0: station 28:cf:e9:5b:73:a4 power save mode enabled ps_seq=100417
+error,wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS station=dc:a6:32:48:91:0f bssid=18:64:72:2f:8a:c3 seq=101316
+error,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key timeout after message 1/4 retry=3 event_id=val-1011
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 transient low ACK rate recovered ack_rate=60
+error,hostapd: wlan0: STA f4:f5:d8:7a:19:2b IEEE 802.1X: EAP timeout waiting for response session=101276
+error,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 EAP-TLS: client certificate validation failed serial=201273
+error,kernel: wlan0: firmware crashed during key install for station 5c:e9:1e:33:8f:a1 crash_id=101360
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 RSN: PMKSA cache lookup succeeded cache_id=100608
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac temporary keepalive miss recovered without disconnect retry=2 event_id=val-475
+error,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 EAP-TLS: client certificate validation failed serial=201219
+error,kernel: wlan0: firmware crashed while processing association response station=5c:e9:1e:33:8f:a1 crash_id=101396
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key message sent replay_counter=100182
+normal,dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.165 64:5a:04:a9:33:e1 client-35
+error,hostapd: wlan0: STA a8:6d:aa:42:bc:09 RADIUS: server timeout during authentication session=101230
+normal,kernel: wlan0: station f4:f5:d8:7a:19:2b power save mode disabled after traffic idle interval=92s
+error,dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.0.100 3c:22:fb:10:24:38 lease conflict detected xid=101160
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: authenticated auth_seq=100002
+normal,kernel: wlan0: station 48:5f:99:c0:21:6a low signal warning cleared signal=-59
+error,hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key timeout after message 1/4 retry=1
+error,dnsmasq-dhcp[411]: no address available for DHCP request from 0c:8b:fd:61:c2:14 pool=3
+error,hostapd: wlan0: STA a0:36:9f:71:b5:2e EAP-TLS: client certificate validation failed serial=201225
+normal,wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=00:25:9c:7a:10:01 id=0 ssid=IoT-Net station=9c:b6:d0:13:7e:64
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd retry counter reset after successful frame ack retry_count=2 event_id=val-522
+normal,dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.103 e4:5f:01:aa:3b:77 lease=12h
+error,hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101118
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f keepalive response received sequence=100470
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 keepalive response received sequence=100548
+error,dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.0.118 3c:22:fb:10:24:38 xid=101178
+error,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101090
+normal,kernel: wlan0: station 28:cf:e9:5b:73:a4 power save mode enabled ps_seq=100345
+normal,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.140 f4:f5:d8:7a:19:2b xid=100250
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 keepalive response received sequence=100494
+normal,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.146 6c:5a:b0:2e:91:c8 xid=100256
+error,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101120
+error,hostapd: wlan0: STA 3c:22:fb:10:24:38 RADIUS: Access-Reject received session=101232
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd retry counter reset after successful frame ack retry_count=0 event_id=val-540
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: EAPOL-Key message 4/4 received replay_counter=100139
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=5c:e9:1e:33:8f:a1 above=1 signal=-59 noise=-95 txrate=144.4 Mb/s
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: pairwise key handshake completed (RSN) event_id=val-83
+normal,dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.163 28:cf:e9:5b:73:a4 lease=12h
+error,hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: group key handshake timeout retry=1 event_id=val-997
+error,hostapd: wlan0: STA d8:bb:c1:07:90:ac IEEE 802.11: disassociated due to inactivity reason=4 seq=101051
+normal,wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=18:64:72:2f:8a:c3 id=0 ssid=IoT-Net station=d8:bb:c1:07:90:ac
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: EAPOL-Key message 3/4 sent replay_counter=100144
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c RADIUS: Access-Accept received session=100840
+normal,kernel: wlan0: station e4:5f:01:aa:3b:77 power save mode enabled ps_seq=100339
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: EAPOL-Key message 1/4 sent replay_counter=100154
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b authorized vlan=2 event_id=val-70
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd accounting interim update sent session=100846
+error,"hostapd: wlan0: STA 48:5f:99:c0:21:6a excessive frame retries, disconnecting station retry_count=11"
+normal,kernel: wlan0: station 6c:5a:b0:2e:91:c8 power save mode disabled after traffic idle interval=92s
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 keepalive response received after retry retry=0 event_id=val-545
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac RSN: PMKSA cache lookup succeeded cache_id=100673
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 keepalive response received sequence=100566
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 FT authentication completed r0kh_id=ap-3
+normal,kernel: wlan0: station 70:3a:cb:51:2d:88 power save mode enabled after association interval=33s
+normal,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 single missed ack recovered on retry retry_count=1
+error,hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: received EAPOL-Key with invalid MIC replay_counter=100923
+error,dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.2.120 5c:e9:1e:33:8f:a1 lease conflict detected xid=101180
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac changed power save mode: on ps_seq=100349
+error,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101093
+error,hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101089
+error,hostapd: wlan0: STA 70:3a:cb:51:2d:88 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101073
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd signal poll updated signal=-73 noise=-95
+normal,kernel: wlan0: station f4:f5:d8:7a:19:2b power save mode disabled after traffic idle interval=104s
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 changed power save mode: off ps_seq=100366
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 IEEE 802.1X: authentication completed successfully session=100841
+error,hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: received EAPOL-Key with invalid MIC replay_counter=100905
+error,hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: disassociated due to inactivity reason=4 seq=101041
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: EAPOL-Key message 2/4 received replay_counter=100119
+normal,radiusd[822]: Login OK: [70:3a:cb:51:2d:88] from client ap-7 port 1839
+normal,kernel: wlan0: station 48:5f:99:c0:21:6a power save mode enabled ps_seq=100423
+error,kernel: wlan0: connection lost from 64:70:02:9a:bc:11 after beacon timeout station=5c:e9:1e:33:8f:a1 seq=101342
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e changed power save mode: on ps_seq=100325
+normal,kernel: wlan0: station 6c:5a:b0:2e:91:c8 power save mode disabled after traffic idle interval=26s
+normal,hostapd: wlan0: STA e4:5f:01:aa:3b:77 FT authentication completed r0kh_id=ap-7
+normal,kernel: wlan0: station 70:3a:cb:51:2d:88 power save mode enabled after association interval=117s
+normal,kernel: wlan0: station 6c:5a:b0:2e:91:c8 power save mode disabled after traffic idle interval=80s
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b keepalive retry succeeded retry=2 event_id=val-520
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 authorized vlan=2 event_id=val-28
+error,hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101070
+error,kernel: wlan0: firmware crashed while processing association response station=f4:f5:d8:7a:19:2b crash_id=101366
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 RSN: PMKSA cache entry added cache_id=100586
+error,hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: pairwise key installation failed keyidx=2 event_id=val-966
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 RSN: PMKSA cache hit cache_id=100695
+normal,hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.1X: authentication completed successfully session=100837
+normal,kernel: wlan0: station 64:5a:04:a9:33:e1 power save mode enabled after association interval=9s
+error,hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.1X: authentication failed session=101215
+error,hostapd: wlan0: STA 2c:54:cf:92:10:bd IEEE 802.11: authentication failed status_code=13 attempt=101422
+error,"hostapd: wlan0: STA 2c:54:cf:92:10:bd keepalive timeout exceeded, station removed reason=4 retry_count=10"
+error,hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: received EAPOL-Key with invalid MIC replay_counter=101013
+error,dnsmasq-dhcp[411]: bad DHCP request from 5c:e9:1e:33:8f:a1: requested address outside subnet xid=101144
+error,hostapd: wlan0: STA a8:6d:aa:42:bc:09 IEEE 802.11: association denied status_code=17 AP full attempt=101410
+error,dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.3.85 70:3a:cb:51:2d:88 lease conflict detected xid=101145
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd retry counter reset after successful frame ack retry_count=0
+normal,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: associated (aid 36)
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f accounting session started session=100848
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd RSN: PMKSA cache entry added cache_id=100666
+error,hostapd: wlan0: STA 70:3a:cb:51:2d:88 deauthenticated after keepalive timeout reason=4 retry_count=11
+error,wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS station=b8:27:eb:6d:45:f2 bssid=00:25:9c:7a:10:01 seq=101346
+normal,hostapd: wlan0: STA 48:5f:99:c0:21:6a accounting session stopped normally session=100855
+normal,dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) b8:27:eb:6d:45:f2 xid=100248
+normal,kernel: wlan0: station 70:3a:cb:51:2d:88 power save mode enabled after association interval=51s
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 FT authentication completed r0kh_id=ap-7
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 accounting session updated rx_bytes=1331297 tx_bytes=1742773
+error,dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.5.93 a0:36:9f:71:b5:2e xid=101153
+error,hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key timeout after message 3/4 retry=0
+error,hostapd: wlan0: STA 88:66:5a:d1:72:0c disconnected after repeated keepalive failures retry_count=14
+error,dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.1.125 e4:5f:01:aa:3b:77 lease conflict detected xid=101185
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key message sent replay_counter=100122
+normal,dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) dc:a6:32:48:91:0f xid=100200
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: authenticated auth_seq=100008
+error,dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.1.95 28:cf:e9:5b:73:a4 lease conflict detected xid=101155
+normal,"hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-477"
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 EAP: peer certificate verified serial=200842
+normal,hostapd: wlan0: STA 48:5f:99:c0:21:6a FT authentication completed r0kh_id=ap-7
+normal,radiusd[822]: Login OK: [a0:36:9f:71:b5:2e] from client ap-3 port 1811
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: EAPOL-Key message 1/4 sent replay_counter=100148
+error,hostapd: wlan0: STA 64:5a:04:a9:33:e1 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101103
+error,dnsmasq-dhcp[411]: no address available for DHCP request from a0:36:9f:71:b5:2e pool=5
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac temporary keepalive miss recovered without disconnect retry=2 event_id=val-583
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b temporary queue timeout recovered queue=0
+error,hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: received EAPOL-Key with invalid MIC replay_counter=101031
+normal,"hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1"
+error,hostapd: wlan0: STA a0:36:9f:71:b5:2e IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101099
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e accounting session updated rx_bytes=1331245 tx_bytes=1742705
+error,kernel: wlan0: station 64:5a:04:a9:33:e1 link failed due to poor channel conditions signal=-87
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 retry counter reset after successful frame ack retry_count=0 event_id=val-528
+error,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100946
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 RADIUS: Access-Accept received session=100836
+error,hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101125
+error,hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: pairwise key installation failed keyidx=2 event_id=val-990
+error,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 IEEE 802.11: disassociated due to inactivity reason=4 seq=101036
+error,radiusd[822]: Login incorrect: [0c:8b:fd:61:c2:14] invalid password from client ap-5
+normal,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 RSN: PMKSA cache lookup succeeded cache_id=100633
+error,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.1X: authentication failed session=101245
+normal,"hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-525"
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 RSN: PMKSA cache entry added cache_id=100656
+error,hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: pairwise key installation failed keyidx=0 event_id=val-1020
+error,"hostapd: wlan0: STA a0:36:9f:71:b5:2e no keepalive ACK after retries, deauthenticating reason=4 retry_count=11"
+error,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100964
+error,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100982
+error,hostapd: wlan0: STA 64:5a:04:a9:33:e1 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101085
+error,hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: pairwise key installation failed keyidx=2 event_id=val-1026
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 accounting session updated rx_bytes=1331141 tx_bytes=1742569
+normal,dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.85 e4:5f:01:aa:3b:77 lease=12h
+error,kernel: wlan0: connection lost from 18:64:72:2f:8a:c3 after beacon timeout station=a0:36:9f:71:b5:2e seq=101297
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c RSN: PMKSA cache hit cache_id=100660
+error,kernel: wlan0: station d8:bb:c1:07:90:ac link failed due to poor channel conditions signal=-92
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 keepalive response received after retry retry=0
+error,hostapd: wlan0: STA 2c:54:cf:92:10:bd deauthenticated after keepalive timeout reason=4 retry_count=12
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=a8:6d:aa:42:bc:09 above=1 signal=-55 noise=-95 txrate=433.3 Mb/s
+error,hostapd: wlan0: STA dc:a6:32:48:91:0f disconnected due to excessive frame retries retry_count=10
+error,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: authentication failed status_code=13 attempt=101407
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: EAPOL-Key message 1/4 sent replay_counter=100172
+normal,"hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-573"
+error,wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=dc:a6:32:48:91:0f bssid=64:70:02:9a:bc:11 reason=34 locally_generated=0 seq=101082
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 authorized vlan=2
+normal,hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: pairwise key handshake completed (RSN) event_id=val-65
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c retry counter reset after successful frame ack retry_count=2 event_id=val-570
+error,kernel: wlan0: tx queue stuck for station a8:6d:aa:42:bc:09; firmware recovery triggered queue=6
+normal,kernel: wlan0: station dc:a6:32:48:91:0f power save mode disabled ps_seq=100416
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=9c:b6:d0:13:7e:64 scan_id=100769
+normal,hostapd: wlan0: STA 48:5f:99:c0:21:6a RSN: PMKSA cache lookup succeeded cache_id=100603
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: EAPOL-Key message 3/4 sent replay_counter=100186
+normal,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 keepalive retry succeeded retry=2 event_id=val-550
+error,radiusd[822]: Login incorrect: [0c:8b:fd:61:c2:14] invalid password from client ap-7
+error,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: received EAPOL-Key with invalid MIC replay_counter=100917
+normal,"hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1"
+error,hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: group key handshake timeout retry=3 event_id=val-955
+error,hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: group key handshake timeout retry=3 event_id=val-943
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 accounting interim update sent session=100850
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c retry counter reset after successful frame ack retry_count=0 event_id=val-480
+error,hostapd: wlan0: STA 88:66:5a:d1:72:0c IEEE 802.11: disassociated due to inactivity reason=4 seq=101056
+error,hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.1X: authentication failed session=101221
+error,hostapd: wlan0: STA a0:36:9f:71:b5:2e PMF required but client did not negotiate management frame protection attempt=101423
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: group key handshake completed (RSN) gtk=2 event_id=val-66
+error,hostapd: wlan0: STA 64:5a:04:a9:33:e1 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101139
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 EAP: peer certificate verified serial=200814
+normal,kernel: wlan0: station dc:a6:32:48:91:0f power save mode disabled ps_seq=100398
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 signal poll updated signal=-67 noise=-95
+normal,wpa_supplicant: wlan0: CTRL-EVENT-ROAMED bssid=00:25:9c:7a:10:01 station=f4:f5:d8:7a:19:2b roam_seq=100808
+error,hostapd: wlan0: STA a0:36:9f:71:b5:2e IEEE 802.11: association denied status_code=17 AP full attempt=101405
+error,wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=48:5f:99:c0:21:6a bssid=00:25:9c:7a:10:01 reason=34 locally_generated=0 seq=101107
+normal,dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) b8:27:eb:6d:45:f2 xid=100194
+error,hostapd: wlan0: STA a0:36:9f:71:b5:2e IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101063
+error,kernel: wlan0: hardware restart required after station dc:a6:32:48:91:0f transmit timeout queue=4
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b accounting interim update sent session=100862
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 reassociated successfully aid=35
+normal,kernel: wlan0: station e4:5f:01:aa:3b:77 power save mode enabled ps_seq=100375
+normal,kernel: wlan0: station 70:3a:cb:51:2d:88 power save mode enabled after association interval=87s
+normal,kernel: wlan0: station dc:a6:32:48:91:0f power save mode disabled ps_seq=100290
+error,hostapd: wlan0: STA b8:27:eb:6d:45:f2 RADIUS: Access-Reject received session=101256
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 retry counter reset after successful frame ack retry_count=0
+error,"hostapd: wlan0: STA 28:cf:e9:5b:73:a4 keepalive timeout exceeded, station removed reason=4 retry_count=11"
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c retry counter reset after successful frame ack retry_count=0
+error,hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key timeout after message 1/4 retry=1 event_id=val-981
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 temporary queue timeout recovered queue=0
+normal,wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=28:cf:e9:5b:73:a4 scan_id=100777
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c changed power save mode: off ps_seq=100372
+error,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 6c:5a:b0:2e:91:c8 ignored because address pool exhausted pool=2
+normal,dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.130 a8:6d:aa:42:bc:09
+error,hostapd: wlan0: STA 2c:54:cf:92:10:bd RADIUS: server timeout during authentication session=101224
+normal,kernel: wlan0: station f4:f5:d8:7a:19:2b power save mode disabled after traffic idle interval=2s
+normal,dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.109 28:cf:e9:5b:73:a4 lease=12h
+error,hostapd: wlan0: STA 2c:54:cf:92:10:bd RADIUS: server timeout during authentication session=101278
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e changed power save mode: on ps_seq=100433
+normal,dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.97 48:5f:99:c0:21:6a lease=12h
+normal,kernel: wlan0: station 64:5a:04:a9:33:e1 power save mode enabled after association interval=93s
+error,hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key timeout after message 3/4 retry=2 event_id=val-1022
+error,hostapd: wlan0: STA a8:6d:aa:42:bc:09 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101104
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: authenticated auth_seq=100038
+normal,"hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-549"
+error,hostapd: wlan0: STA 88:66:5a:d1:72:0c RADIUS: server timeout during authentication session=101290
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: authenticated auth_seq=100044
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: EAPOL-Key message 1/4 sent replay_counter=100178
+error,hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: association denied status_code=17 AP full attempt=101430
+error,"hostapd: wlan0: STA 48:5f:99:c0:21:6a no keepalive ACK after retries, deauthenticating reason=4 retry_count=9"
+error,hostapd: wlan0: STA 70:3a:cb:51:2d:88 IEEE 802.11: association denied status_code=17 AP full attempt=101415
+normal,kernel: wlan0: station 28:cf:e9:5b:73:a4 power save mode enabled ps_seq=100327
+error,kernel: wlan0: station 9c:b6:d0:13:7e:64 link failed due to poor channel conditions signal=-92
+normal,dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.129 64:5a:04:a9:33:e1 client-79
+error,hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: disassociated due to inactivity reason=4 seq=101076
+error,hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.1X: authentication failed session=101287
+normal,hostapd: wlan0: STA f4:f5:d8:7a:19:2b reassociated successfully aid=55
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: EAPOL-Key message 4/4 received replay_counter=100103
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: group key handshake completed (RSN) gtk=2
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: EAPOL-Key message 2/4 received replay_counter=100113
+normal,kernel: wlan0: station 0c:8b:fd:61:c2:14 power save mode enabled after association interval=93s
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: EAPOL-Key message 4/4 received replay_counter=100151
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 changed power save mode: on ps_seq=100301
+normal,radiusd[822]: Login OK: [28:cf:e9:5b:73:a4] from client ap-7 port 1831
+normal,kernel: wlan0: station 48:5f:99:c0:21:6a power save mode enabled ps_seq=100369
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: authenticated auth_seq=100080
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: group key handshake completed (RSN) gtk=0 event_id=val-60
+error,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 deauthenticated after keepalive timeout reason=4 retry_count=13
+normal,hostapd: wlan0: STA d8:bb:c1:07:90:ac single missed ack recovered on retry retry_count=1
+error,hostapd: wlan0: STA a8:6d:aa:42:bc:09 deauthenticated after keepalive timeout reason=4 retry_count=14
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 accounting interim update sent session=100870
+normal,dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.169 48:5f:99:c0:21:6a lease=12h
+normal,wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=00:25:9c:7a:10:01 id=0 ssid=OfficeWiFi station=d8:bb:c1:07:90:ac
+error,dnsmasq-dhcp[411]: bad DHCP request from 88:66:5a:d1:72:0c: requested address outside subnet xid=101164
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 RSN: PMKSA cache hit cache_id=100690
+normal,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 accounting session updated rx_bytes=1331037 tx_bytes=1742433
+normal,kernel: wlan0: station 64:5a:04:a9:33:e1 power save mode enabled after association interval=63s
+normal,hostapd: wlan0: STA 64:5a:04:a9:33:e1 IEEE 802.1X: authentication completed successfully session=100833
+normal,hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key message sent replay_counter=100116
+error,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 IEEE 802.11: authentication failed status_code=13 attempt=101417
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 keepalive response received after retry retry=0 event_id=val-575
+error,hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100910
+normal,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 temporary keepalive miss recovered without disconnect retry=2
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: pairwise key handshake completed (RSN) event_id=val-89
+error,hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: pairwise key installation failed keyidx=0
+normal,hostapd: wlan0: STA 88:66:5a:d1:72:0c RSN: PMKSA cache entry refreshed cache_id=100642
+error,hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: association rejected unsupported rates status_code=18 attempt=101406
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 retry counter reset after successful frame ack retry_count=2 event_id=val-546
+error,hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.1X: authentication failed session=101251
+normal,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 RSN: PMKSA cache entry refreshed cache_id=100647
+normal,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 accounting session stopped normally session=100867
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 keepalive retry succeeded retry=2 event_id=val-580
+normal,hostapd: wlan0: STA a8:6d:aa:42:bc:09 changed power save mode: off ps_seq=100312
+error,hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key timeout after message 1/4 retry=1
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 keepalive response received sequence=100500
+error,hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: association denied status_code=17 AP full attempt=101425
+normal,hostapd: wlan0: STA b8:27:eb:6d:45:f2 keepalive response received sequence=100464
+error,dnsmasq-dhcp[411]: bad DHCP request from 48:5f:99:c0:21:6a: requested address outside subnet xid=101179
+error,kernel: wlan0: firmware crashed during key install for station dc:a6:32:48:91:0f crash_id=101370
+error,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: received EAPOL-Key with invalid MIC replay_counter=100989
+error,hostapd: wlan0: STA 9c:b6:d0:13:7e:64 IEEE 802.11: association denied status_code=17 AP full attempt=101435
+normal,hostapd: wlan0: STA 48:5f:99:c0:21:6a single missed ack recovered on retry retry_count=1
+normal,hostapd: wlan0: STA 2c:54:cf:92:10:bd RSN: using cached PMKSA for fast reconnect cache_id=100594
+normal,kernel: wlan0: station b8:27:eb:6d:45:f2 power save mode disabled ps_seq=100302
+error,hostapd: wlan0: STA 0c:8b:fd:61:c2:14 PMF required but client did not negotiate management frame protection attempt=101403
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 RSN: using cached PMKSA for fast reconnect cache_id=100634
+error,hostapd: wlan0: STA dc:a6:32:48:91:0f disconnected after repeated keepalive failures retry_count=12
+error,"hostapd: wlan0: STA 28:cf:e9:5b:73:a4 no keepalive ACK after retries, deauthenticating reason=4 retry_count=15"
+normal,wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=00:25:9c:7a:10:02 id=0 ssid=OfficeWiFi-Guest station=9c:b6:d0:13:7e:64
+error,dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 9c:b6:d0:13:7e:64 ignored because address pool exhausted pool=5
+error,"hostapd: wlan0: STA 3c:22:fb:10:24:38 keepalive timeout exceeded, station removed reason=4 retry_count=8"
+error,hostapd: wlan0: STA b8:27:eb:6d:45:f2 RADIUS: Access-Reject received session=101220
+normal,hostapd: wlan0: STA dc:a6:32:48:91:0f RSN: PMKSA cache entry added cache_id=100686
+normal,hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: EAPOL-Key message 4/4 received replay_counter=100127
+normal,hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 RSN: PMKSA cache lookup succeeded cache_id=100598
+error,hostapd: wlan0: STA 88:66:5a:d1:72:0c RADIUS: server timeout during authentication session=101236

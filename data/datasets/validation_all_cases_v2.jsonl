@@ -1,0 +1,1500 @@
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 RADIUS: Access-Reject received session=101238", "label": "error"}
+{"input": "kernel: wlan0: connection lost from 18:64:72:2f:8a:c3 after beacon timeout station=64:5a:04:a9:33:e1 seq=101337", "label": "error"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: pairwise key handshake completed (RSN) event_id=val-95", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: pairwise key installation failed keyidx=2 event_id=val-954", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=28:cf:e9:5b:73:a4 bssid=18:64:72:2f:8a:c3 reason=34 locally_generated=0 seq=101137", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f signal poll updated signal=-63 noise=-95", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 RSN: using cached PMKSA for fast reconnect cache_id=100604", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 disconnected after repeated keepalive failures retry_count=13", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) d8:bb:c1:07:90:ac ignored because address pool exhausted pool=5", "label": "error"}
+{"input": "kernel: wlan0: station 64:5a:04:a9:33:e1 data rate updated to 300 Mbps mcs=3", "label": "normal"}
+{"input": "kernel: wlan0: station 64:5a:04:a9:33:e1 power save mode enabled after association interval=81s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101038", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 EAP: peer certificate verified serial=200834", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100934", "label": "error"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 keepalive response received sequence=100512", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.5.123 9c:b6:d0:13:7e:64 xid=101183", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.131 d8:bb:c1:07:90:ac", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101075", "label": "error"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key timeout after message 3/4 retry=2 event_id=val-962", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.110 6c:5a:b0:2e:91:c8 xid=100220", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 RSN: PMKSA cache hit cache_id=100645", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 keepalive retry succeeded retry=2 event_id=val-544", "label": "normal"}
+{"input": "kernel: wlan0: station f4:f5:d8:7a:19:2b beacon loss detected, connection unstable seq=101330", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 changed power save mode: off ps_seq=100438", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 IEEE 802.11: authentication failed status_code=13 attempt=101427", "label": "error"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101054", "label": "error"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key timeout after message 1/4 retry=3 event_id=val-1023", "label": "error"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: pairwise key handshake completed (RSN) event_id=val-71", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: authentication failed status_code=13 attempt=101437", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.3.133 64:5a:04:a9:33:e1 xid=101193", "label": "error"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 RADIUS: Access-Reject received session=101286", "label": "error"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 keepalive response received sequence=100530", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: EAPOL-Key message 4/4 received replay_counter=100163", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101080", "label": "error"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 RSN: PMKSA cache entry refreshed cache_id=100602", "label": "normal"}
+{"input": "kernel: wlan0: station 5c:e9:1e:33:8f:a1 power save mode disabled after traffic idle interval=86s", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) 3c:22:fb:10:24:38 xid=100260", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS station=2c:54:cf:92:10:bd bssid=18:64:72:2f:8a:c3 seq=101296", "label": "error"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 denied by MAC ACL policy acl_rule=4", "label": "error"}
+{"input": "kernel: wlan0: station e4:5f:01:aa:3b:77 power save mode enabled ps_seq=100429", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 disconnected due to excessive frame retries retry_count=8", "label": "error"}
+{"input": "radiusd[822]: Login incorrect: [70:3a:cb:51:2d:88] invalid password from client ap-1 event_id=val-1289", "label": "error"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-495", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101040", "label": "error"}
+{"input": "kernel: wlan0: station d8:bb:c1:07:90:ac data rate updated to 866.7 Mbps mcs=11 event_id=val-763", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 IEEE 802.11: association rejected unsupported rates status_code=18 attempt=101421", "label": "error"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: pairwise key handshake completed (RSN)", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 RSN: using cached PMKSA for fast reconnect cache_id=100694", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: EAPOL-Key message 2/4 received replay_counter=100161", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101034", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.80 5c:e9:1e:33:8f:a1 xid=100190", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101129", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 EAP-TLS: client certificate validation failed serial=201291", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key timeout after message 3/4 retry=2 event_id=val-974", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: EAPOL-Key message 3/4 sent replay_counter=100180", "label": "normal"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 excessive frame retries, disconnecting station retry_count=15", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac changed power save mode: on ps_seq=100421", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 authorized vlan=2 event_id=val-46", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 RADIUS: server timeout during authentication session=101212", "label": "error"}
+{"input": "kernel: wlan0: tx queue stuck for station 48:5f:99:c0:21:6a; firmware recovery triggered queue=7", "label": "error"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.1X: authentication completed successfully session=100813", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key timeout after message 3/4 retry=2", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: EAPOL-Key message 3/4 sent replay_counter=100162", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: associated (aid 50)", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 changed power save mode: on ps_seq=100373", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=e4:5f:01:aa:3b:77 scan_id=100789", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: EAPOL-Key message 1/4 sent replay_counter=100136", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 denied by MAC ACL policy acl_rule=9", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.135 70:3a:cb:51:2d:88 client-5", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key message received replay_counter=100177", "label": "normal"}
+{"input": "kernel: wlan0: station 48:5f:99:c0:21:6a data rate updated to 72.2 Mbps mcs=7", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101043", "label": "error"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 keepalive timeout exceeded, station removed reason=4 retry_count=13", "label": "error"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 keepalive response received sequence=100554", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: authenticated auth_seq=100062", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: received EAPOL-Key with invalid MIC replay_counter=100971", "label": "error"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 keepalive timeout exceeded, station removed reason=4 retry_count=12", "label": "error"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: authenticated auth_seq=100026", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.107 a0:36:9f:71:b5:2e", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=b8:27:eb:6d:45:f2 above=1 signal=-63 noise=-95 txrate=54 Mb/s", "label": "normal"}
+{"input": "kernel: wlan0: station 64:5a:04:a9:33:e1 retry count high but frame delivered retry_count=2", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: EAPOL-Key message 3/4 sent replay_counter=100114", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 reassociated successfully aid=63", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f keepalive response received sequence=100506", "label": "normal"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: received EAPOL-Key with invalid MIC replay_counter=100929", "label": "error"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 RSN: PMKSA cache hit cache_id=100620", "label": "normal"}
+{"input": "kernel: wlan0: station 3c:22:fb:10:24:38 power save mode disabled ps_seq=100296", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 RADIUS: server timeout during authentication session=101266", "label": "error"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key message received replay_counter=100135", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.161 a0:36:9f:71:b5:2e", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 RSN: PMKSA cache entry refreshed cache_id=100627", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: bad DHCP request from 70:3a:cb:51:2d:88: requested address outside subnet xid=101199", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f keepalive timeout exceeded, station removed reason=4 retry_count=14", "label": "error"}
+{"input": "kernel: wlan0: station 48:5f:99:c0:21:6a beacon loss detected, connection unstable seq=101305", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key timeout after message 3/4 retry=0 event_id=val-1028", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-ROAMED bssid=00:25:9c:7a:10:01 station=b8:27:eb:6d:45:f2 roam_seq=100788", "label": "normal"}
+{"input": "kernel: wlan0: station 48:5f:99:c0:21:6a power save mode enabled ps_seq=100297", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 keepalive retry succeeded retry=2 event_id=val-514", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac changed power save mode: on ps_seq=100385", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-ROAMED bssid=64:70:02:9a:bc:11 station=3c:22:fb:10:24:38 roam_seq=100800", "label": "normal"}
+{"input": "kernel: wlan0: station 0c:8b:fd:61:c2:14 power save mode enabled after association interval=105s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: EAPOL-Key message 1/4 sent replay_counter=100184", "label": "normal"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 keepalive response received after retry retry=0 event_id=val-551", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 IEEE 802.1X: EAP timeout waiting for response session=101252", "label": "error"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: association rejected unsupported rates status_code=18 attempt=101436", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac IEEE 802.11: association rejected unsupported rates status_code=18 attempt=101411", "label": "error"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 FT authentication completed r0kh_id=ap-7", "label": "normal"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: received EAPOL-Key with invalid MIC replay_counter=101001", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 changed power save mode: on ps_seq=100337", "label": "normal"}
+{"input": "kernel: wlan0: firmware crashed during key install for station e4:5f:01:aa:3b:77 crash_id=101365", "label": "error"}
+{"input": "kernel: wlan0: station dc:a6:32:48:91:0f power save mode disabled ps_seq=100326", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.1X: authentication failed session=101263", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100904", "label": "error"}
+{"input": "kernel: wlan0: connection lost from 64:70:02:9a:bc:11 after beacon timeout station=3c:22:fb:10:24:38 seq=101322", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 temporary keepalive miss recovered without disconnect retry=2 event_id=val-535", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b IEEE 802.1X: EAP timeout waiting for response session=101222", "label": "error"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c changed power save mode: off ps_seq=100390", "label": "normal"}
+{"input": "kernel: wlan0: station 3c:22:fb:10:24:38 power save mode disabled ps_seq=100404", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 EAP: peer certificate verified serial=200838", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) 3c:22:fb:10:24:38 xid=100206", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 RADIUS: Access-Reject received session=101250", "label": "error"}
+{"input": "kernel: wlan0: driver failed to install pairwise key for station a8:6d:aa:42:bc:09 keyidx=0", "label": "error"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: associated (aid 14)", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 RADIUS: Access-Accept received session=100820", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.148 a8:6d:aa:42:bc:09", "label": "normal"}
+{"input": "radiusd[822]: Login OK: [0c:8b:fd:61:c2:14] from client ap-3 port 1827", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=a8:6d:aa:42:bc:09 above=1 signal=-56 noise=-95 txrate=433.3 Mb/s", "label": "normal"}
+{"input": "kernel: wlan0: station 0c:8b:fd:61:c2:14 power save mode enabled after association interval=111s", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=64:70:02:9a:bc:11 id=0 ssid=OfficeWiFi-Guest station=d8:bb:c1:07:90:ac", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 temporary keepalive miss recovered without disconnect retry=2 event_id=val-553", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 accounting session stopped normally session=100851", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac temporary keepalive miss recovered without disconnect retry=2 event_id=val-493", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: no address available for DHCP request from 9c:b6:d0:13:7e:64 pool=5", "label": "error"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key timeout after message 1/4 retry=3 event_id=val-975", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.3.103 70:3a:cb:51:2d:88 xid=101163", "label": "error"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b keepalive retry succeeded retry=2 event_id=val-538", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: group key handshake timeout retry=1 event_id=val-1009", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd transient low ACK rate recovered ack_rate=52", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 keepalive response received after retry retry=0", "label": "normal"}
+{"input": "radiusd[822]: Login incorrect: [70:3a:cb:51:2d:88] invalid password from client ap-1", "label": "error"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 keepalive response received sequence=100446", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 changed power save mode: on ps_seq=100409", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.1.143 e4:5f:01:aa:3b:77 xid=101203", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: group key handshake timeout retry=1 event_id=val-985", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 keepalive response received after retry retry=0 event_id=val-497", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=3c:22:fb:10:24:38 bssid=00:25:9c:7a:10:02 reason=34 locally_generated=0 seq=101052", "label": "error"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: pairwise key handshake completed (RSN) event_id=val-53", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 RSN: PMKSA cache entry added cache_id=100651", "label": "normal"}
+{"input": "kernel: wlan0: connection lost from 00:25:9c:7a:10:01 after beacon timeout station=70:3a:cb:51:2d:88 seq=101307", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS station=0c:8b:fd:61:c2:14 bssid=00:25:9c:7a:10:02 seq=101331", "label": "error"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 RSN: PMKSA cache lookup succeeded cache_id=100683", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 EAP: peer certificate verified serial=200818", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key timeout after message 1/4 retry=1 event_id=val-1017", "label": "error"}
+{"input": "kernel: wlan0: station 48:5f:99:c0:21:6a retry count high but frame delivered retry_count=3", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 IEEE 802.1X: EAP timeout waiting for response session=101246", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 RSN: using cached PMKSA for fast reconnect cache_id=100679", "label": "normal"}
+{"input": "kernel: wlan0: station dc:a6:32:48:91:0f power save mode disabled ps_seq=100434", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e EAP-TLS: client certificate validation failed serial=201243", "label": "error"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: group key handshake timeout retry=1 event_id=val-937", "label": "error"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e changed power save mode: on ps_seq=100361", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 changed power save mode: on ps_seq=100355", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=18:64:72:2f:8a:c3 id=0 ssid=Corp-8021X station=a0:36:9f:71:b5:2e", "label": "normal"}
+{"input": "kernel: wlan0: firmware crashed during key install for station 88:66:5a:d1:72:0c crash_id=101380", "label": "error"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: pairwise key handshake completed (RSN) event_id=val-35", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac temporary keepalive miss recovered without disconnect retry=2 event_id=val-529", "label": "normal"}
+{"input": "radiusd[822]: Login incorrect: [64:5a:04:a9:33:e1] invalid password from client ap-3", "label": "error"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e RSN: PMKSA cache entry refreshed cache_id=100667", "label": "normal"}
+{"input": "radiusd[822]: Login incorrect: [0c:8b:fd:61:c2:14] invalid password from client ap-1", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd RADIUS: Access-Accept received session=100828", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: received EAPOL-Key with invalid MIC replay_counter=100941", "label": "error"}
+{"input": "kernel: wlan0: firmware crashed while processing association response station=3c:22:fb:10:24:38 crash_id=101376", "label": "error"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key message sent replay_counter=100152", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 RSN: PMKSA cache lookup succeeded cache_id=100618", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=0c:8b:fd:61:c2:14 bssid=18:64:72:2f:8a:c3 reason=34 locally_generated=0 seq=101097", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.115 48:5f:99:c0:21:6a lease=12h", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 accounting interim update sent session=100854", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 disconnected after repeated keepalive failures retry_count=10", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-ROAMED bssid=18:64:72:2f:8a:c3 station=6c:5a:b0:2e:91:c8 roam_seq=100796", "label": "normal"}
+{"input": "kernel: wlan0: station e4:5f:01:aa:3b:77 power save mode enabled ps_seq=100357", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100988", "label": "error"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 keepalive response received sequence=100584", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 keepalive response received sequence=100458", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: no address available for DHCP request from 70:3a:cb:51:2d:88 pool=3", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac disconnected due to excessive frame retries retry_count=15", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.125 a0:36:9f:71:b5:2e", "label": "normal"}
+{"input": "kernel: wlan0: station 0c:8b:fd:61:c2:14 retry count high but frame delivered retry_count=2", "label": "normal"}
+{"input": "kernel: wlan0: station a0:36:9f:71:b5:2e low signal warning cleared signal=-67", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c EAP: peer certificate verified serial=200822", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: associated (aid 62)", "label": "normal"}
+{"input": "kernel: wlan0: station f4:f5:d8:7a:19:2b power save mode disabled after traffic idle interval=110s", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: no address available for DHCP request from 2c:54:cf:92:10:bd pool=4", "label": "error"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: associated (aid 54)", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 RSN: using cached PMKSA for fast reconnect cache_id=100644", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: received EAPOL-Key with invalid MIC replay_counter=101025", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.154 88:66:5a:d1:72:0c", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=70:3a:cb:51:2d:88 scan_id=100785", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=101012", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 RSN: PMKSA cache entry refreshed cache_id=100677", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.170 5c:e9:1e:33:8f:a1 xid=100280", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-555", "label": "normal"}
+{"input": "radiusd[822]: Login incorrect: [0c:8b:fd:61:c2:14] invalid password from client ap-7 event_id=val-1295", "label": "error"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e temporary keepalive miss recovered without disconnect retry=2 event_id=val-523", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key timeout after message 1/4 retry=3 event_id=val-999", "label": "error"}
+{"input": "kernel: wlan0: firmware crashed while processing association response station=64:5a:04:a9:33:e1 crash_id=101391", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f accounting interim update sent session=100866", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 retry counter reset after successful frame ack retry_count=2", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 keepalive response received after retry retry=0 event_id=val-503", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 RSN: PMKSA cache entry added cache_id=100701", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key timeout after message 1/4 retry=3 event_id=val-987", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd changed power save mode: off ps_seq=100414", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.89 a0:36:9f:71:b5:2e", "label": "normal"}
+{"input": "kernel: wlan0: station 3c:22:fb:10:24:38 power save mode disabled ps_seq=100350", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 keepalive response received sequence=100536", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 disconnected after repeated keepalive failures retry_count=8", "label": "error"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: received EAPOL-Key with invalid MIC replay_counter=100995", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=00:25:9c:7a:10:02 id=0 ssid=OfficeWiFi-Guest station=a0:36:9f:71:b5:2e", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key timeout after message 3/4 retry=2 event_id=val-938", "label": "error"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c retry counter reset after successful frame ack retry_count=0 event_id=val-516", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: EAPOL-Key message 1/4 sent replay_counter=100166", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 no keepalive ACK after retries, deauthenticating reason=4 retry_count=14", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: group key handshake completed (RSN) gtk=2 event_id=val-78", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: authenticated auth_seq=100056", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.1.83 48:5f:99:c0:21:6a xid=101143", "label": "error"}
+{"input": "kernel: wlan0: station 0c:8b:fd:61:c2:14 power save mode enabled after association interval=57s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: EAPOL-Key message 2/4 received replay_counter=100167", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-501", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.142 2c:54:cf:92:10:bd", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: group key handshake completed (RSN) gtk=2 event_id=val-90", "label": "normal"}
+{"input": "kernel: wlan0: driver failed to install pairwise key for station d8:bb:c1:07:90:ac keyidx=1", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: pairwise key handshake completed (RSN)", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 RSN: PMKSA cache hit cache_id=100615", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f RSN: PMKSA cache entry refreshed cache_id=100632", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd RSN: PMKSA cache lookup succeeded cache_id=100648", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) dc:a6:32:48:91:0f xid=100218", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e temporary keepalive miss recovered without disconnect retry=2 event_id=val-487", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.100 88:66:5a:d1:72:0c", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 excessive frame retries, disconnecting station retry_count=8", "label": "error"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 keepalive retry succeeded retry=2 event_id=val-460", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key timeout after message 3/4 retry=2", "label": "error"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c excessive frame retries, disconnecting station retry_count=12", "label": "error"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b transient low ACK rate recovered ack_rate=68", "label": "normal"}
+{"input": "kernel: wlan0: station 28:cf:e9:5b:73:a4 power save mode enabled ps_seq=100291", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b authorized vlan=2 event_id=val-88", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.139 e4:5f:01:aa:3b:77 lease=12h", "label": "normal"}
+{"input": "kernel: wlan0: station a0:36:9f:71:b5:2e retry count high but frame delivered retry_count=4", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.2.108 f4:f5:d8:7a:19:2b xid=101168", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd reassociated successfully aid=39", "label": "normal"}
+{"input": "kernel: wlan0: station 9c:b6:d0:13:7e:64 retry count high but frame delivered retry_count=4", "label": "normal"}
+{"input": "kernel: wlan0: station 48:5f:99:c0:21:6a power save mode enabled ps_seq=100387", "label": "normal"}
+{"input": "kernel: wlan0: station 3c:22:fb:10:24:38 power save mode disabled ps_seq=100368", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 denied by MAC ACL policy acl_rule=9", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f keepalive response received sequence=100560", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: associated (aid 20)", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) a0:36:9f:71:b5:2e ignored because address pool exhausted pool=5", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 no keepalive ACK after retries, deauthenticating reason=4 retry_count=13", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: EAPOL-Key message 3/4 sent replay_counter=100168", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: bad DHCP request from f4:f5:d8:7a:19:2b: requested address outside subnet xid=101204", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: bad DHCP request from a8:6d:aa:42:bc:09: requested address outside subnet xid=101194", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=d8:bb:c1:07:90:ac scan_id=100781", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: disassociated due to inactivity reason=4 seq=101136", "label": "error"}
+{"input": "kernel: wlan0: station 64:5a:04:a9:33:e1 power save mode enabled after association interval=99s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c changed power save mode: off ps_seq=100408", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 accounting session updated rx_bytes=1331193 tx_bytes=1742637", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 retry counter reset after successful frame ack retry_count=2 event_id=val-582", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd changed power save mode: off ps_seq=100324", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 RSN: PMKSA cache lookup succeeded cache_id=100638", "label": "normal"}
+{"input": "kernel: wlan0: hardware restart required after station 3c:22:fb:10:24:38 transmit timeout queue=6", "label": "error"}
+{"input": "kernel: wlan0: station 64:5a:04:a9:33:e1 power save mode enabled after association interval=117s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-471", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 single missed ack recovered on retry retry_count=1", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 RSN: PMKSA cache lookup succeeded cache_id=100698", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd accounting session started session=100864", "label": "normal"}
+{"input": "kernel: wlan0: tx queue stuck for station 28:cf:e9:5b:73:a4; firmware recovery triggered queue=5", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: no address available for DHCP request from f4:f5:d8:7a:19:2b pool=2", "label": "error"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b IEEE 802.1X: EAP timeout waiting for response session=101258", "label": "error"}
+{"input": "kernel: wlan0: station f4:f5:d8:7a:19:2b power save mode disabled after traffic idle interval=74s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 keepalive timeout exceeded, station removed reason=4 retry_count=10", "label": "error"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: pairwise key installation failed keyidx=0 event_id=val-948", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 IEEE 802.1X: authentication completed successfully session=100821", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f RADIUS: Access-Reject received session=101226", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS station=48:5f:99:c0:21:6a bssid=64:70:02:9a:bc:11 seq=101341", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: group key handshake timeout retry=3", "label": "error"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 FT authentication completed r0kh_id=ap-3", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 transient low ACK rate recovered ack_rate=56", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: group key handshake completed (RSN) gtk=0 event_id=val-72", "label": "normal"}
+{"input": "kernel: wlan0: station 0c:8b:fd:61:c2:14 low signal warning cleared signal=-67", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 changed power save mode: off ps_seq=100384", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100928", "label": "error"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key timeout after message 1/4 retry=1 event_id=val-969", "label": "error"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: received EAPOL-Key with invalid MIC replay_counter=100953", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f keepalive response received sequence=100452", "label": "normal"}
+{"input": "kernel: wlan0: station e4:5f:01:aa:3b:77 low signal warning cleared signal=-63", "label": "normal"}
+{"input": "kernel: wlan0: station 64:5a:04:a9:33:e1 low signal warning cleared signal=-51", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 accounting session started session=100868", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101113", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 RSN: PMKSA cache hit cache_id=100625", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 RADIUS: Access-Reject received session=101214", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac RSN: PMKSA cache entry refreshed cache_id=100637", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e changed power save mode: on ps_seq=100343", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=18:64:72:2f:8a:c3 id=0 ssid=IoT-Net station=a0:36:9f:71:b5:2e", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101033", "label": "error"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: authenticated auth_seq=100098", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 temporary keepalive miss recovered without disconnect retry=2 event_id=val-499", "label": "normal"}
+{"input": "kernel: wlan0: hardware restart required after station 9c:b6:d0:13:7e:64 transmit timeout queue=3", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: bad DHCP request from dc:a6:32:48:91:0f: requested address outside subnet xid=101154", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 signal poll updated signal=-61 noise=-95", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=f4:f5:d8:7a:19:2b bssid=64:70:02:9a:bc:11 reason=34 locally_generated=0 seq=101042", "label": "error"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 single missed ack recovered on retry retry_count=1", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: group key handshake completed (RSN) gtk=0 event_id=val-84", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: pairwise key installation failed keyidx=2", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: no address available for DHCP request from 88:66:5a:d1:72:0c pool=4", "label": "error"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: EAPOL-Key message 1/4 sent replay_counter=100124", "label": "normal"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: pairwise key handshake completed (RSN) event_id=val-47", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b IEEE 802.11: association denied status_code=17 AP full attempt=101420", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd retry counter reset after successful frame ack retry_count=2 event_id=val-558", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: pairwise key installation failed keyidx=0 event_id=val-1008", "label": "error"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: associated (aid 2)", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.4.98 a8:6d:aa:42:bc:09 xid=101158", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) b8:27:eb:6d:45:f2 xid=100266", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 authorized vlan=2 event_id=val-76", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c RSN: using cached PMKSA for fast reconnect cache_id=100624", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.1X: authentication failed session=101257", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.86 f4:f5:d8:7a:19:2b xid=100196", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101088", "label": "error"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 RSN: PMKSA cache entry added cache_id=100611", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd changed power save mode: off ps_seq=100360", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: group key handshake timeout retry=3", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.94 a8:6d:aa:42:bc:09", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS station=88:66:5a:d1:72:0c bssid=00:25:9c:7a:10:01 seq=101326", "label": "error"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 authorized vlan=2", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd signal poll updated signal=-67 noise=-95", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: EAPOL-Key message 1/4 sent replay_counter=100130", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 keepalive retry succeeded retry=2 event_id=val-496", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: group key handshake timeout retry=1 event_id=val-973", "label": "error"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100916", "label": "error"}
+{"input": "kernel: wlan0: station 5c:e9:1e:33:8f:a1 power save mode disabled after traffic idle interval=104s", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b keepalive retry succeeded retry=2 event_id=val-574", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) dc:a6:32:48:91:0f xid=100272", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 keepalive response received sequence=100572", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 RSN: PMKSA cache hit cache_id=100640", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 RSN: PMKSA cache lookup succeeded cache_id=100663", "label": "normal"}
+{"input": "kernel: wlan0: station 70:3a:cb:51:2d:88 beacon loss detected, connection unstable seq=101325", "label": "error"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=101006", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: pairwise key installation failed keyidx=2 event_id=val-978", "label": "error"}
+{"input": "kernel: wlan0: connection lost from 00:25:9c:7a:10:02 after beacon timeout station=f4:f5:d8:7a:19:2b seq=101312", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 keepalive retry succeeded retry=2 event_id=val-472", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 3c:22:fb:10:24:38 ignored because address pool exhausted pool=0", "label": "error"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 keepalive response received sequence=100476", "label": "normal"}
+{"input": "kernel: wlan0: station 48:5f:99:c0:21:6a power save mode enabled ps_seq=100315", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 48:5f:99:c0:21:6a ignored because address pool exhausted pool=1", "label": "error"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101095", "label": "error"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c RADIUS: server timeout during authentication session=101254", "label": "error"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: received EAPOL-Key with invalid MIC replay_counter=100959", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=9c:b6:d0:13:7e:64 bssid=18:64:72:2f:8a:c3 reason=34 locally_generated=0 seq=101057", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100976", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 RADIUS: Access-Accept received session=100832", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key message received replay_counter=100141", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.88 2c:54:cf:92:10:bd", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 RSN: PMKSA cache entry added cache_id=100676", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.2.138 5c:e9:1e:33:8f:a1 xid=101198", "label": "error"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a RSN: PMKSA cache lookup succeeded cache_id=100693", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-ROAMED bssid=64:70:02:9a:bc:11 station=88:66:5a:d1:72:0c roam_seq=100804", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.99 70:3a:cb:51:2d:88 client-49", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 disconnected due to excessive frame retries retry_count=9", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=64:5a:04:a9:33:e1 bssid=00:25:9c:7a:10:01 reason=34 locally_generated=0 seq=101067", "label": "error"}
+{"input": "kernel: wlan0: station a0:36:9f:71:b5:2e beacon loss detected, connection unstable seq=101315", "label": "error"}
+{"input": "kernel: wlan0: station 6c:5a:b0:2e:91:c8 power save mode disabled after traffic idle interval=110s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 keepalive retry succeeded retry=2 event_id=val-568", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 RSN: PMKSA cache hit cache_id=100680", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.164 6c:5a:b0:2e:91:c8 xid=100274", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 64:5a:04:a9:33:e1 ignored because address pool exhausted pool=3", "label": "error"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: pairwise key installation failed keyidx=2 event_id=val-1002", "label": "error"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e RSN: PMKSA cache lookup succeeded cache_id=100613", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd RSN: PMKSA cache hit cache_id=100630", "label": "normal"}
+{"input": "kernel: wlan0: station 5c:e9:1e:33:8f:a1 power save mode disabled after traffic idle interval=14s", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: association denied status_code=17 AP full attempt=101400", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=d8:bb:c1:07:90:ac bssid=00:25:9c:7a:10:01 reason=34 locally_generated=0 seq=101087", "label": "error"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: EAPOL-Key message 4/4 received replay_counter=100181", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 reassociated successfully aid=31", "label": "normal"}
+{"input": "kernel: wlan0: station 6c:5a:b0:2e:91:c8 power save mode disabled after traffic idle interval=44s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd EAP: peer certificate verified serial=200810", "label": "normal"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 RSN: using cached PMKSA for fast reconnect cache_id=100659", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 keepalive retry succeeded retry=2 event_id=val-526", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key timeout after message 1/4 retry=3 event_id=val-951", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: group key handshake completed (RSN) gtk=2", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100940", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) b8:27:eb:6d:45:f2 xid=100212", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c signal poll updated signal=-55 noise=-95", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 temporary keepalive miss recovered without disconnect retry=2 event_id=val-481", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 authorized vlan=2 event_id=val-82", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: associated (aid 60)", "label": "normal"}
+{"input": "kernel: wlan0: hardware restart required after station 2c:54:cf:92:10:bd transmit timeout queue=0", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac RSN: using cached PMKSA for fast reconnect cache_id=100619", "label": "normal"}
+{"input": "kernel: wlan0: station f4:f5:d8:7a:19:2b power save mode disabled after traffic idle interval=38s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-513", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b no keepalive ACK after retries, deauthenticating reason=4 retry_count=10", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f RADIUS: Access-Accept received session=100812", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c disconnected due to excessive frame retries retry_count=12", "label": "error"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e temporary keepalive miss recovered without disconnect retry=2 event_id=val-505", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-465", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b authorized vlan=2 event_id=val-52", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 authorized vlan=2 event_id=val-40", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 FT authentication completed r0kh_id=ap-3", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: pairwise key handshake completed (RSN) event_id=val-23", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=dc:a6:32:48:91:0f above=1 signal=-51 noise=-95 txrate=54 Mb/s", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.95 d8:bb:c1:07:90:ac", "label": "normal"}
+{"input": "kernel: wlan0: station 28:cf:e9:5b:73:a4 power save mode enabled ps_seq=100381", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.2.150 6c:5a:b0:2e:91:c8 lease conflict detected xid=101210", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101039", "label": "error"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b authorized vlan=2", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 keepalive timeout exceeded, station removed reason=4 retry_count=15", "label": "error"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 keepalive response received after retry retry=0 event_id=val-527", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.101 9c:b6:d0:13:7e:64", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100922", "label": "error"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 RSN: PMKSA cache hit cache_id=100590", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101130", "label": "error"}
+{"input": "kernel: wlan0: station 5c:e9:1e:33:8f:a1 power save mode disabled after traffic idle interval=98s", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac disconnected after repeated keepalive failures retry_count=9", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 IEEE 802.11: disassociated due to inactivity reason=4 seq=101091", "label": "error"}
+{"input": "radiusd[822]: Login incorrect: [0c:8b:fd:61:c2:14] invalid password from client ap-3", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=6c:5a:b0:2e:91:c8 bssid=64:70:02:9a:bc:11 reason=34 locally_generated=0 seq=101102", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 RADIUS: server timeout during authentication session=101284", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: pairwise key installation failed keyidx=2 event_id=val-1014", "label": "error"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: EAPOL-Key message 2/4 received replay_counter=100131", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: associated (aid 56)", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-ROAMED bssid=00:25:9c:7a:10:01 station=88:66:5a:d1:72:0c roam_seq=100768", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.1X: authentication failed session=101227", "label": "error"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.1X: authentication failed session=101233", "label": "error"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=101018", "label": "error"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 RSN: PMKSA cache hit cache_id=100665", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101128", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: pairwise key installation failed keyidx=2", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: EAPOL-Key message 2/4 received replay_counter=100101", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 disconnected due to excessive frame retries retry_count=10", "label": "error"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key timeout after message 1/4 retry=1 event_id=val-1005", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: authenticated auth_seq=100092", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd RADIUS: server timeout during authentication session=101260", "label": "error"}
+{"input": "kernel: wlan0: driver failed to install pairwise key for station 0c:8b:fd:61:c2:14 keyidx=3", "label": "error"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b IEEE 802.1X: EAP timeout waiting for response session=101240", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd denied by MAC ACL policy acl_rule=4", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 signal poll updated signal=-71 noise=-95", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.116 5c:e9:1e:33:8f:a1 xid=100226", "label": "normal"}
+{"input": "kernel: wlan0: tx queue stuck for station 70:3a:cb:51:2d:88; firmware recovery triggered queue=3", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.136 88:66:5a:d1:72:0c", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac RSN: PMKSA cache hit cache_id=100655", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 IEEE 802.11: authentication failed status_code=13 attempt=101432", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: group key handshake timeout retry=3 event_id=val-979", "label": "error"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 RSN: PMKSA cache entry refreshed cache_id=100617", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: group key handshake completed (RSN) gtk=0", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac denied by MAC ACL policy acl_rule=9", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 IEEE 802.11: association rejected unsupported rates status_code=18 attempt=101426", "label": "error"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 RADIUS: Access-Accept received session=100824", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c retry counter reset after successful frame ack retry_count=2 event_id=val-498", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: EAPOL-Key message 4/4 received replay_counter=100115", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac EAP-TLS: client certificate validation failed serial=201231", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.118 88:66:5a:d1:72:0c", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c RADIUS: server timeout during authentication session=101218", "label": "error"}
+{"input": "kernel: wlan0: station e4:5f:01:aa:3b:77 power save mode enabled ps_seq=100303", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e FT authentication completed r0kh_id=ap-7", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) b8:27:eb:6d:45:f2 ignored because address pool exhausted pool=0", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.105 0c:8b:fd:61:c2:14 client-55", "label": "normal"}
+{"input": "radiusd[822]: Login incorrect: [70:3a:cb:51:2d:88] invalid password from client ap-3", "label": "error"}
+{"input": "kernel: wlan0: hardware restart required after station 64:5a:04:a9:33:e1 transmit timeout queue=5", "label": "error"}
+{"input": "kernel: wlan0: station 64:5a:04:a9:33:e1 data rate updated to 300 Mbps mcs=3 event_id=val-743", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 accounting session started session=100872", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101108", "label": "error"}
+{"input": "radiusd[822]: Login OK: [64:5a:04:a9:33:e1] from client ap-7 port 1815", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 disconnected after repeated keepalive failures retry_count=11", "label": "error"}
+{"input": "kernel: wlan0: firmware crashed while processing association response station=a8:6d:aa:42:bc:09 crash_id=101356", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 RSN: PMKSA cache entry added cache_id=100636", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b EAP: peer certificate verified serial=200826", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac keepalive timeout exceeded, station removed reason=4 retry_count=11", "label": "error"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 keepalive response received after retry retry=0 event_id=val-467", "label": "normal"}
+{"input": "kernel: wlan0: firmware crashed during key install for station 6c:5a:b0:2e:91:c8 crash_id=101390", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: no address available for DHCP request from 64:5a:04:a9:33:e1 pool=3", "label": "error"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 reassociated successfully aid=7", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b RSN: PMKSA cache lookup succeeded cache_id=100628", "label": "normal"}
+{"input": "kernel: wlan0: driver failed to install pairwise key for station b8:27:eb:6d:45:f2 keyidx=2", "label": "error"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b keepalive retry succeeded retry=2 event_id=val-484", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key timeout after message 3/4 retry=2 event_id=val-998", "label": "error"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f RADIUS: Access-Reject received session=101244", "label": "error"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: pairwise key installation failed keyidx=2", "label": "error"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b RSN: PMKSA cache entry added cache_id=100646", "label": "normal"}
+{"input": "kernel: wlan0: station 64:5a:04:a9:33:e1 power save mode enabled after association interval=45s", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101068", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: bad DHCP request from d8:bb:c1:07:90:ac: requested address outside subnet xid=101159", "label": "error"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 RADIUS: Access-Reject received session=101274", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 PMF required but client did not negotiate management frame protection attempt=101433", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=00:25:9c:7a:10:01 id=0 ssid=IoT-Net station=d8:bb:c1:07:90:ac", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 accounting session started session=100860", "label": "normal"}
+{"input": "kernel: wlan0: station d8:bb:c1:07:90:ac low signal warning cleared signal=-59", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e disconnected due to excessive frame retries retry_count=13", "label": "error"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b excessive frame retries, disconnecting station retry_count=12", "label": "error"}
+{"input": "kernel: wlan0: station 48:5f:99:c0:21:6a data rate updated to 72.2 Mbps mcs=7 event_id=val-747", "label": "normal"}
+{"input": "kernel: wlan0: connection lost from 00:25:9c:7a:10:01 after beacon timeout station=9c:b6:d0:13:7e:64 seq=101327", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f RSN: PMKSA cache hit cache_id=100650", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 no keepalive ACK after retries, deauthenticating reason=4 retry_count=8", "label": "error"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key message sent replay_counter=100140", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c changed power save mode: off ps_seq=100336", "label": "normal"}
+{"input": "radiusd[822]: Login OK: [9c:b6:d0:13:7e:64] from client ap-7 port 1823", "label": "normal"}
+{"input": "kernel: wlan0: station b8:27:eb:6d:45:f2 power save mode disabled ps_seq=100320", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=a8:6d:aa:42:bc:09 bssid=64:70:02:9a:bc:11 reason=34 locally_generated=0 seq=101122", "label": "error"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c temporary queue timeout recovered queue=4", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=dc:a6:32:48:91:0f above=1 signal=-52 noise=-95 txrate=54 Mb/s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 RSN: PMKSA cache entry added cache_id=100616", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS station=e4:5f:01:aa:3b:77 bssid=00:25:9c:7a:10:02 seq=101311", "label": "error"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e deauthenticated after keepalive timeout reason=4 retry_count=9", "label": "error"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c reassociated successfully aid=51", "label": "normal"}
+{"input": "kernel: wlan0: station e4:5f:01:aa:3b:77 power save mode enabled ps_seq=100321", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 RSN: using cached PMKSA for fast reconnect cache_id=100589", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 keepalive response received after retry retry=0 event_id=val-473", "label": "normal"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: EAPOL-Key message 2/4 received replay_counter=100155", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 IEEE 802.1X: EAP timeout waiting for response session=101264", "label": "error"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-567", "label": "normal"}
+{"input": "kernel: wlan0: station 28:cf:e9:5b:73:a4 power save mode enabled ps_seq=100309", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key timeout after message 1/4 retry=3", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.158 f4:f5:d8:7a:19:2b xid=100268", "label": "normal"}
+{"input": "kernel: wlan0: station 48:5f:99:c0:21:6a power save mode enabled ps_seq=100351", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 changed power save mode: on ps_seq=100391", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f RADIUS: Access-Reject received session=101280", "label": "error"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-483", "label": "normal"}
+{"input": "kernel: wlan0: station 28:cf:e9:5b:73:a4 data rate updated to 72.2 Mbps mcs=7", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c keepalive timeout exceeded, station removed reason=4 retry_count=8", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) dc:a6:32:48:91:0f ignored because address pool exhausted pool=0", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.152 5c:e9:1e:33:8f:a1 xid=100262", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101053", "label": "error"}
+{"input": "radiusd[822]: Login incorrect: [64:5a:04:a9:33:e1] invalid password from client ap-7", "label": "error"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e excessive frame retries, disconnecting station retry_count=13", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 disconnected due to excessive frame retries retry_count=14", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 keepalive timeout exceeded, station removed reason=4 retry_count=13", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac temporary keepalive miss recovered without disconnect retry=2 event_id=val-511", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: EAPOL-Key message 1/4 sent replay_counter=100106", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: group key handshake timeout retry=1", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.124 2c:54:cf:92:10:bd", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: no address available for DHCP request from b8:27:eb:6d:45:f2 pool=0", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=f4:f5:d8:7a:19:2b bssid=00:25:9c:7a:10:02 reason=34 locally_generated=0 seq=101132", "label": "error"}
+{"input": "kernel: wlan0: station d8:bb:c1:07:90:ac low signal warning cleared signal=-55", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101115", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: group key handshake timeout retry=1 event_id=val-1021", "label": "error"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key message received replay_counter=100117", "label": "normal"}
+{"input": "kernel: wlan0: station e4:5f:01:aa:3b:77 power save mode enabled ps_seq=100411", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b disconnected due to excessive frame retries retry_count=12", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=0c:8b:fd:61:c2:14 scan_id=100809", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 temporary queue timeout recovered queue=0", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 RSN: PMKSA cache lookup succeeded cache_id=100653", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101065", "label": "error"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101124", "label": "error"}
+{"input": "kernel: wlan0: station 28:cf:e9:5b:73:a4 data rate updated to 72.2 Mbps mcs=7 event_id=val-759", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b RSN: PMKSA cache hit cache_id=100700", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 FT authentication completed r0kh_id=ap-3", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e IEEE 802.11: disassociated due to inactivity reason=4 seq=101081", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.133 48:5f:99:c0:21:6a lease=12h", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) dc:a6:32:48:91:0f xid=100254", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=28:cf:e9:5b:73:a4 bssid=00:25:9c:7a:10:01 reason=34 locally_generated=0 seq=101047", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=88:66:5a:d1:72:0c bssid=00:25:9c:7a:10:02 reason=34 locally_generated=0 seq=101092", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.172 88:66:5a:d1:72:0c", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 accounting session stopped normally session=100863", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101084", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac EAP-TLS: client certificate validation failed serial=201213", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 reassociated successfully aid=43", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac EAP-TLS: client certificate validation failed serial=201285", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 RADIUS: server timeout during authentication session=101248", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 authorized vlan=2 event_id=val-94", "label": "normal"}
+{"input": "kernel: wlan0: station 88:66:5a:d1:72:0c link failed due to poor channel conditions signal=-82", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=101030", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.5.135 d8:bb:c1:07:90:ac lease conflict detected xid=101195", "label": "error"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 FT authentication completed r0kh_id=ap-3", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key timeout after message 3/4 retry=0 event_id=val-980", "label": "error"}
+{"input": "kernel: wlan0: station b8:27:eb:6d:45:f2 power save mode disabled ps_seq=100374", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b PMF required but client did not negotiate management frame protection attempt=101438", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=a0:36:9f:71:b5:2e scan_id=100793", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: EAPOL-Key message 4/4 received replay_counter=100121", "label": "normal"}
+{"input": "kernel: wlan0: station 5c:e9:1e:33:8f:a1 power save mode disabled after traffic idle interval=116s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 keepalive response received after retry retry=0 event_id=val-557", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f keepalive response received sequence=100524", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: associated (aid 42)", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 deauthenticated after keepalive timeout reason=4 retry_count=14", "label": "error"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 accounting session started session=100856", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd changed power save mode: off ps_seq=100378", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd RSN: PMKSA cache entry refreshed cache_id=100612", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 RSN: PMKSA cache lookup succeeded cache_id=100593", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: disassociated due to inactivity reason=4 seq=101046", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f RSN: PMKSA cache lookup succeeded cache_id=100668", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: EAPOL-Key message 3/4 sent replay_counter=100120", "label": "normal"}
+{"input": "kernel: wlan0: station b8:27:eb:6d:45:f2 power save mode disabled ps_seq=100392", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: received EAPOL-Key with invalid MIC replay_counter=100977", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 keepalive response received after retry retry=0 event_id=val-461", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=18:64:72:2f:8a:c3 id=0 ssid=OfficeWiFi station=a0:36:9f:71:b5:2e", "label": "normal"}
+{"input": "kernel: wlan0: hardware restart required after station 5c:e9:1e:33:8f:a1 transmit timeout queue=2", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101069", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=f4:f5:d8:7a:19:2b above=1 signal=-48 noise=-95 txrate=144.4 Mb/s", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac changed power save mode: on ps_seq=100403", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 keepalive response received sequence=100518", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: group key handshake timeout retry=1 event_id=val-949", "label": "error"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key message received replay_counter=100099", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=5c:e9:1e:33:8f:a1 bssid=00:25:9c:7a:10:02 reason=34 locally_generated=0 seq=101072", "label": "error"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: authenticated auth_seq=100068", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101100", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 signal poll updated signal=-47 noise=-95", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key timeout after message 1/4 retry=1 event_id=val-957", "label": "error"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 transient low ACK rate recovered ack_rate=48", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key timeout after message 1/4 retry=1 event_id=val-993", "label": "error"}
+{"input": "kernel: wlan0: station 70:3a:cb:51:2d:88 power save mode enabled after association interval=15s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd changed power save mode: off ps_seq=100342", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: associated (aid 38)", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e IEEE 802.1X: authentication completed successfully session=100829", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-519", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: authenticated auth_seq=100086", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 temporary keepalive miss recovered without disconnect retry=2 event_id=val-517", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101079", "label": "error"}
+{"input": "kernel: wlan0: station a0:36:9f:71:b5:2e data rate updated to 866.7 Mbps mcs=11 event_id=val-739", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a disconnected due to excessive frame retries retry_count=11", "label": "error"}
+{"input": "kernel: wlan0: station 3c:22:fb:10:24:38 power save mode disabled ps_seq=100386", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b keepalive retry succeeded retry=2 event_id=val-466", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 RSN: using cached PMKSA for fast reconnect cache_id=100669", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.123 0c:8b:fd:61:c2:14 client-73", "label": "normal"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 RSN: PMKSA cache lookup succeeded cache_id=100623", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=00:25:9c:7a:10:02 id=0 ssid=Lab-WPA2 station=9c:b6:d0:13:7e:64", "label": "normal"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 keepalive response received after retry retry=0 event_id=val-569", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 denied by MAC ACL policy acl_rule=9", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS station=5c:e9:1e:33:8f:a1 bssid=00:25:9c:7a:10:01 seq=101306", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 changed power save mode: off ps_seq=100348", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f keepalive response received sequence=100542", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101098", "label": "error"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: EAPOL-Key message 3/4 sent replay_counter=100156", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: pairwise key installation failed keyidx=0 event_id=val-972", "label": "error"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 disconnected after repeated keepalive failures retry_count=10", "label": "error"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 authorized vlan=2 event_id=val-64", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 IEEE 802.1X: EAP timeout waiting for response session=101270", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: group key handshake timeout retry=3 event_id=val-1015", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 RSN: PMKSA cache hit cache_id=100600", "label": "normal"}
+{"input": "kernel: wlan0: firmware crashed during key install for station d8:bb:c1:07:90:ac crash_id=101375", "label": "error"}
+{"input": "kernel: wlan0: station dc:a6:32:48:91:0f power save mode disabled ps_seq=100362", "label": "normal"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 keepalive response received after retry retry=0 event_id=val-533", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key message sent replay_counter=100158", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c RSN: PMKSA cache lookup succeeded cache_id=100588", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS station=6c:5a:b0:2e:91:c8 bssid=18:64:72:2f:8a:c3 seq=101336", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: EAPOL-Key message 3/4 sent replay_counter=100150", "label": "normal"}
+{"input": "radiusd[822]: Login incorrect: [70:3a:cb:51:2d:88] invalid password from client ap-5", "label": "error"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 IEEE 802.1X: EAP timeout waiting for response session=101216", "label": "error"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: received EAPOL-Key with invalid MIC replay_counter=100935", "label": "error"}
+{"input": "radiusd[822]: Login incorrect: [64:5a:04:a9:33:e1] invalid password from client ap-5", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac changed power save mode: on ps_seq=100313", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.159 0c:8b:fd:61:c2:14 client-29", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key message received replay_counter=100171", "label": "normal"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: EAPOL-Key message 2/4 received replay_counter=100173", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key message received replay_counter=100105", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac EAP-TLS: client certificate validation failed serial=201249", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: received EAPOL-Key with invalid MIC replay_counter=100947", "label": "error"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: authenticated auth_seq=100050", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=b8:27:eb:6d:45:f2 bssid=00:25:9c:7a:10:02 reason=34 locally_generated=0 seq=101112", "label": "error"}
+{"input": "kernel: wlan0: station 70:3a:cb:51:2d:88 power save mode enabled after association interval=99s", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: bad DHCP request from 0c:8b:fd:61:c2:14: requested address outside subnet xid=101169", "label": "error"}
+{"input": "kernel: wlan0: station 0c:8b:fd:61:c2:14 data rate updated to 300 Mbps mcs=3 event_id=val-755", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101114", "label": "error"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e accounting session stopped normally session=100847", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=64:70:02:9a:bc:11 id=0 ssid=OfficeWiFi-Guest station=a0:36:9f:71:b5:2e", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c IEEE 802.11: association rejected unsupported rates status_code=18 attempt=101416", "label": "error"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: associated (aid 32)", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: bad DHCP request from 6c:5a:b0:2e:91:c8: requested address outside subnet xid=101174", "label": "error"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key message sent replay_counter=100104", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.2.90 f4:f5:d8:7a:19:2b lease conflict detected xid=101150", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.113 d8:bb:c1:07:90:ac", "label": "normal"}
+{"input": "kernel: wlan0: station a0:36:9f:71:b5:2e low signal warning cleared signal=-51", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: EAPOL-Key message 1/4 sent replay_counter=100160", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key timeout after message 1/4 retry=1 event_id=val-945", "label": "error"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key timeout after message 3/4 retry=0 event_id=val-1004", "label": "error"}
+{"input": "kernel: wlan0: station 9c:b6:d0:13:7e:64 data rate updated to 866.7 Mbps mcs=11", "label": "normal"}
+{"input": "radiusd[822]: Login incorrect: [64:5a:04:a9:33:e1] invalid password from client ap-1", "label": "error"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-543", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) 3c:22:fb:10:24:38 xid=100224", "label": "normal"}
+{"input": "kernel: wlan0: connection lost from 00:25:9c:7a:10:01 after beacon timeout station=e4:5f:01:aa:3b:77 seq=101347", "label": "error"}
+{"input": "radiusd[822]: Login OK: [48:5f:99:c0:21:6a] from client ap-3 port 1819", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=6c:5a:b0:2e:91:c8 above=1 signal=-72 noise=-95 txrate=144.4 Mb/s", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.111 64:5a:04:a9:33:e1 client-61", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: received EAPOL-Key with invalid MIC replay_counter=101007", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: EAPOL-Key message 3/4 sent replay_counter=100126", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a PMF required but client did not negotiate management frame protection attempt=101413", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: EAPOL-Key message 4/4 received replay_counter=100157", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b IEEE 802.11: disassociated due to inactivity reason=4 seq=101096", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101138", "label": "error"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 keepalive response received after retry retry=0 event_id=val-563", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 RSN: PMKSA cache entry refreshed cache_id=100687", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=5c:e9:1e:33:8f:a1 above=1 signal=-60 noise=-95 txrate=144.4 Mb/s", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.4.110 2c:54:cf:92:10:bd lease conflict detected xid=101170", "label": "error"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 temporary queue timeout recovered queue=4", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 0c:8b:fd:61:c2:14 ignored because address pool exhausted pool=3", "label": "error"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key timeout after message 3/4 retry=0 event_id=val-1016", "label": "error"}
+{"input": "kernel: wlan0: firmware crashed while processing association response station=28:cf:e9:5b:73:a4 crash_id=101371", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: no address available for DHCP request from 3c:22:fb:10:24:38 pool=0", "label": "error"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-531", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 RSN: using cached PMKSA for fast reconnect cache_id=100699", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=b8:27:eb:6d:45:f2 above=1 signal=-64 noise=-95 txrate=54 Mb/s", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.104 f4:f5:d8:7a:19:2b xid=100214", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: group key handshake timeout retry=3 event_id=val-1027", "label": "error"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key timeout after message 3/4 retry=2 event_id=val-950", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: group key handshake timeout retry=3", "label": "error"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b IEEE 802.1X: EAP timeout waiting for response session=101294", "label": "error"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key timeout after message 3/4 retry=0", "label": "error"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 keepalive retry succeeded retry=2 event_id=val-478", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 RSN: PMKSA cache entry refreshed cache_id=100652", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 changed power save mode: off ps_seq=100294", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 RSN: PMKSA cache entry added cache_id=100681", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.122 f4:f5:d8:7a:19:2b xid=100232", "label": "normal"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 single missed ack recovered on retry retry_count=1", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101074", "label": "error"}
+{"input": "kernel: wlan0: station 0c:8b:fd:61:c2:14 power save mode enabled after association interval=39s", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b RSN: PMKSA cache entry refreshed cache_id=100682", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e temporary keepalive miss recovered without disconnect retry=2 event_id=val-559", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: EAPOL-Key message 2/4 received replay_counter=100179", "label": "normal"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: pairwise key handshake completed (RSN) event_id=val-29", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac RSN: PMKSA cache entry added cache_id=100691", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) b8:27:eb:6d:45:f2 xid=100230", "label": "normal"}
+{"input": "kernel: wlan0: station 70:3a:cb:51:2d:88 low signal warning cleared signal=-59", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101110", "label": "error"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 reassociated successfully aid=3", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac temporary keepalive miss recovered without disconnect retry=2", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 keepalive retry succeeded retry=2", "label": "normal"}
+{"input": "kernel: wlan0: station f4:f5:d8:7a:19:2b power save mode disabled after traffic idle interval=20s", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b RADIUS: Access-Accept received session=100844", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) dc:a6:32:48:91:0f xid=100236", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e disconnected after repeated keepalive failures retry_count=15", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f reassociated successfully aid=59", "label": "normal"}
+{"input": "kernel: wlan0: driver failed to install pairwise key for station dc:a6:32:48:91:0f keyidx=0", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 retry counter reset after successful frame ack retry_count=0 event_id=val-564", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS station=64:5a:04:a9:33:e1 bssid=64:70:02:9a:bc:11 seq=101301", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: bad DHCP request from b8:27:eb:6d:45:f2: requested address outside subnet xid=101184", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=e4:5f:01:aa:3b:77 bssid=18:64:72:2f:8a:c3 reason=34 locally_generated=0 seq=101077", "label": "error"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: pairwise key handshake completed (RSN) event_id=val-77", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 signal poll updated signal=-69 noise=-95", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 changed power save mode: on ps_seq=100319", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f RADIUS: Access-Reject received session=101262", "label": "error"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e changed power save mode: on ps_seq=100289", "label": "normal"}
+{"input": "kernel: wlan0: hardware restart required after station d8:bb:c1:07:90:ac transmit timeout queue=1", "label": "error"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c changed power save mode: off ps_seq=100426", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: group key handshake completed (RSN) gtk=0 event_id=val-96", "label": "normal"}
+{"input": "kernel: wlan0: firmware crashed while processing association response station=2c:54:cf:92:10:bd crash_id=101386", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: group key handshake completed (RSN) gtk=2 event_id=val-42", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 EAP-TLS: client certificate validation failed serial=201255", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac accounting session updated rx_bytes=1331089 tx_bytes=1742501", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd no keepalive ACK after retries, deauthenticating reason=4 retry_count=14", "label": "error"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 excessive frame retries, disconnecting station retry_count=9", "label": "error"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key message received replay_counter=100165", "label": "normal"}
+{"input": "kernel: wlan0: station 3c:22:fb:10:24:38 beacon loss detected, connection unstable seq=101340", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 accounting session started session=100852", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 PMF required but client did not negotiate management frame protection attempt=101428", "label": "error"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 denied by MAC ACL policy acl_rule=9", "label": "error"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e RSN: using cached PMKSA for fast reconnect cache_id=100649", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=2c:54:cf:92:10:bd above=1 signal=-67 noise=-95 txrate=433.3 Mb/s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 IEEE 802.1X: EAP timeout waiting for response session=101288", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 changed power save mode: off ps_seq=100402", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.98 5c:e9:1e:33:8f:a1 xid=100208", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 RADIUS: Access-Reject received session=101292", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.3.115 64:5a:04:a9:33:e1 lease conflict detected xid=101175", "label": "error"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: associated (aid 48)", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.112 a8:6d:aa:42:bc:09", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.1X: authentication failed session=101293", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.106 2c:54:cf:92:10:bd", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f EAP: peer certificate verified serial=200830", "label": "normal"}
+{"input": "kernel: wlan0: station b8:27:eb:6d:45:f2 power save mode disabled ps_seq=100428", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) 3c:22:fb:10:24:38 xid=100278", "label": "normal"}
+{"input": "radiusd[822]: Login OK: [d8:bb:c1:07:90:ac] from client ap-3 port 1835", "label": "normal"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: received EAPOL-Key with invalid MIC replay_counter=100983", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: bad DHCP request from a0:36:9f:71:b5:2e: requested address outside subnet xid=101189", "label": "error"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: pairwise key handshake completed (RSN)", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e RSN: PMKSA cache hit cache_id=100595", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: group key handshake completed (RSN) gtk=0", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c retry counter reset after successful frame ack retry_count=0 event_id=val-552", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: EAPOL-Key message 2/4 received replay_counter=100149", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f deauthenticated after keepalive timeout reason=4 retry_count=8", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 excessive frame retries, disconnecting station retry_count=14", "label": "error"}
+{"input": "kernel: wlan0: station 6c:5a:b0:2e:91:c8 beacon loss detected, connection unstable seq=101300", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 accounting session stopped normally session=100859", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101035", "label": "error"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 RSN: PMKSA cache entry added cache_id=100671", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e temporary keepalive miss recovered without disconnect retry=2 event_id=val-469", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f excessive frame retries, disconnecting station retry_count=10", "label": "error"}
+{"input": "kernel: wlan0: station 3c:22:fb:10:24:38 power save mode disabled ps_seq=100440", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.134 5c:e9:1e:33:8f:a1 xid=100244", "label": "normal"}
+{"input": "kernel: wlan0: firmware crashed while processing association response station=a0:36:9f:71:b5:2e crash_id=101351", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: EAPOL-Key message 4/4 received replay_counter=100187", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 RSN: PMKSA cache lookup succeeded cache_id=100643", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c denied by MAC ACL policy acl_rule=4", "label": "error"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 keepalive retry succeeded retry=2 event_id=val-532", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.1X: authentication failed session=101269", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: received EAPOL-Key with invalid MIC replay_counter=100965", "label": "error"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 IEEE 802.11: disassociated due to inactivity reason=4 seq=101121", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac temporary keepalive miss recovered without disconnect retry=2 event_id=val-547", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e changed power save mode: on ps_seq=100379", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac changed power save mode: on ps_seq=100367", "label": "normal"}
+{"input": "radiusd[822]: Login incorrect: [70:3a:cb:51:2d:88] invalid password from client ap-7", "label": "error"}
+{"input": "kernel: wlan0: station 64:5a:04:a9:33:e1 low signal warning cleared signal=-55", "label": "normal"}
+{"input": "kernel: wlan0: station 9c:b6:d0:13:7e:64 data rate updated to 866.7 Mbps mcs=11 event_id=val-751", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: pairwise key installation failed keyidx=0 event_id=val-984", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 IEEE 802.11: disassociated due to inactivity reason=4 seq=101066", "label": "error"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: pairwise key handshake completed (RSN) event_id=val-41", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 PMF required but client did not negotiate management frame protection attempt=101408", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-ROAMED bssid=64:70:02:9a:bc:11 station=5c:e9:1e:33:8f:a1 roam_seq=100784", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: authenticated auth_seq=100020", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f keepalive response received sequence=100578", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key message sent replay_counter=100164", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.175 e4:5f:01:aa:3b:77 lease=12h", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=101024", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: received EAPOL-Key with invalid MIC replay_counter=100911", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd changed power save mode: off ps_seq=100306", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: group key handshake timeout retry=1", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd IEEE 802.11: disassociated due to inactivity reason=4 seq=101116", "label": "error"}
+{"input": "kernel: wlan0: station b8:27:eb:6d:45:f2 beacon loss detected, connection unstable seq=101310", "label": "error"}
+{"input": "kernel: wlan0: station dc:a6:32:48:91:0f link failed due to poor channel conditions signal=-87", "label": "error"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b signal poll updated signal=-59 noise=-95", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e changed power save mode: on ps_seq=100307", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS station=d8:bb:c1:07:90:ac bssid=64:70:02:9a:bc:11 seq=101321", "label": "error"}
+{"input": "kernel: wlan0: station 0c:8b:fd:61:c2:14 power save mode enabled after association interval=75s", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101078", "label": "error"}
+{"input": "kernel: wlan0: firmware crashed during key install for station 64:5a:04:a9:33:e1 crash_id=101355", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-ROAMED bssid=18:64:72:2f:8a:c3 station=dc:a6:32:48:91:0f roam_seq=100776", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100952", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: EAPOL-Key message 4/4 received replay_counter=100175", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd retry counter reset after successful frame ack retry_count=2 event_id=val-486", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key message sent replay_counter=100134", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=70:3a:cb:51:2d:88 bssid=00:25:9c:7a:10:01 reason=34 locally_generated=0 seq=101127", "label": "error"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c changed power save mode: off ps_seq=100300", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: group key handshake timeout retry=1", "label": "error"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: EAPOL-Key message 3/4 sent replay_counter=100174", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 excessive frame retries, disconnecting station retry_count=10", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: EAPOL-Key message 1/4 sent replay_counter=100112", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: EAPOL-Key message 3/4 sent replay_counter=100102", "label": "normal"}
+{"input": "kernel: wlan0: station 6c:5a:b0:2e:91:c8 power save mode disabled after traffic idle interval=8s", "label": "normal"}
+{"input": "kernel: wlan0: station 5c:e9:1e:33:8f:a1 power save mode disabled after traffic idle interval=50s", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.117 70:3a:cb:51:2d:88 client-67", "label": "normal"}
+{"input": "kernel: wlan0: station 70:3a:cb:51:2d:88 low signal warning cleared signal=-63", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: EAPOL-Key message 4/4 received replay_counter=100145", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: group key handshake completed (RSN) gtk=2", "label": "normal"}
+{"input": "kernel: wlan0: tx queue stuck for station f4:f5:d8:7a:19:2b; firmware recovery triggered queue=0", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: pairwise key installation failed keyidx=0", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.160 2c:54:cf:92:10:bd", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.153 70:3a:cb:51:2d:88 client-23", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.119 9c:b6:d0:13:7e:64", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a RSN: PMKSA cache entry added cache_id=100621", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: association rejected unsupported rates status_code=18 attempt=101431", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101048", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: EAPOL-Key message 3/4 sent replay_counter=100108", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: no address available for DHCP request from 28:cf:e9:5b:73:a4 pool=1", "label": "error"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b RSN: PMKSA cache entry refreshed cache_id=100592", "label": "normal"}
+{"input": "kernel: wlan0: station a0:36:9f:71:b5:2e data rate updated to 866.7 Mbps mcs=11", "label": "normal"}
+{"input": "kernel: wlan0: tx queue stuck for station 6c:5a:b0:2e:91:c8; firmware recovery triggered queue=2", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac EAP-TLS: client certificate validation failed serial=201267", "label": "error"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 no keepalive ACK after retries, deauthenticating reason=4 retry_count=12", "label": "error"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.1X: authentication completed successfully session=100825", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: association rejected unsupported rates status_code=18 attempt=101401", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.91 28:cf:e9:5b:73:a4 lease=12h", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101045", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f RSN: using cached PMKSA for fast reconnect cache_id=100614", "label": "normal"}
+{"input": "kernel: wlan0: station 6c:5a:b0:2e:91:c8 power save mode disabled after traffic idle interval=62s", "label": "normal"}
+{"input": "kernel: wlan0: station 0c:8b:fd:61:c2:14 link failed due to poor channel conditions signal=-87", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f signal poll updated signal=-57 noise=-95", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 RSN: PMKSA cache entry refreshed cache_id=100662", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 disconnected after repeated keepalive failures retry_count=15", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 retry counter reset after successful frame ack retry_count=0 event_id=val-492", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 keepalive response received after retry retry=0 event_id=val-521", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: EAPOL-Key message 3/4 sent replay_counter=100138", "label": "normal"}
+{"input": "kernel: wlan0: station 64:5a:04:a9:33:e1 power save mode enabled after association interval=27s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 RSN: using cached PMKSA for fast reconnect cache_id=100674", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 transient low ACK rate recovered ack_rate=44", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.157 e4:5f:01:aa:3b:77 lease=12h", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: disassociated due to inactivity reason=4 seq=101131", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 keepalive retry succeeded retry=2", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.166 a8:6d:aa:42:bc:09", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 IEEE 802.11: disassociated due to inactivity reason=4 seq=101086", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 RSN: PMKSA cache hit cache_id=100605", "label": "normal"}
+{"input": "kernel: wlan0: station e4:5f:01:aa:3b:77 power save mode enabled ps_seq=100393", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.1.113 28:cf:e9:5b:73:a4 xid=101173", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.3.145 0c:8b:fd:61:c2:14 lease conflict detected xid=101205", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 RSN: PMKSA cache entry refreshed cache_id=100607", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c accounting interim update sent session=100858", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-ROAMED bssid=64:70:02:9a:bc:11 station=a8:6d:aa:42:bc:09 roam_seq=100780", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101059", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 retry counter reset after successful frame ack retry_count=2 event_id=val-510", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key timeout after message 3/4 retry=0", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=2c:54:cf:92:10:bd above=1 signal=-68 noise=-95 txrate=433.3 Mb/s", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 PMF required but client did not negotiate management frame protection attempt=101418", "label": "error"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101058", "label": "error"}
+{"input": "kernel: wlan0: station 28:cf:e9:5b:73:a4 power save mode enabled ps_seq=100399", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key message received replay_counter=100147", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 88:66:5a:d1:72:0c ignored because address pool exhausted pool=4", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: EAPOL-Key message 2/4 received replay_counter=100137", "label": "normal"}
+{"input": "kernel: wlan0: driver failed to install pairwise key for station 48:5f:99:c0:21:6a keyidx=1", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.143 a0:36:9f:71:b5:2e", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: group key handshake completed (RSN) gtk=0 event_id=val-36", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f keepalive response received sequence=100488", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 RADIUS: Access-Accept received session=100816", "label": "normal"}
+{"input": "kernel: wlan0: firmware crashed while processing association response station=70:3a:cb:51:2d:88 crash_id=101361", "label": "error"}
+{"input": "kernel: wlan0: station 28:cf:e9:5b:73:a4 low signal warning cleared signal=-55", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e temporary keepalive miss recovered without disconnect retry=2 event_id=val-541", "label": "normal"}
+{"input": "kernel: wlan0: station 28:cf:e9:5b:73:a4 power save mode enabled ps_seq=100435", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) 3c:22:fb:10:24:38 xid=100242", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 2c:54:cf:92:10:bd ignored because address pool exhausted pool=4", "label": "error"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 signal poll updated signal=-45 noise=-95", "label": "normal"}
+{"input": "kernel: wlan0: tx queue stuck for station b8:27:eb:6d:45:f2; firmware recovery triggered queue=4", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key message sent replay_counter=100146", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e temporary keepalive miss recovered without disconnect retry=2 event_id=val-577", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 keepalive response received after retry retry=0 event_id=val-509", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: bad DHCP request from 28:cf:e9:5b:73:a4: requested address outside subnet xid=101209", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=00:25:9c:7a:10:02 id=0 ssid=Lab-WPA2 station=a0:36:9f:71:b5:2e", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: no address available for DHCP request from 48:5f:99:c0:21:6a pool=1", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101064", "label": "error"}
+{"input": "kernel: wlan0: station dc:a6:32:48:91:0f power save mode disabled ps_seq=100344", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key timeout after message 1/4 retry=3", "label": "error"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 RSN: PMKSA cache entry added cache_id=100591", "label": "normal"}
+{"input": "kernel: wlan0: station e4:5f:01:aa:3b:77 retry count high but frame delivered retry_count=3", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.177 0c:8b:fd:61:c2:14 client-47", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101133", "label": "error"}
+{"input": "kernel: wlan0: station 5c:e9:1e:33:8f:a1 power save mode disabled after traffic idle interval=32s", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: group key handshake completed (RSN) gtk=0", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: no address available for DHCP request from d8:bb:c1:07:90:ac pool=5", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 changed power save mode: off ps_seq=100330", "label": "normal"}
+{"input": "kernel: wlan0: tx queue stuck for station a0:36:9f:71:b5:2e; firmware recovery triggered queue=1", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 RSN: PMKSA cache entry added cache_id=100661", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.176 f4:f5:d8:7a:19:2b xid=100286", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: group key handshake timeout retry=3 event_id=val-1003", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd disconnected after repeated keepalive failures retry_count=8", "label": "error"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a disconnected after repeated keepalive failures retry_count=13", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key timeout after message 3/4 retry=0 event_id=val-956", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: pairwise key installation failed keyidx=0 event_id=val-960", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) b8:27:eb:6d:45:f2 xid=100284", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.0.88 b8:27:eb:6d:45:f2 xid=101148", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key timeout after message 3/4 retry=2 event_id=val-1010", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: pairwise key installation failed keyidx=0 event_id=val-996", "label": "error"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key message received replay_counter=100123", "label": "normal"}
+{"input": "kernel: wlan0: station b8:27:eb:6d:45:f2 power save mode disabled ps_seq=100338", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd changed power save mode: off ps_seq=100288", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.4.128 2c:54:cf:92:10:bd xid=101188", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.93 64:5a:04:a9:33:e1 client-43", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=a0:36:9f:71:b5:2e bssid=18:64:72:2f:8a:c3 reason=34 locally_generated=0 seq=101117", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 IEEE 802.11: disassociated due to inactivity reason=4 seq=101111", "label": "error"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: authenticated auth_seq=100014", "label": "normal"}
+{"input": "kernel: wlan0: driver failed to install pairwise key for station 70:3a:cb:51:2d:88 keyidx=1", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f denied by MAC ACL policy acl_rule=4", "label": "error"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b signal poll updated signal=-53 noise=-95", "label": "normal"}
+{"input": "kernel: wlan0: station e4:5f:01:aa:3b:77 link failed due to poor channel conditions signal=-82", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: EAPOL-Key message 3/4 sent replay_counter=100132", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: authenticated auth_seq=100074", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: authenticated auth_seq=100032", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: disassociated due to inactivity reason=4 seq=101101", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-ROAMED bssid=00:25:9c:7a:10:02 station=f4:f5:d8:7a:19:2b roam_seq=100772", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: no address available for DHCP request from 6c:5a:b0:2e:91:c8 pool=2", "label": "error"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e changed power save mode: on ps_seq=100397", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.0.148 dc:a6:32:48:91:0f xid=101208", "label": "error"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: group key handshake completed (RSN) gtk=0 event_id=val-48", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101094", "label": "error"}
+{"input": "kernel: wlan0: tx queue stuck for station 3c:22:fb:10:24:38; firmware recovery triggered queue=2", "label": "error"}
+{"input": "kernel: wlan0: station 6c:5a:b0:2e:91:c8 power save mode disabled after traffic idle interval=98s", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=00:25:9c:7a:10:01 id=0 ssid=Corp-8021X station=9c:b6:d0:13:7e:64", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c RSN: PMKSA cache entry added cache_id=100606", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key timeout after message 1/4 retry=3 event_id=val-939", "label": "error"}
+{"input": "kernel: wlan0: station 5c:e9:1e:33:8f:a1 link failed due to poor channel conditions signal=-92", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.92 6c:5a:b0:2e:91:c8 xid=100202", "label": "normal"}
+{"input": "kernel: wlan0: station 70:3a:cb:51:2d:88 power save mode enabled after association interval=69s", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac accounting session stopped normally session=100871", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: EAPOL-Key message 4/4 received replay_counter=100133", "label": "normal"}
+{"input": "kernel: wlan0: station 2c:54:cf:92:10:bd link failed due to poor channel conditions signal=-82", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.149 d8:bb:c1:07:90:ac", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.147 64:5a:04:a9:33:e1 client-17", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a RSN: PMKSA cache entry refreshed cache_id=100657", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=48:5f:99:c0:21:6a scan_id=100801", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: group key handshake timeout retry=3 event_id=val-991", "label": "error"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 IEEE 802.11: disassociated due to inactivity reason=4 seq=101126", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 disconnected due to excessive frame retries retry_count=15", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=70:3a:cb:51:2d:88 bssid=18:64:72:2f:8a:c3 reason=34 locally_generated=0 seq=101037", "label": "error"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c RSN: PMKSA cache entry added cache_id=100696", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 keepalive response received after retry retry=0 event_id=val-485", "label": "normal"}
+{"input": "kernel: wlan0: station 6c:5a:b0:2e:91:c8 power save mode disabled after traffic idle interval=116s", "label": "normal"}
+{"input": "kernel: wlan0: station 9c:b6:d0:13:7e:64 beacon loss detected, connection unstable seq=101345", "label": "error"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 keepalive response received after retry retry=0 event_id=val-539", "label": "normal"}
+{"input": "kernel: wlan0: station 70:3a:cb:51:2d:88 retry count high but frame delivered retry_count=2", "label": "normal"}
+{"input": "kernel: wlan0: hardware restart required after station e4:5f:01:aa:3b:77 transmit timeout queue=7", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.4.80 a8:6d:aa:42:bc:09 lease conflict detected xid=101140", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=48:5f:99:c0:21:6a scan_id=100765", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100994", "label": "error"}
+{"input": "kernel: wlan0: station dc:a6:32:48:91:0f power save mode disabled ps_seq=100308", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=00:25:9c:7a:10:01 id=0 ssid=OfficeWiFi station=9c:b6:d0:13:7e:64", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key timeout after message 1/4 retry=3 event_id=val-963", "label": "error"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key timeout after message 1/4 retry=3", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=3c:22:fb:10:24:38 above=1 signal=-75 noise=-95 txrate=54 Mb/s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd changed power save mode: off ps_seq=100432", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac FT authentication completed r0kh_id=ap-7", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd retry counter reset after successful frame ack retry_count=0 event_id=val-504", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c signal poll updated signal=-49 noise=-95", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-ROAMED bssid=00:25:9c:7a:10:02 station=2c:54:cf:92:10:bd roam_seq=100792", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: no address available for DHCP request from a8:6d:aa:42:bc:09 pool=4", "label": "error"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: EAPOL-Key message 1/4 sent replay_counter=100100", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key message received replay_counter=100153", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e RSN: PMKSA cache hit cache_id=100685", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.121 e4:5f:01:aa:3b:77 lease=12h", "label": "normal"}
+{"input": "radiusd[822]: Login OK: [e4:5f:01:aa:3b:77] from client ap-3 port 1843", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 IEEE 802.11: disassociated due to inactivity reason=4 seq=101061", "label": "error"}
+{"input": "kernel: wlan0: firmware crashed during key install for station 48:5f:99:c0:21:6a crash_id=101395", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: group key handshake timeout retry=3 event_id=val-967", "label": "error"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e EAP-TLS: client certificate validation failed serial=201261", "label": "error"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: associated (aid 26)", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 keepalive response received after retry retry=0 event_id=val-581", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 no keepalive ACK after retries, deauthenticating reason=4 retry_count=9", "label": "error"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key message sent replay_counter=100176", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101044", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 authorized vlan=2 event_id=val-22", "label": "normal"}
+{"input": "kernel: wlan0: station dc:a6:32:48:91:0f power save mode disabled ps_seq=100380", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac IEEE 802.1X: authentication completed successfully session=100817", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e RSN: PMKSA cache entry added cache_id=100631", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key message sent replay_counter=100110", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 authorized vlan=2 event_id=val-58", "label": "normal"}
+{"input": "kernel: wlan0: station 64:5a:04:a9:33:e1 power save mode enabled after association interval=111s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 IEEE 802.1X: EAP timeout waiting for response session=101234", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 keepalive retry succeeded retry=2 event_id=val-490", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 RSN: using cached PMKSA for fast reconnect cache_id=100629", "label": "normal"}
+{"input": "kernel: wlan0: firmware crashed during key install for station 2c:54:cf:92:10:bd crash_id=101350", "label": "error"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: pairwise key handshake completed (RSN) event_id=val-59", "label": "normal"}
+{"input": "kernel: wlan0: station 48:5f:99:c0:21:6a power save mode enabled ps_seq=100333", "label": "normal"}
+{"input": "kernel: wlan0: station b8:27:eb:6d:45:f2 power save mode disabled ps_seq=100356", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.128 6c:5a:b0:2e:91:c8 xid=100238", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 RSN: using cached PMKSA for fast reconnect cache_id=100654", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a RSN: PMKSA cache hit cache_id=100585", "label": "normal"}
+{"input": "kernel: wlan0: connection lost from 64:70:02:9a:bc:11 after beacon timeout station=a8:6d:aa:42:bc:09 seq=101302", "label": "error"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c RSN: PMKSA cache lookup succeeded cache_id=100678", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101060", "label": "error"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 deauthenticated after keepalive timeout reason=4 retry_count=9", "label": "error"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b IEEE 802.11: authentication failed status_code=13 attempt=101402", "label": "error"}
+{"input": "kernel: wlan0: station 28:cf:e9:5b:73:a4 power save mode enabled ps_seq=100363", "label": "normal"}
+{"input": "kernel: wlan0: station 9c:b6:d0:13:7e:64 low signal warning cleared signal=-63", "label": "normal"}
+{"input": "kernel: wlan0: station 3c:22:fb:10:24:38 power save mode disabled ps_seq=100422", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 excessive frame retries, disconnecting station retry_count=9", "label": "error"}
+{"input": "kernel: wlan0: station 3c:22:fb:10:24:38 power save mode disabled ps_seq=100332", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a RSN: using cached PMKSA for fast reconnect cache_id=100639", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=3c:22:fb:10:24:38 above=1 signal=-76 noise=-95 txrate=54 Mb/s", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-537", "label": "normal"}
+{"input": "kernel: wlan0: station 70:3a:cb:51:2d:88 power save mode enabled after association interval=105s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.1X: authentication failed session=101281", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 EAP-TLS: client certificate validation failed serial=201237", "label": "error"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-489", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 RSN: PMKSA cache entry refreshed cache_id=100622", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.79 48:5f:99:c0:21:6a lease=12h", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 keepalive response received sequence=100482", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 keepalive timeout exceeded, station removed reason=4 retry_count=9", "label": "error"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: associated (aid 44)", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.81 70:3a:cb:51:2d:88 client-31", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: authentication failed status_code=13 attempt=101412", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 5c:e9:1e:33:8f:a1 ignored because address pool exhausted pool=2", "label": "error"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key message received replay_counter=100111", "label": "normal"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101055", "label": "error"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: EAPOL-Key message 2/4 received replay_counter=100125", "label": "normal"}
+{"input": "kernel: wlan0: driver failed to install pairwise key for station 88:66:5a:d1:72:0c keyidx=2", "label": "error"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key timeout after message 3/4 retry=0 event_id=val-944", "label": "error"}
+{"input": "kernel: wlan0: firmware crashed during key install for station 0c:8b:fd:61:c2:14 crash_id=101385", "label": "error"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: EAPOL-Key message 4/4 received replay_counter=100109", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 RSN: using cached PMKSA for fast reconnect cache_id=100599", "label": "normal"}
+{"input": "kernel: wlan0: station f4:f5:d8:7a:19:2b power save mode disabled after traffic idle interval=56s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 keepalive retry succeeded retry=2 event_id=val-508", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 signal poll updated signal=-65 noise=-95", "label": "normal"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101109", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key message sent replay_counter=100128", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=64:5a:04:a9:33:e1 scan_id=100797", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 RSN: PMKSA cache entry refreshed cache_id=100672", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f temporary queue timeout recovered queue=4", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 RSN: using cached PMKSA for fast reconnect cache_id=100609", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101050", "label": "error"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 single missed ack recovered on retry retry_count=1", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.4.140 88:66:5a:d1:72:0c lease conflict detected xid=101200", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: bad DHCP request from e4:5f:01:aa:3b:77: requested address outside subnet xid=101149", "label": "error"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 RADIUS: Access-Reject received session=101268", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 keepalive response received after retry retry=0 event_id=val-479", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101083", "label": "error"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: EAPOL-Key message 2/4 received replay_counter=100143", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 reassociated successfully aid=47", "label": "normal"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 keepalive response received after retry retry=0", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c retry counter reset after successful frame ack retry_count=2", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key message sent replay_counter=100188", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=a8:6d:aa:42:bc:09 bssid=00:25:9c:7a:10:02 reason=34 locally_generated=0 seq=101032", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 IEEE 802.1X: EAP timeout waiting for response session=101282", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 no keepalive ACK after retries, deauthenticating reason=4 retry_count=12", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=88:66:5a:d1:72:0c above=1 signal=-44 noise=-95 txrate=433.3 Mb/s", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 RSN: PMKSA cache entry added cache_id=100626", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.83 9c:b6:d0:13:7e:64", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e temporary keepalive miss recovered without disconnect retry=2", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.1X: authentication failed session=101275", "label": "error"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b authorized vlan=2 event_id=val-34", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac changed power save mode: on ps_seq=100295", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 temporary keepalive miss recovered without disconnect retry=2 event_id=val-463", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key timeout after message 3/4 retry=2 event_id=val-986", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.151 48:5f:99:c0:21:6a lease=12h", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac excessive frame retries, disconnecting station retry_count=15", "label": "error"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101049", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac RSN: PMKSA cache entry added cache_id=100601", "label": "normal"}
+{"input": "kernel: wlan0: driver failed to install pairwise key for station 6c:5a:b0:2e:91:c8 keyidx=0", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: group key handshake completed (RSN) gtk=2 event_id=val-54", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 RSN: using cached PMKSA for fast reconnect cache_id=100689", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: pairwise key installation failed keyidx=0", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.127 28:cf:e9:5b:73:a4 lease=12h", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 signal poll updated signal=-51 noise=-95", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 IEEE 802.1X: authentication completed successfully session=100845", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c changed power save mode: off ps_seq=100354", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: disassociated due to inactivity reason=4 seq=101106", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd RADIUS: server timeout during authentication session=101242", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=6c:5a:b0:2e:91:c8 above=1 signal=-71 noise=-95 txrate=144.4 Mb/s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c RADIUS: server timeout during authentication session=101272", "label": "error"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101135", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.171 70:3a:cb:51:2d:88 client-41", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 deauthenticated after keepalive timeout reason=4 retry_count=11", "label": "error"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-579", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 deauthenticated after keepalive timeout reason=4 retry_count=10", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac changed power save mode: on ps_seq=100439", "label": "normal"}
+{"input": "kernel: wlan0: station 48:5f:99:c0:21:6a power save mode enabled ps_seq=100405", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 RSN: PMKSA cache entry refreshed cache_id=100597", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=0c:8b:fd:61:c2:14 scan_id=100773", "label": "normal"}
+{"input": "kernel: wlan0: hardware restart required after station 28:cf:e9:5b:73:a4 transmit timeout queue=1", "label": "error"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.1X: authentication failed session=101239", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) e4:5f:01:aa:3b:77 ignored because address pool exhausted pool=1", "label": "error"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101119", "label": "error"}
+{"input": "kernel: wlan0: driver failed to install pairwise key for station a0:36:9f:71:b5:2e keyidx=3", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: EAPOL-Key message 4/4 received replay_counter=100169", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=64:70:02:9a:bc:11 id=0 ssid=Lab-WPA2 station=d8:bb:c1:07:90:ac", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key timeout after message 3/4 retry=0 event_id=val-992", "label": "error"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c transient low ACK rate recovered ack_rate=64", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.82 88:66:5a:d1:72:0c", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-561", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c retry counter reset after successful frame ack retry_count=2 event_id=val-534", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101134", "label": "error"}
+{"input": "kernel: wlan0: station 28:cf:e9:5b:73:a4 low signal warning cleared signal=-51", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.137 9c:b6:d0:13:7e:64", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 keepalive retry succeeded retry=2 event_id=val-562", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key message received replay_counter=100129", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 RSN: PMKSA cache lookup succeeded cache_id=100658", "label": "normal"}
+{"input": "kernel: wlan0: station b8:27:eb:6d:45:f2 power save mode disabled ps_seq=100410", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.155 9c:b6:d0:13:7e:64", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac temporary keepalive miss recovered without disconnect retry=2 event_id=val-565", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.0.130 dc:a6:32:48:91:0f lease conflict detected xid=101190", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 RSN: PMKSA cache entry refreshed cache_id=100587", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c changed power save mode: off ps_seq=100318", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key message received replay_counter=100183", "label": "normal"}
+{"input": "kernel: wlan0: station 70:3a:cb:51:2d:88 data rate updated to 300 Mbps mcs=3", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 RSN: PMKSA cache entry refreshed cache_id=100692", "label": "normal"}
+{"input": "kernel: wlan0: station 28:cf:e9:5b:73:a4 link failed due to poor channel conditions signal=-82", "label": "error"}
+{"input": "kernel: wlan0: station 0c:8b:fd:61:c2:14 power save mode enabled after association interval=3s", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101105", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=18:64:72:2f:8a:c3 id=0 ssid=Corp-8021X station=d8:bb:c1:07:90:ac", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: group key handshake timeout retry=1 event_id=val-961", "label": "error"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 keepalive response received after retry retry=0 event_id=val-491", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key message received replay_counter=100159", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd retry counter reset after successful frame ack retry_count=0 event_id=val-576", "label": "normal"}
+{"input": "kernel: wlan0: station e4:5f:01:aa:3b:77 low signal warning cleared signal=-67", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-507", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key timeout after message 3/4 retry=2", "label": "error"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b RSN: PMKSA cache hit cache_id=100610", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.145 28:cf:e9:5b:73:a4 lease=12h", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e EAP-TLS: client certificate validation failed serial=201279", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 temporary keepalive miss recovered without disconnect retry=2 event_id=val-571", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 RSN: PMKSA cache hit cache_id=100670", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.141 0c:8b:fd:61:c2:14 client-11", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=101000", "label": "error"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: associated (aid 8)", "label": "normal"}
+{"input": "kernel: wlan0: station 28:cf:e9:5b:73:a4 beacon loss detected, connection unstable seq=101335", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: pairwise key installation failed keyidx=2 event_id=val-942", "label": "error"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 no keepalive ACK after retries, deauthenticating reason=4 retry_count=11", "label": "error"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b keepalive retry succeeded retry=2 event_id=val-556", "label": "normal"}
+{"input": "kernel: wlan0: station 5c:e9:1e:33:8f:a1 power save mode disabled after traffic idle interval=68s", "label": "normal"}
+{"input": "kernel: wlan0: station a8:6d:aa:42:bc:09 beacon loss detected, connection unstable seq=101320", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.173 9c:b6:d0:13:7e:64", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key message sent replay_counter=100170", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a RSN: PMKSA cache hit cache_id=100675", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b deauthenticated after keepalive timeout reason=4 retry_count=8", "label": "error"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: EAPOL-Key message 1/4 sent replay_counter=100118", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100958", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101123", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd changed power save mode: off ps_seq=100396", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b keepalive retry succeeded retry=2", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b RSN: using cached PMKSA for fast reconnect cache_id=100664", "label": "normal"}
+{"input": "kernel: wlan0: connection lost from 00:25:9c:7a:10:02 after beacon timeout station=2c:54:cf:92:10:bd seq=101332", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 deauthenticated after keepalive timeout reason=4 retry_count=15", "label": "error"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: disassociated due to inactivity reason=4 seq=101071", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 RSN: PMKSA cache entry added cache_id=100641", "label": "normal"}
+{"input": "kernel: wlan0: station 0c:8b:fd:61:c2:14 data rate updated to 300 Mbps mcs=3", "label": "normal"}
+{"input": "kernel: wlan0: station e4:5f:01:aa:3b:77 data rate updated to 72.2 Mbps mcs=7", "label": "normal"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: received EAPOL-Key with invalid MIC replay_counter=101019", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.5.105 9c:b6:d0:13:7e:64 lease conflict detected xid=101165", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd retry counter reset after successful frame ack retry_count=2", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100970", "label": "error"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key timeout after message 1/4 retry=1 event_id=val-1029", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 changed power save mode: on ps_seq=100427", "label": "normal"}
+{"input": "kernel: wlan0: station 3c:22:fb:10:24:38 link failed due to poor channel conditions signal=-87", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 keepalive response received after retry retry=0 event_id=val-515", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f RSN: PMKSA cache entry added cache_id=100596", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b keepalive retry succeeded retry=2 event_id=val-502", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac changed power save mode: on ps_seq=100331", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 IEEE 802.1X: EAP timeout waiting for response session=101228", "label": "error"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-459", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=2c:54:cf:92:10:bd bssid=64:70:02:9a:bc:11 reason=34 locally_generated=0 seq=101062", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 RSN: PMKSA cache entry refreshed cache_id=100697", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e changed power save mode: on ps_seq=100415", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: EAPOL-Key message 1/4 sent replay_counter=100142", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.87 0c:8b:fd:61:c2:14 client-37", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 RSN: PMKSA cache hit cache_id=100635", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 RSN: PMKSA cache lookup succeeded cache_id=100688", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: EAPOL-Key message 2/4 received replay_counter=100107", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: pairwise key installation failed keyidx=0 event_id=val-936", "label": "error"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key timeout after message 1/4 retry=1", "label": "error"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: EAPOL-Key message 2/4 received replay_counter=100185", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPRELEASE(wlan0) 10.20.5.167 d8:bb:c1:07:90:ac", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=9c:b6:d0:13:7e:64 scan_id=100805", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c PMF required but client did not negotiate management frame protection attempt=101398", "label": "error"}
+{"input": "kernel: wlan0: firmware crashed while processing association response station=9c:b6:d0:13:7e:64 crash_id=101381", "label": "error"}
+{"input": "kernel: wlan0: station 3c:22:fb:10:24:38 power save mode disabled ps_seq=100314", "label": "normal"}
+{"input": "kernel: wlan0: station 0c:8b:fd:61:c2:14 power save mode enabled after association interval=21s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd RSN: using cached PMKSA for fast reconnect cache_id=100684", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key timeout after message 3/4 retry=0 event_id=val-968", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 changed power save mode: off ps_seq=100420", "label": "normal"}
+{"input": "kernel: wlan0: station d8:bb:c1:07:90:ac data rate updated to 866.7 Mbps mcs=11", "label": "normal"}
+{"input": "kernel: wlan0: connection lost from 18:64:72:2f:8a:c3 after beacon timeout station=28:cf:e9:5b:73:a4 seq=101317", "label": "error"}
+{"input": "kernel: wlan0: station 28:cf:e9:5b:73:a4 power save mode enabled ps_seq=100417", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS station=dc:a6:32:48:91:0f bssid=18:64:72:2f:8a:c3 seq=101316", "label": "error"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 WPA: EAPOL-Key timeout after message 1/4 retry=3 event_id=val-1011", "label": "error"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 transient low ACK rate recovered ack_rate=60", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b IEEE 802.1X: EAP timeout waiting for response session=101276", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 EAP-TLS: client certificate validation failed serial=201273", "label": "error"}
+{"input": "kernel: wlan0: firmware crashed during key install for station 5c:e9:1e:33:8f:a1 crash_id=101360", "label": "error"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 RSN: PMKSA cache lookup succeeded cache_id=100608", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac temporary keepalive miss recovered without disconnect retry=2 event_id=val-475", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 EAP-TLS: client certificate validation failed serial=201219", "label": "error"}
+{"input": "kernel: wlan0: firmware crashed while processing association response station=5c:e9:1e:33:8f:a1 crash_id=101396", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key message sent replay_counter=100182", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.165 64:5a:04:a9:33:e1 client-35", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 RADIUS: server timeout during authentication session=101230", "label": "error"}
+{"input": "kernel: wlan0: station f4:f5:d8:7a:19:2b power save mode disabled after traffic idle interval=92s", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.0.100 3c:22:fb:10:24:38 lease conflict detected xid=101160", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: authenticated auth_seq=100002", "label": "normal"}
+{"input": "kernel: wlan0: station 48:5f:99:c0:21:6a low signal warning cleared signal=-59", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key timeout after message 1/4 retry=1", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: no address available for DHCP request from 0c:8b:fd:61:c2:14 pool=3", "label": "error"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e EAP-TLS: client certificate validation failed serial=201225", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=00:25:9c:7a:10:01 id=0 ssid=IoT-Net station=9c:b6:d0:13:7e:64", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd retry counter reset after successful frame ack retry_count=2 event_id=val-522", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.103 e4:5f:01:aa:3b:77 lease=12h", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101118", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f keepalive response received sequence=100470", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 keepalive response received sequence=100548", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.0.118 3c:22:fb:10:24:38 xid=101178", "label": "error"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101090", "label": "error"}
+{"input": "kernel: wlan0: station 28:cf:e9:5b:73:a4 power save mode enabled ps_seq=100345", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.140 f4:f5:d8:7a:19:2b xid=100250", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 keepalive response received sequence=100494", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 10.20.2.146 6c:5a:b0:2e:91:c8 xid=100256", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101120", "label": "error"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 RADIUS: Access-Reject received session=101232", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd retry counter reset after successful frame ack retry_count=0 event_id=val-540", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: EAPOL-Key message 4/4 received replay_counter=100139", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=5c:e9:1e:33:8f:a1 above=1 signal=-59 noise=-95 txrate=144.4 Mb/s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: pairwise key handshake completed (RSN) event_id=val-83", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.163 28:cf:e9:5b:73:a4 lease=12h", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: group key handshake timeout retry=1 event_id=val-997", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac IEEE 802.11: disassociated due to inactivity reason=4 seq=101051", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=18:64:72:2f:8a:c3 id=0 ssid=IoT-Net station=d8:bb:c1:07:90:ac", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: EAPOL-Key message 3/4 sent replay_counter=100144", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c RADIUS: Access-Accept received session=100840", "label": "normal"}
+{"input": "kernel: wlan0: station e4:5f:01:aa:3b:77 power save mode enabled ps_seq=100339", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: EAPOL-Key message 1/4 sent replay_counter=100154", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b authorized vlan=2 event_id=val-70", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd accounting interim update sent session=100846", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a excessive frame retries, disconnecting station retry_count=11", "label": "error"}
+{"input": "kernel: wlan0: station 6c:5a:b0:2e:91:c8 power save mode disabled after traffic idle interval=92s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 keepalive response received after retry retry=0 event_id=val-545", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac RSN: PMKSA cache lookup succeeded cache_id=100673", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 keepalive response received sequence=100566", "label": "normal"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 FT authentication completed r0kh_id=ap-3", "label": "normal"}
+{"input": "kernel: wlan0: station 70:3a:cb:51:2d:88 power save mode enabled after association interval=33s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 single missed ack recovered on retry retry_count=1", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: received EAPOL-Key with invalid MIC replay_counter=100923", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.2.120 5c:e9:1e:33:8f:a1 lease conflict detected xid=101180", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac changed power save mode: on ps_seq=100349", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101093", "label": "error"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101089", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101073", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd signal poll updated signal=-73 noise=-95", "label": "normal"}
+{"input": "kernel: wlan0: station f4:f5:d8:7a:19:2b power save mode disabled after traffic idle interval=104s", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 changed power save mode: off ps_seq=100366", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 IEEE 802.1X: authentication completed successfully session=100841", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: received EAPOL-Key with invalid MIC replay_counter=100905", "label": "error"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: disassociated due to inactivity reason=4 seq=101041", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: EAPOL-Key message 2/4 received replay_counter=100119", "label": "normal"}
+{"input": "radiusd[822]: Login OK: [70:3a:cb:51:2d:88] from client ap-7 port 1839", "label": "normal"}
+{"input": "kernel: wlan0: station 48:5f:99:c0:21:6a power save mode enabled ps_seq=100423", "label": "normal"}
+{"input": "kernel: wlan0: connection lost from 64:70:02:9a:bc:11 after beacon timeout station=5c:e9:1e:33:8f:a1 seq=101342", "label": "error"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e changed power save mode: on ps_seq=100325", "label": "normal"}
+{"input": "kernel: wlan0: station 6c:5a:b0:2e:91:c8 power save mode disabled after traffic idle interval=26s", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 FT authentication completed r0kh_id=ap-7", "label": "normal"}
+{"input": "kernel: wlan0: station 70:3a:cb:51:2d:88 power save mode enabled after association interval=117s", "label": "normal"}
+{"input": "kernel: wlan0: station 6c:5a:b0:2e:91:c8 power save mode disabled after traffic idle interval=80s", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b keepalive retry succeeded retry=2 event_id=val-520", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 authorized vlan=2 event_id=val-28", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101070", "label": "error"}
+{"input": "kernel: wlan0: firmware crashed while processing association response station=f4:f5:d8:7a:19:2b crash_id=101366", "label": "error"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 RSN: PMKSA cache entry added cache_id=100586", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: pairwise key installation failed keyidx=2 event_id=val-966", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 RSN: PMKSA cache hit cache_id=100695", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.1X: authentication completed successfully session=100837", "label": "normal"}
+{"input": "kernel: wlan0: station 64:5a:04:a9:33:e1 power save mode enabled after association interval=9s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.1X: authentication failed session=101215", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd IEEE 802.11: authentication failed status_code=13 attempt=101422", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd keepalive timeout exceeded, station removed reason=4 retry_count=10", "label": "error"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: received EAPOL-Key with invalid MIC replay_counter=101013", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: bad DHCP request from 5c:e9:1e:33:8f:a1: requested address outside subnet xid=101144", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 IEEE 802.11: association denied status_code=17 AP full attempt=101410", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.3.85 70:3a:cb:51:2d:88 lease conflict detected xid=101145", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd retry counter reset after successful frame ack retry_count=0", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: associated (aid 36)", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f accounting session started session=100848", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd RSN: PMKSA cache entry added cache_id=100666", "label": "normal"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 deauthenticated after keepalive timeout reason=4 retry_count=11", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-BEACON-LOSS station=b8:27:eb:6d:45:f2 bssid=00:25:9c:7a:10:01 seq=101346", "label": "error"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a accounting session stopped normally session=100855", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) b8:27:eb:6d:45:f2 xid=100248", "label": "normal"}
+{"input": "kernel: wlan0: station 70:3a:cb:51:2d:88 power save mode enabled after association interval=51s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 FT authentication completed r0kh_id=ap-7", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 accounting session updated rx_bytes=1331297 tx_bytes=1742773", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: duplicate lease conflict for 10.20.5.93 a0:36:9f:71:b5:2e xid=101153", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f WPA: EAPOL-Key timeout after message 3/4 retry=0", "label": "error"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c disconnected after repeated keepalive failures retry_count=14", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.1.125 e4:5f:01:aa:3b:77 lease conflict detected xid=101185", "label": "error"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key message sent replay_counter=100122", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) dc:a6:32:48:91:0f xid=100200", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: authenticated auth_seq=100008", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPNAK(wlan0) 10.20.1.95 28:cf:e9:5b:73:a4 lease conflict detected xid=101155", "label": "error"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-477", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 EAP: peer certificate verified serial=200842", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a FT authentication completed r0kh_id=ap-7", "label": "normal"}
+{"input": "radiusd[822]: Login OK: [a0:36:9f:71:b5:2e] from client ap-3 port 1811", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 WPA: EAPOL-Key message 1/4 sent replay_counter=100148", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101103", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: no address available for DHCP request from a0:36:9f:71:b5:2e pool=5", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac temporary keepalive miss recovered without disconnect retry=2 event_id=val-583", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b temporary queue timeout recovered queue=0", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: received EAPOL-Key with invalid MIC replay_counter=101031", "label": "error"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101099", "label": "error"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e accounting session updated rx_bytes=1331245 tx_bytes=1742705", "label": "normal"}
+{"input": "kernel: wlan0: station 64:5a:04:a9:33:e1 link failed due to poor channel conditions signal=-87", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 retry counter reset after successful frame ack retry_count=0 event_id=val-528", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100946", "label": "error"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 RADIUS: Access-Accept received session=100836", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101125", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: pairwise key installation failed keyidx=2 event_id=val-990", "label": "error"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 IEEE 802.11: disassociated due to inactivity reason=4 seq=101036", "label": "error"}
+{"input": "radiusd[822]: Login incorrect: [0c:8b:fd:61:c2:14] invalid password from client ap-5", "label": "error"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 RSN: PMKSA cache lookup succeeded cache_id=100633", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.1X: authentication failed session=101245", "label": "error"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-525", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 RSN: PMKSA cache entry added cache_id=100656", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: pairwise key installation failed keyidx=0 event_id=val-1020", "label": "error"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e no keepalive ACK after retries, deauthenticating reason=4 retry_count=11", "label": "error"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100964", "label": "error"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100982", "label": "error"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 IEEE 802.11: deauthenticated due to local deauth request reason=3 seq=101085", "label": "error"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: pairwise key installation failed keyidx=2 event_id=val-1026", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 accounting session updated rx_bytes=1331141 tx_bytes=1742569", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.85 e4:5f:01:aa:3b:77 lease=12h", "label": "normal"}
+{"input": "kernel: wlan0: connection lost from 18:64:72:2f:8a:c3 after beacon timeout station=a0:36:9f:71:b5:2e seq=101297", "label": "error"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c RSN: PMKSA cache hit cache_id=100660", "label": "normal"}
+{"input": "kernel: wlan0: station d8:bb:c1:07:90:ac link failed due to poor channel conditions signal=-92", "label": "error"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 keepalive response received after retry retry=0", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd deauthenticated after keepalive timeout reason=4 retry_count=12", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SIGNAL-CHANGE station=a8:6d:aa:42:bc:09 above=1 signal=-55 noise=-95 txrate=433.3 Mb/s", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f disconnected due to excessive frame retries retry_count=10", "label": "error"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: authentication failed status_code=13 attempt=101407", "label": "error"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: EAPOL-Key message 1/4 sent replay_counter=100172", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-573", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=dc:a6:32:48:91:0f bssid=64:70:02:9a:bc:11 reason=34 locally_generated=0 seq=101082", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 authorized vlan=2", "label": "normal"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 WPA: pairwise key handshake completed (RSN) event_id=val-65", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c retry counter reset after successful frame ack retry_count=2 event_id=val-570", "label": "normal"}
+{"input": "kernel: wlan0: tx queue stuck for station a8:6d:aa:42:bc:09; firmware recovery triggered queue=6", "label": "error"}
+{"input": "kernel: wlan0: station dc:a6:32:48:91:0f power save mode disabled ps_seq=100416", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=9c:b6:d0:13:7e:64 scan_id=100769", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a RSN: PMKSA cache lookup succeeded cache_id=100603", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: EAPOL-Key message 3/4 sent replay_counter=100186", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 keepalive retry succeeded retry=2 event_id=val-550", "label": "normal"}
+{"input": "radiusd[822]: Login incorrect: [0c:8b:fd:61:c2:14] invalid password from client ap-7", "label": "error"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: received EAPOL-Key with invalid MIC replay_counter=100917", "label": "error"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: group key handshake timeout retry=3 event_id=val-955", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: group key handshake timeout retry=3 event_id=val-943", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 accounting interim update sent session=100850", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c retry counter reset after successful frame ack retry_count=0 event_id=val-480", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c IEEE 802.11: disassociated due to inactivity reason=4 seq=101056", "label": "error"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 IEEE 802.1X: authentication failed session=101221", "label": "error"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e PMF required but client did not negotiate management frame protection attempt=101423", "label": "error"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c WPA: group key handshake completed (RSN) gtk=2 event_id=val-66", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101139", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 EAP: peer certificate verified serial=200814", "label": "normal"}
+{"input": "kernel: wlan0: station dc:a6:32:48:91:0f power save mode disabled ps_seq=100398", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 signal poll updated signal=-67 noise=-95", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-ROAMED bssid=00:25:9c:7a:10:01 station=f4:f5:d8:7a:19:2b roam_seq=100808", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e IEEE 802.11: association denied status_code=17 AP full attempt=101405", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED station=48:5f:99:c0:21:6a bssid=00:25:9c:7a:10:01 reason=34 locally_generated=0 seq=101107", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPDISCOVER(wlan0) b8:27:eb:6d:45:f2 xid=100194", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e IEEE 802.11: deauthenticated due to previous authentication no longer valid reason=2 seq=101063", "label": "error"}
+{"input": "kernel: wlan0: hardware restart required after station dc:a6:32:48:91:0f transmit timeout queue=4", "label": "error"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b accounting interim update sent session=100862", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 reassociated successfully aid=35", "label": "normal"}
+{"input": "kernel: wlan0: station e4:5f:01:aa:3b:77 power save mode enabled ps_seq=100375", "label": "normal"}
+{"input": "kernel: wlan0: station 70:3a:cb:51:2d:88 power save mode enabled after association interval=87s", "label": "normal"}
+{"input": "kernel: wlan0: station dc:a6:32:48:91:0f power save mode disabled ps_seq=100290", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 RADIUS: Access-Reject received session=101256", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 retry counter reset after successful frame ack retry_count=0", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 keepalive timeout exceeded, station removed reason=4 retry_count=11", "label": "error"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c retry counter reset after successful frame ack retry_count=0", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a WPA: EAPOL-Key timeout after message 1/4 retry=1 event_id=val-981", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 temporary queue timeout recovered queue=0", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-SCAN-RESULTS station=28:cf:e9:5b:73:a4 scan_id=100777", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c changed power save mode: off ps_seq=100372", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 6c:5a:b0:2e:91:c8 ignored because address pool exhausted pool=2", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPINFORM(wlan0) 10.20.4.130 a8:6d:aa:42:bc:09", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd RADIUS: server timeout during authentication session=101224", "label": "error"}
+{"input": "kernel: wlan0: station f4:f5:d8:7a:19:2b power save mode disabled after traffic idle interval=2s", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.109 28:cf:e9:5b:73:a4 lease=12h", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd RADIUS: server timeout during authentication session=101278", "label": "error"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e changed power save mode: on ps_seq=100433", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.97 48:5f:99:c0:21:6a lease=12h", "label": "normal"}
+{"input": "kernel: wlan0: station 64:5a:04:a9:33:e1 power save mode enabled after association interval=93s", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 WPA: EAPOL-Key timeout after message 3/4 retry=2 event_id=val-1022", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 IEEE 802.11: class 3 frame from nonassociated station reason=7 seq=101104", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: authenticated auth_seq=100038", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.11: did not acknowledge keepalive, retry scheduled retry=1 event_id=val-549", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c RADIUS: server timeout during authentication session=101290", "label": "error"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: authenticated auth_seq=100044", "label": "normal"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b WPA: EAPOL-Key message 1/4 sent replay_counter=100178", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: association denied status_code=17 AP full attempt=101430", "label": "error"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a no keepalive ACK after retries, deauthenticating reason=4 retry_count=9", "label": "error"}
+{"input": "hostapd: wlan0: STA 70:3a:cb:51:2d:88 IEEE 802.11: association denied status_code=17 AP full attempt=101415", "label": "error"}
+{"input": "kernel: wlan0: station 28:cf:e9:5b:73:a4 power save mode enabled ps_seq=100327", "label": "normal"}
+{"input": "kernel: wlan0: station 9c:b6:d0:13:7e:64 link failed due to poor channel conditions signal=-92", "label": "error"}
+{"input": "dnsmasq-dhcp[411]: DHCPACK(wlan0) 10.20.3.129 64:5a:04:a9:33:e1 client-79", "label": "normal"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 IEEE 802.11: disassociated due to inactivity reason=4 seq=101076", "label": "error"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.1X: authentication failed session=101287", "label": "error"}
+{"input": "hostapd: wlan0: STA f4:f5:d8:7a:19:2b reassociated successfully aid=55", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 WPA: EAPOL-Key message 4/4 received replay_counter=100103", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: group key handshake completed (RSN) gtk=2", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 WPA: EAPOL-Key message 2/4 received replay_counter=100113", "label": "normal"}
+{"input": "kernel: wlan0: station 0c:8b:fd:61:c2:14 power save mode enabled after association interval=93s", "label": "normal"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac WPA: EAPOL-Key message 4/4 received replay_counter=100151", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 changed power save mode: on ps_seq=100301", "label": "normal"}
+{"input": "radiusd[822]: Login OK: [28:cf:e9:5b:73:a4] from client ap-7 port 1831", "label": "normal"}
+{"input": "kernel: wlan0: station 48:5f:99:c0:21:6a power save mode enabled ps_seq=100369", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 IEEE 802.11: authenticated auth_seq=100080", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 WPA: group key handshake completed (RSN) gtk=0 event_id=val-60", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 deauthenticated after keepalive timeout reason=4 retry_count=13", "label": "error"}
+{"input": "hostapd: wlan0: STA d8:bb:c1:07:90:ac single missed ack recovered on retry retry_count=1", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 deauthenticated after keepalive timeout reason=4 retry_count=14", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 accounting interim update sent session=100870", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPOFFER(wlan0) 10.20.1.169 48:5f:99:c0:21:6a lease=12h", "label": "normal"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=00:25:9c:7a:10:01 id=0 ssid=OfficeWiFi station=d8:bb:c1:07:90:ac", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: bad DHCP request from 88:66:5a:d1:72:0c: requested address outside subnet xid=101164", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 RSN: PMKSA cache hit cache_id=100690", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 accounting session updated rx_bytes=1331037 tx_bytes=1742433", "label": "normal"}
+{"input": "kernel: wlan0: station 64:5a:04:a9:33:e1 power save mode enabled after association interval=63s", "label": "normal"}
+{"input": "hostapd: wlan0: STA 64:5a:04:a9:33:e1 IEEE 802.1X: authentication completed successfully session=100833", "label": "normal"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 WPA: EAPOL-Key message sent replay_counter=100116", "label": "normal"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 IEEE 802.11: authentication failed status_code=13 attempt=101417", "label": "error"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 keepalive response received after retry retry=0 event_id=val-575", "label": "normal"}
+{"input": "hostapd: wlan0: STA 5c:e9:1e:33:8f:a1 WPA: 4-Way Handshake failed - pre-shared key may be incorrect attempt=100910", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 temporary keepalive miss recovered without disconnect retry=2", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: pairwise key handshake completed (RSN) event_id=val-89", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd WPA: pairwise key installation failed keyidx=0", "label": "error"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c RSN: PMKSA cache entry refreshed cache_id=100642", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f IEEE 802.11: association rejected unsupported rates status_code=18 attempt=101406", "label": "error"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 retry counter reset after successful frame ack retry_count=2 event_id=val-546", "label": "normal"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a IEEE 802.1X: authentication failed session=101251", "label": "error"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 RSN: PMKSA cache entry refreshed cache_id=100647", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 accounting session stopped normally session=100867", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 keepalive retry succeeded retry=2 event_id=val-580", "label": "normal"}
+{"input": "hostapd: wlan0: STA a8:6d:aa:42:bc:09 changed power save mode: off ps_seq=100312", "label": "normal"}
+{"input": "hostapd: wlan0: STA e4:5f:01:aa:3b:77 WPA: EAPOL-Key timeout after message 1/4 retry=1", "label": "error"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 keepalive response received sequence=100500", "label": "normal"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 IEEE 802.11: association denied status_code=17 AP full attempt=101425", "label": "error"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 keepalive response received sequence=100464", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: bad DHCP request from 48:5f:99:c0:21:6a: requested address outside subnet xid=101179", "label": "error"}
+{"input": "kernel: wlan0: firmware crashed during key install for station dc:a6:32:48:91:0f crash_id=101370", "label": "error"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 WPA: received EAPOL-Key with invalid MIC replay_counter=100989", "label": "error"}
+{"input": "hostapd: wlan0: STA 9c:b6:d0:13:7e:64 IEEE 802.11: association denied status_code=17 AP full attempt=101435", "label": "error"}
+{"input": "hostapd: wlan0: STA 48:5f:99:c0:21:6a single missed ack recovered on retry retry_count=1", "label": "normal"}
+{"input": "hostapd: wlan0: STA 2c:54:cf:92:10:bd RSN: using cached PMKSA for fast reconnect cache_id=100594", "label": "normal"}
+{"input": "kernel: wlan0: station b8:27:eb:6d:45:f2 power save mode disabled ps_seq=100302", "label": "normal"}
+{"input": "hostapd: wlan0: STA 0c:8b:fd:61:c2:14 PMF required but client did not negotiate management frame protection attempt=101403", "label": "error"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 RSN: using cached PMKSA for fast reconnect cache_id=100634", "label": "normal"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f disconnected after repeated keepalive failures retry_count=12", "label": "error"}
+{"input": "hostapd: wlan0: STA 28:cf:e9:5b:73:a4 no keepalive ACK after retries, deauthenticating reason=4 retry_count=15", "label": "error"}
+{"input": "wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED bssid=00:25:9c:7a:10:02 id=0 ssid=OfficeWiFi-Guest station=9c:b6:d0:13:7e:64", "label": "normal"}
+{"input": "dnsmasq-dhcp[411]: DHCPREQUEST(wlan0) 9c:b6:d0:13:7e:64 ignored because address pool exhausted pool=5", "label": "error"}
+{"input": "hostapd: wlan0: STA 3c:22:fb:10:24:38 keepalive timeout exceeded, station removed reason=4 retry_count=8", "label": "error"}
+{"input": "hostapd: wlan0: STA b8:27:eb:6d:45:f2 RADIUS: Access-Reject received session=101220", "label": "error"}
+{"input": "hostapd: wlan0: STA dc:a6:32:48:91:0f RSN: PMKSA cache entry added cache_id=100686", "label": "normal"}
+{"input": "hostapd: wlan0: STA a0:36:9f:71:b5:2e WPA: EAPOL-Key message 4/4 received replay_counter=100127", "label": "normal"}
+{"input": "hostapd: wlan0: STA 6c:5a:b0:2e:91:c8 RSN: PMKSA cache lookup succeeded cache_id=100598", "label": "normal"}
+{"input": "hostapd: wlan0: STA 88:66:5a:d1:72:0c RADIUS: server timeout during authentication session=101236", "label": "error"}

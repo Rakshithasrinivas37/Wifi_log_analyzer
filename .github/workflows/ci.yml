@@ -1,5 +1,6 @@
 name: CI
 
+# Run checks on pull requests, pushes to main branches, and manual dispatch.
 on:
   pull_request:
   push:
@@ -18,6 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
+      # Python 3.11 matches the expected modern FastAPI/Pydantic runtime.
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
@@ -29,6 +31,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      # Compile importable modules first so syntax/import regressions fail clearly.
       - name: Compile deployment modules
         run: |
           python -m py_compile \
@@ -36,8 +39,9 @@ jobs:
             src/finetuning.py \
             src/groq_diagnosis.py \
             src/inference_flan_t5.py \
-            src/local_llm_diagnosis.py \
-            src/pcap_analysis.py
+            src/pcap_analysis.py \
+            scripts/inference_trt_llm.py \
+            scripts/merge_flan_t5_lora.py
 
       - name: Run tests
         run: python -m pytest -q

@@ -10,7 +10,7 @@ The core pipeline is:
 2. Run FLAN-T5 inference on timestamped log text.
 3. Keep only error logs with timestamps and MAC addresses.
 4. Correlate error logs with PCAP deauthentication/disassociation packets.
-5. Send diagnosis evidence to Groq or another LLM for recommended actions.
+5. Send diagnosis evidence to Groq for recommended actions.
 
 ## Project Layout
 
@@ -200,7 +200,6 @@ POST /jobs/inference/flan-t5/upload
 POST /jobs/pcap/analyze
 POST /jobs/pcap/analyze/upload
 POST /jobs/diagnosis/groq
-POST /jobs/diagnosis/local-llm
 POST /jobs/pipeline/groq
 GET  /jobs/{job_id}
 ```
@@ -255,7 +254,7 @@ Created by PCAP analysis:
 
 ### Groq Diagnosis JSONL
 
-Created by LLM diagnosis:
+Created by Groq diagnosis:
 
 ```json
 {"mac":"3c:22:fb:10:24:38","diagnosis":{"root_cause":"4-way handshake timeout","confidence":0.9,"why":["reason code 15"],"recommended_action":{"summary":"Check PSK/security settings."}}}
@@ -264,8 +263,6 @@ Created by LLM diagnosis:
 ## Notes
 
 - Use a persistent RunPod volume for models, uploaded PCAP files, and outputs.
-- Run one local LLM diagnosis request at a time on a single T4 because each
-  request loads the model into memory.
 - Groq billing is separate from RunPod billing.
 - This project is intended for lab/testing workflows; validate findings against
   real AP/controller logs before operational changes.

@@ -30,21 +30,31 @@ from pydantic import BaseModel, Field
 
 
 T = TypeVar("T")
+
+# APP_ROOT is where the application code lives. In Docker this can be /app.
 APP_ROOT = Path(os.environ.get("WIFI_ANALYZER_APP_DIR", Path.cwd())).resolve()
+
+# WORKSPACE_ROOT is where runtime files live: uploads, models, PCAPs, and outputs.
 WORKSPACE_ROOT = Path(os.environ.get("WIFI_ANALYZER_WORKSPACE", Path.cwd())).resolve()
+
+# A small thread pool lets long GPU/LLM work run in the background.
 JOB_EXECUTOR = ThreadPoolExecutor(
     max_workers=int(os.environ.get("WIFI_ANALYZER_JOB_WORKERS", "2"))
 )
+
+# Jobs are stored in memory because this service is designed for one RunPod process.
 JOBS: dict[str, dict[str, Any]] = {}
 JOBS_LOCK = Lock()
 
+# FastAPI builds the OpenAPI docs from this object and the Pydantic models below.
 app = FastAPI(
     title="WiFi Log Analyzer API",
-    description="Run FLAN-T5 inference, PCAP correlation, and LLM diagnosis.",
+    description="Run FLAN-T5 inference, PCAP correlation, and Groq diagnosis.",
     version="1.0.0",
 )
 
 
+# Request models define the JSON/form inputs accepted by API endpoints.
 class InferenceRequest(BaseModel):
     """Request body for FLAN-T5 log inference."""
 
@@ -144,24 +154,6 @@ class GroqDiagnosisRequest(BaseModel):
     limit: int | None = None
 
 
-class LocalLlmDiagnosisRequest(BaseModel):
-    """Request body for local open-source LLM diagnosis."""
-
-    input: str = "diagnosis.jsonl"
-    output: str = "local_llm_diagnosis.jsonl"
-    model: str = "Qwen/Qwen2.5-7B-Instruct"
-    model_type: Literal["causal", "seq2seq"] = "causal"
-    load_in_4bit: bool = True
-    load_in_8bit: bool = False
-    device_map: str = "auto"
-    torch_dtype: Literal["auto", "float16", "bfloat16", "float32"] = "auto"
-    max_input_tokens: int = 4096
-    max_new_tokens: int = 512
-    temperature: float = 0.0
-    max_record_chars: int = 12000
-    limit: int | None = None
-
-
 class GroqPipelineRequest(BaseModel):
     """Request body for an end-to-end pipeline using Groq diagnosis."""
 
@@ -236,12 +228,18 @@ class JobStatusResponse(BaseModel):
 
 
 def resolve_path(path_text: str) -> Path:
-    """Resolve a path and ensure it stays inside the workspace."""
+    """Resolve a writable path and reject paths outside the workspace.
+
+    This protects file-writing endpoints from writing to arbitrary locations on
+    the RunPod container.
+    """
 
     path = Path(path_text)
     if not path.is_absolute():
+        # Relative output paths are written under WORKSPACE_ROOT.
         path = WORKSPACE_ROOT / path
     resolved = path.resolve()
+    # Keep all write paths inside the configured workspace.
     if resolved != WORKSPACE_ROOT and WORKSPACE_ROOT not in resolved.parents:
         raise HTTPException(
             status_code=400,
@@ -255,9 +253,14 @@ def resolve_read_path(
     label: str,
     want_dir: bool | None = None,
 ) -> Path:
-    """Resolve readable inputs from workspace first, then app directory."""
+    """Resolve readable inputs from workspace first, then app directory.
+
+    This lets Docker images read bundled files from APP_ROOT while still
+    preferring user-uploaded files from WORKSPACE_ROOT.
+    """
 
     path = Path(path_text)
+    # Absolute paths are checked as-is; relative paths are checked in both roots.
     candidates = [path.resolve()] if path.is_absolute() else [
         (WORKSPACE_ROOT / path).resolve(),
         (APP_ROOT / path).resolve(),
@@ -267,6 +270,7 @@ def resolve_read_path(
     checked: list[str] = []
     for candidate in candidates:
         checked.append(str(candidate))
+        # Prevent reads from arbitrary paths outside the allowed roots.
         if not any(candidate == root or root in candidate.parents for root in allowed_roots):
             continue
         if not candidate.exists():
@@ -283,9 +287,10 @@ def resolve_read_path(
 
 
 def resolve_model_dir(path_text: str) -> Path:
-    """Resolve model_dir from workspace first, then the app directory."""
+    """Resolve a Hugging Face model directory from workspace or app roots."""
 
     path = Path(path_text)
+    # Model paths can come from mounted RunPod storage or from files baked into /app.
     candidates = [path.resolve()] if path.is_absolute() else [
         (WORKSPACE_ROOT / path).resolve(),
         (APP_ROOT / path).resolve(),
@@ -310,7 +315,11 @@ def resolve_model_dir(path_text: str) -> Path:
 
 
 def resolve_trt_engine_dir(path_text: str) -> Path:
-    """Resolve a TensorRT-LLM engine directory from app/workspace locations."""
+    """Resolve a TensorRT-LLM engine directory from app/workspace locations.
+
+    RunPod users often store engines beside the repo at /workspace/trt_engine,
+    so this allows the workspace parent in addition to the app and workspace.
+    """
 
     path = Path(path_text)
     workspace_parent = WORKSPACE_ROOT.parent.resolve()
@@ -339,7 +348,7 @@ def resolve_trt_engine_dir(path_text: str) -> Path:
 
 
 def require_existing_path(path: Path, label: str, want_dir: bool | None = None) -> Path:
-    """Return path when it exists, otherwise raise a clear request error."""
+    """Validate that a resolved path exists and has the expected file type."""
 
     if not path.exists():
         raise HTTPException(
@@ -362,9 +371,12 @@ def require_existing_path(path: Path, label: str, want_dir: bool | None = None) 
 def save_upload_file(upload: UploadFile, subdir: str) -> str:
     """Save an uploaded file under the workspace and return a relative path."""
 
+    # Strip any directory components from the client-provided filename.
     original_name = Path(upload.filename or "uploaded_file").name
     if not original_name or original_name in {".", ".."}:
         original_name = "uploaded_file"
+
+    # Prefix with a UUID so repeated uploads do not overwrite each other.
     relative_path = Path("uploads") / subdir / f"{uuid.uuid4().hex}_{original_name}"
     destination = resolve_path(str(relative_path))
     destination.parent.mkdir(parents=True, exist_ok=True)
@@ -375,13 +387,19 @@ def save_upload_file(upload: UploadFile, subdir: str) -> str:
 
 
 def run_service(action: Callable[[], T]) -> T:
-    """Run service code and convert unexpected exceptions to HTTP 500."""
+    """Run service code and convert unexpected exceptions to HTTP 500.
+
+    Endpoint functions stay small by delegating actual work to execute_* helpers
+    and using this wrapper for consistent error responses.
+    """
 
     try:
         return action()
     except HTTPException:
+        # Preserve expected client errors such as bad paths or missing files.
         raise
     except Exception as exc:
+        # Hide Python tracebacks from HTTP clients but keep the error type/message.
         raise HTTPException(
             status_code=500,
             detail={"error_type": type(exc).__name__, "message": str(exc)},
@@ -389,7 +407,7 @@ def run_service(action: Callable[[], T]) -> T:
 
 
 def jsonable(value: Any) -> Any:
-    """Convert service results into JSON-serializable values."""
+    """Convert service results into JSON-serializable values for job storage."""
 
     if isinstance(value, BaseModel):
         return value.model_dump()
@@ -403,9 +421,10 @@ def jsonable(value: Any) -> Any:
 
 
 def submit_job(name: str, action: Callable[[], Any]) -> JobSubmitResponse:
-    """Submit a background job and return its ID."""
+    """Submit a background job and return a polling URL."""
 
     job_id = uuid.uuid4().hex
+    # Register the job before handing work to the executor so polling works immediately.
     with JOBS_LOCK:
         JOBS[job_id] = {
             "job_id": job_id,
@@ -419,6 +438,8 @@ def submit_job(name: str, action: Callable[[], Any]) -> JobSubmitResponse:
         }
 
     def runner() -> None:
+        """Run one background job and save its final status."""
+
         with JOBS_LOCK:
             JOBS[job_id]["status"] = "running"
             JOBS[job_id]["started_at"] = time()
@@ -435,6 +456,7 @@ def submit_job(name: str, action: Callable[[], Any]) -> JobSubmitResponse:
                 }
             return
         with JOBS_LOCK:
+            # Store only JSON-safe result data because the job API returns this dict.
             JOBS[job_id]["status"] = "succeeded"
             JOBS[job_id]["finished_at"] = time()
             JOBS[job_id]["result"] = jsonable(result)
@@ -448,7 +470,7 @@ def submit_job(name: str, action: Callable[[], Any]) -> JobSubmitResponse:
 
 
 def jsonl_preview(path: Path, limit: int = 5) -> list[dict[str, Any]]:
-    """Read a small JSONL preview."""
+    """Read the first few JSONL rows for API response previews."""
 
     rows: list[dict[str, Any]] = []
     if not path.exists():
@@ -464,12 +486,13 @@ def jsonl_preview(path: Path, limit: int = 5) -> list[dict[str, Any]]:
 
 
 def execute_flan_t5_inference(request: InferenceRequest) -> InferenceResponse:
-    """Execute FLAN-T5 inference from a request object."""
+    """Resolve paths, run FLAN-T5 inference, and format the API response."""
 
     logfile = resolve_read_path(request.logfile, "logfile", want_dir=False)
     model_dir = resolve_model_dir(request.model_dir)
     output = resolve_path(request.output)
 
+    # Import lazily so /health and docs do not require ML libraries to import.
     from src.inference_flan_t5 import (
         InferenceConfig,
         run_flan_t5_inference as run_flan_t5_inference_service,
@@ -499,12 +522,13 @@ def execute_flan_t5_inference(request: InferenceRequest) -> InferenceResponse:
 
 
 def execute_trt_llm_inference(request: TrtInferenceRequest) -> TrtInferenceResponse:
-    """Execute TensorRT-LLM inference from a request object."""
+    """Resolve paths, run TensorRT-LLM inference, and format the response."""
 
     logfile = resolve_read_path(request.logfile, "logfile", want_dir=False)
     engine_dir = resolve_trt_engine_dir(request.engine_dir)
     output = resolve_path(request.output)
 
+    # TensorRT-LLM is optional, so import it only for TRT requests.
     from scripts.inference_trt_llm import (
         TrtInferenceConfig,
         run_trt_llm_inference as run_trt_llm_inference_service,
@@ -536,7 +560,7 @@ def execute_trt_llm_inference(request: TrtInferenceRequest) -> TrtInferenceRespo
 
 
 def execute_flan_t5_finetuning(request: FineTuningRequest) -> FineTuningResponse:
-    """Execute FLAN-T5 LoRA fine-tuning from a request object."""
+    """Resolve dataset/model paths, run LoRA fine-tuning, and return metrics."""
 
     train_csv = resolve_read_path(request.train_csv, "train_csv", want_dir=False)
     validation_csv = (
@@ -546,6 +570,7 @@ def execute_flan_t5_finetuning(request: FineTuningRequest) -> FineTuningResponse
     )
     output_dir = resolve_path(request.output_dir)
 
+    # Import lazily because training dependencies are heavier than API startup.
     from src.finetuning import (
         FineTuningConfig,
         fine_tune_flan_t5 as fine_tune_flan_t5_service,
@@ -586,8 +611,9 @@ def execute_flan_t5_finetuning(request: FineTuningRequest) -> FineTuningResponse
 
 
 def execute_pcap_analysis(request: PcapAnalysisRequest) -> JsonlResponse:
-    """Execute PCAP analysis from a request object."""
+    """Resolve input files, run PCAP/log correlation, and return JSONL metadata."""
 
+    # Scapy is only needed for PCAP analysis, so keep this import request-scoped.
     from src.pcap_analysis import (
         PcapAnalysisConfig,
         run_pcap_analysis as run_pcap_analysis_service,
@@ -610,8 +636,9 @@ def execute_pcap_analysis(request: PcapAnalysisRequest) -> JsonlResponse:
 
 
 def execute_groq_diagnosis(request: GroqDiagnosisRequest) -> JsonlResponse:
-    """Execute Groq diagnosis from a request object."""
+    """Resolve diagnosis evidence, call Groq, and return output metadata."""
 
+    # Groq is optional at import time; this keeps API startup independent of API keys.
     from src.groq_diagnosis import (
         GroqDiagnosisConfig,
         run_groq_diagnosis as run_groq_diagnosis_service,
@@ -641,48 +668,18 @@ def execute_groq_diagnosis(request: GroqDiagnosisRequest) -> JsonlResponse:
     )
 
 
-def execute_local_llm_diagnosis(request: LocalLlmDiagnosisRequest) -> JsonlResponse:
-    """Execute local LLM diagnosis from a request object."""
-
-    from src.local_llm_diagnosis import (
-        LocalLlmDiagnosisConfig,
-        run_local_llm_diagnosis as run_local_llm_diagnosis_service,
-    )
-
-    output = resolve_path(request.output)
-    rows = run_local_llm_diagnosis_service(
-        LocalLlmDiagnosisConfig(
-            input=resolve_read_path(request.input, "input", want_dir=False),
-            output=output,
-            model=request.model,
-            model_type=request.model_type,
-            load_in_4bit=request.load_in_4bit,
-            load_in_8bit=request.load_in_8bit,
-            device_map=request.device_map,
-            torch_dtype=request.torch_dtype,
-            max_input_tokens=request.max_input_tokens,
-            max_new_tokens=request.max_new_tokens,
-            temperature=request.temperature,
-            max_record_chars=request.max_record_chars,
-            limit=request.limit,
-        )
-    )
-    return JsonlResponse(
-        output=str(output),
-        row_count=len(rows),
-        preview=rows[:5],
-    )
-
-
 def execute_groq_pipeline(request: GroqPipelineRequest) -> dict[str, Any]:
-    """Execute the end-to-end Groq pipeline."""
+    """Run inference, PCAP correlation, and Groq diagnosis in sequence."""
 
     output_dir = resolve_path(request.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
+
+    # Each pipeline stage writes a durable JSONL artifact under the output folder.
     inference_output = output_dir / "output.jsonl"
     diagnosis_output = output_dir / "diagnosis.jsonl"
     groq_output = output_dir / "groq_diagnosis.jsonl"
 
+    # Stage 1: classify log lines and keep predicted WiFi errors.
     inference_result = execute_flan_t5_inference(
         InferenceRequest(
             logfile=request.logfile,
@@ -696,6 +693,8 @@ def execute_groq_pipeline(request: GroqPipelineRequest) -> dict[str, Any]:
             dtype=request.inference.dtype,
         )
     )
+
+    # Stage 2: correlate error logs with nearby PCAP teardown evidence.
     pcap_result = execute_pcap_analysis(
         PcapAnalysisRequest(
             errors_jsonl=str(inference_output),
@@ -704,6 +703,8 @@ def execute_groq_pipeline(request: GroqPipelineRequest) -> dict[str, Any]:
             window_seconds=request.pcap_window_seconds,
         )
     )
+
+    # Stage 3: send structured evidence to Groq for a root-cause diagnosis.
     groq_result = execute_groq_diagnosis(
         request.groq.model_copy(
             update={
@@ -730,7 +731,7 @@ def execute_groq_pipeline(request: GroqPipelineRequest) -> dict[str, Any]:
 
 @app.get("/health")
 def health() -> dict[str, Any]:
-    """Return basic service status."""
+    """Return basic service status and runtime paths."""
 
     return {
         "status": "ok",
@@ -741,56 +742,49 @@ def health() -> dict[str, Any]:
 
 @app.post("/inference/flan-t5", response_model=InferenceResponse)
 def run_flan_t5_inference(request: InferenceRequest) -> InferenceResponse:
-    """Run FLAN-T5 inference and write error predictions JSONL."""
+    """HTTP endpoint for synchronous FLAN-T5 log inference."""
 
     return run_service(lambda: execute_flan_t5_inference(request))
 
 
 @app.post("/inference/trt-llm", response_model=TrtInferenceResponse)
 def run_trt_llm_inference(request: TrtInferenceRequest) -> TrtInferenceResponse:
-    """Run TensorRT-LLM inference and write predictions JSONL."""
+    """HTTP endpoint for synchronous TensorRT-LLM log inference."""
 
     return run_service(lambda: execute_trt_llm_inference(request))
 
 
 @app.post("/finetune/flan-t5", response_model=FineTuningResponse)
 def run_flan_t5_finetuning(request: FineTuningRequest) -> FineTuningResponse:
-    """Fine-tune FLAN-T5 with LoRA and save an adapter."""
+    """HTTP endpoint for synchronous FLAN-T5 LoRA fine-tuning."""
 
     return run_service(lambda: execute_flan_t5_finetuning(request))
 
 
 @app.post("/pcap/analyze", response_model=JsonlResponse)
 def run_pcap_analysis(request: PcapAnalysisRequest) -> JsonlResponse:
-    """Correlate inference error rows with PCAP teardown evidence."""
+    """HTTP endpoint for PCAP correlation against predicted error logs."""
 
     return run_service(lambda: execute_pcap_analysis(request))
 
 
 @app.post("/diagnosis/groq", response_model=JsonlResponse)
 def run_groq_diagnosis(request: GroqDiagnosisRequest) -> JsonlResponse:
-    """Run Groq diagnosis over diagnosis JSONL."""
+    """HTTP endpoint for Groq diagnosis over PCAP evidence JSONL."""
 
     return run_service(lambda: execute_groq_diagnosis(request))
 
 
-@app.post("/diagnosis/local-llm", response_model=JsonlResponse)
-def run_local_llm_diagnosis(request: LocalLlmDiagnosisRequest) -> JsonlResponse:
-    """Run local open-source LLM diagnosis over diagnosis JSONL."""
-
-    return run_service(lambda: execute_local_llm_diagnosis(request))
-
-
 @app.post("/pipeline/groq")
 def run_groq_pipeline(request: GroqPipelineRequest) -> dict[str, Any]:
-    """Run inference, PCAP analysis, and Groq diagnosis in sequence."""
+    """HTTP endpoint for the full synchronous Groq diagnosis pipeline."""
 
     return run_service(lambda: execute_groq_pipeline(request))
 
 
 @app.post("/jobs/inference/flan-t5", response_model=JobSubmitResponse)
 def submit_flan_t5_inference_job(request: InferenceRequest) -> JobSubmitResponse:
-    """Submit FLAN-T5 inference as a background job."""
+    """Submit FLAN-T5 inference as a pollable background job."""
 
     return submit_job("inference/flan-t5", lambda: execute_flan_t5_inference(request))
 
@@ -810,6 +804,7 @@ def submit_flan_t5_inference_upload_job(
     """Upload a log file and submit FLAN-T5 inference as a background job."""
 
     logfile_path = save_upload_file(logfile, "inference")
+    # Convert multipart form fields into the same request model used by JSON APIs.
     request = InferenceRequest(
         logfile=logfile_path,
         model_dir=model_dir,
@@ -826,7 +821,7 @@ def submit_flan_t5_inference_upload_job(
 
 @app.post("/jobs/inference/trt-llm", response_model=JobSubmitResponse)
 def submit_trt_llm_inference_job(request: TrtInferenceRequest) -> JobSubmitResponse:
-    """Submit TensorRT-LLM inference as a background job."""
+    """Submit TensorRT-LLM inference as a pollable background job."""
 
     return submit_job("inference/trt-llm", lambda: execute_trt_llm_inference(request))
 
@@ -848,6 +843,7 @@ def submit_trt_llm_inference_upload_job(
     """Upload a log file and submit TensorRT-LLM inference as a background job."""
 
     logfile_path = save_upload_file(logfile, "trt-inference")
+    # Convert multipart form fields into the same request model used by JSON APIs.
     request = TrtInferenceRequest(
         logfile=logfile_path,
         engine_dir=engine_dir,
@@ -866,14 +862,14 @@ def submit_trt_llm_inference_upload_job(
 
 @app.post("/jobs/finetune/flan-t5", response_model=JobSubmitResponse)
 def submit_flan_t5_finetuning_job(request: FineTuningRequest) -> JobSubmitResponse:
-    """Submit FLAN-T5 fine-tuning as a background job."""
+    """Submit FLAN-T5 fine-tuning as a pollable background job."""
 
     return submit_job("finetune/flan-t5", lambda: execute_flan_t5_finetuning(request))
 
 
 @app.post("/jobs/pcap/analyze", response_model=JobSubmitResponse)
 def submit_pcap_analysis_job(request: PcapAnalysisRequest) -> JobSubmitResponse:
-    """Submit PCAP analysis as a background job."""
+    """Submit PCAP analysis as a pollable background job."""
 
     return submit_job("pcap/analyze", lambda: execute_pcap_analysis(request))
 
@@ -889,6 +885,7 @@ def submit_pcap_analysis_upload_job(
 
     errors_jsonl_path = save_upload_file(errors_jsonl, "pcap")
     pcap_path = save_upload_file(pcap, "pcap")
+    # Uploaded files become workspace-relative paths for the shared executor.
     request = PcapAnalysisRequest(
         errors_jsonl=errors_jsonl_path,
         pcap=pcap_path,
@@ -900,33 +897,21 @@ def submit_pcap_analysis_upload_job(
 
 @app.post("/jobs/diagnosis/groq", response_model=JobSubmitResponse)
 def submit_groq_diagnosis_job(request: GroqDiagnosisRequest) -> JobSubmitResponse:
-    """Submit Groq diagnosis as a background job."""
+    """Submit Groq diagnosis as a pollable background job."""
 
     return submit_job("diagnosis/groq", lambda: execute_groq_diagnosis(request))
 
 
-@app.post("/jobs/diagnosis/local-llm", response_model=JobSubmitResponse)
-def submit_local_llm_diagnosis_job(
-    request: LocalLlmDiagnosisRequest,
-) -> JobSubmitResponse:
-    """Submit local LLM diagnosis as a background job."""
-
-    return submit_job(
-        "diagnosis/local-llm",
-        lambda: execute_local_llm_diagnosis(request),
-    )
-
-
 @app.post("/jobs/pipeline/groq", response_model=JobSubmitResponse)
 def submit_groq_pipeline_job(request: GroqPipelineRequest) -> JobSubmitResponse:
-    """Submit the end-to-end Groq pipeline as a background job."""
+    """Submit the full Groq pipeline as a pollable background job."""
 
     return submit_job("pipeline/groq", lambda: execute_groq_pipeline(request))
 
 
 @app.get("/jobs/{job_id}", response_model=JobStatusResponse)
 def get_job_status(job_id: str) -> JobStatusResponse:
-    """Return background job status and result/error when finished."""
+    """Return background job status, result, or error by job ID."""
 
     with JOBS_LOCK:
         job = JOBS.get(job_id)
@@ -937,7 +922,7 @@ def get_job_status(job_id: str) -> JobStatusResponse:
 
 @app.get("/files")
 def download_file(path: str) -> FileResponse:
-    """Download a file from the workspace."""
+    """Download a workspace file, such as an output JSONL."""
 
     resolved = resolve_path(path)
     if not resolved.is_file():

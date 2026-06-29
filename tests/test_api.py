@@ -1,3 +1,5 @@
+"""Tests for FastAPI routing, path resolution, uploads, and job polling."""
+
 from __future__ import annotations
 
 from pathlib import Path
@@ -14,6 +16,8 @@ from src import api
 
 
 def test_health_endpoint() -> None:
+    """Health endpoint should report that the service is running."""
+
     client = TestClient(api.app)
 
     response = client.get("/health")
@@ -73,6 +77,8 @@ def test_resolve_trt_engine_dir_allows_workspace_sibling(
 
 
 def test_background_job_endpoint(monkeypatch) -> None:
+    """Background jobs should be submitted, executed, and returned by status API."""
+
     def fake_execute_groq_diagnosis(request):
         return api.JsonlResponse(
             output="groq_diagnosis.jsonl",
@@ -104,6 +110,8 @@ def test_background_job_endpoint(monkeypatch) -> None:
 
 
 def test_inference_upload_job_endpoint(monkeypatch, tmp_path: Path) -> None:
+    """Uploaded log files should be saved before FLAN-T5 inference jobs run."""
+
     monkeypatch.setattr(api, "WORKSPACE_ROOT", tmp_path)
 
     def fake_execute_flan_t5_inference(request):
@@ -158,6 +166,8 @@ def test_inference_upload_job_endpoint(monkeypatch, tmp_path: Path) -> None:
 
 
 def test_trt_inference_endpoint(monkeypatch) -> None:
+    """TRT inference endpoint should pass request fields to the executor."""
+
     def fake_execute_trt_llm_inference(request):
         assert request.engine_dir == "/workspace/trt_engine/t5-small"
         assert request.batch_size == 16
@@ -187,6 +197,8 @@ def test_trt_inference_endpoint(monkeypatch) -> None:
 
 
 def test_trt_inference_upload_job_endpoint(monkeypatch, tmp_path: Path) -> None:
+    """Uploaded log files should be saved before TRT inference jobs run."""
+
     monkeypatch.setattr(api, "WORKSPACE_ROOT", tmp_path)
 
     def fake_execute_trt_llm_inference(request):
@@ -238,6 +250,8 @@ def test_trt_inference_upload_job_endpoint(monkeypatch, tmp_path: Path) -> None:
 
 
 def test_pcap_upload_job_endpoint(monkeypatch, tmp_path: Path) -> None:
+    """Uploaded JSONL and PCAP files should be saved before PCAP jobs run."""
+
     monkeypatch.setattr(api, "WORKSPACE_ROOT", tmp_path)
 
     def fake_execute_pcap_analysis(request):
@@ -283,6 +297,8 @@ def test_pcap_upload_job_endpoint(monkeypatch, tmp_path: Path) -> None:
 
 
 def test_finetuning_job_endpoint(monkeypatch) -> None:
+    """Fine-tuning jobs should return serialized training summaries."""
+
     def fake_execute_flan_t5_finetuning(request):
         return api.FineTuningResponse(
             output_dir="models/flan-t5-log-lora-model",

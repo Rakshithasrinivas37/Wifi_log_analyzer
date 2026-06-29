@@ -59,8 +59,11 @@ def measure_total_inference_time(func: F) -> F:
 
     @wraps(func)
     def wrapper(*args: Any, **kwargs: Any) -> Any:
+        """Run the wrapped inference function and attach elapsed wall time."""
+
         started_at = perf_counter()
         result = func(*args, **kwargs)
+        # The wrapped function returns a mutable result object used by the API.
         result.elapsed_seconds = perf_counter() - started_at
         return result
 
@@ -96,8 +99,11 @@ def monitor_inference_run(func: F) -> F:
 
     @wraps(func)
     def wrapper(*args: Any, **kwargs: Any) -> Any:
+        """Emit structured monitoring events around one inference run."""
+
         config = get_inference_config(args, kwargs)
         started_at = perf_counter()
+        # Structured stderr logs are easy to read in RunPod container logs.
         base_event: dict[str, object] = {
             "event": "flan_t5_inference",
             "status": "started",
@@ -106,6 +112,7 @@ def monitor_inference_run(func: F) -> F:
         if config is not None:
             candidate_lines: int | str
             try:
+                # Count likely inference rows before loading the model.
                 candidate_lines = count_candidate_log_lines(config.logfile)
             except OSError as error:
                 candidate_lines = f"unavailable: {error}"
@@ -136,6 +143,7 @@ def monitor_inference_run(func: F) -> F:
                 }
             )
             if torch.cuda.is_available():
+                # Add GPU state to failures so CUDA issues can be debugged remotely.
                 failed_event["memory_summary"] = cuda_memory_summary("after failed inference")
             print_monitoring_event(failed_event)
             raise
@@ -207,6 +215,7 @@ def iso_to_epoch(timestamp: str) -> str:
     normalized = timestamp.replace("Z", "+00:00")
     dt = datetime.fromisoformat(normalized)
     if dt.tzinfo is None:
+        # Treat naive timestamps as UTC so output is deterministic.
         dt = dt.replace(tzinfo=timezone.utc)
     epoch = dt.astimezone(timezone.utc).timestamp()
     return f"{epoch:.6f}"
@@ -222,6 +231,7 @@ def iter_log_rows(lines: Iterable[str]) -> Iterator[dict[str, str]]:
         timestamp, log_body = split_timestamp_and_log(stripped)
         if not log_body:
             continue
+        # Downstream PCAP correlation expects epoch timestamps as text.
         yield {
             "timestamp": iso_to_epoch(timestamp),
             "log": log_body,
@@ -297,6 +307,7 @@ def debug_cuda_oom(step_mb: int = 512) -> None:
     elements = step_mb * 1024 * 1024 // 2
     try:
         while True:
+            # Allocate blocks until CUDA reports OOM; useful for RunPod debugging.
             tensors.append(torch.empty(elements, dtype=torch.float16, device="cuda"))
             print_cuda_memory(f"allocated debug block {len(tensors)}")
     except RuntimeError as error:
@@ -320,11 +331,14 @@ class FlanT5LogClassifier:
         device: str,
         dtype: str,
     ) -> None:
+        """Load tokenizer, base model, and LoRA adapter for inference."""
+
         self.torch = torch
         self.max_source_length = max_source_length
         self.max_new_tokens = max_new_tokens
         if device == "cuda" and not torch.cuda.is_available():
             raise RuntimeError("CUDA was requested, but CUDA is not available")
+        # "auto" prefers CUDA when available, otherwise falls back to CPU.
         self.device = "cuda" if device == "auto" and torch.cuda.is_available() else device
         if self.device == "auto":
             self.device = "cpu"
@@ -335,12 +349,14 @@ class FlanT5LogClassifier:
             file=sys.stderr,
         )
         print_cuda_memory("before model load")
+        # The adapter directory owns the tokenizer saved during fine-tuning.
         self.tokenizer = AutoTokenizer.from_pretrained(model_dir)
         base = AutoModelForSeq2SeqLM.from_pretrained(
             base_model,
             torch_dtype=self.torch_dtype,
             low_cpu_mem_usage=True,
         )
+        # Attach the fine-tuned LoRA adapter to the base FLAN-T5 model.
         self.model = PeftModel.from_pretrained(base, model_dir).to(self.device)
         self.model.eval()
         print_cuda_memory("after model load")
@@ -364,6 +380,7 @@ class FlanT5LogClassifier:
     def classify_batch(self, log_bodies: list[str]) -> list[str]:
         """Generate one label per log body."""
 
+        # Batch tokenization keeps GPU inference efficient for many short log lines.
         inputs = self.tokenizer(
             [make_prompt(log_body) for log_body in log_bodies],
             return_tensors="pt",
@@ -375,6 +392,7 @@ class FlanT5LogClassifier:
             output_ids = self.model.generate(
                 **inputs,
                 max_new_tokens=self.max_new_tokens,
+                # Classification should be deterministic, not sampled.
                 do_sample=False,
             )
         decoded = self.tokenizer.batch_decode(output_ids, skip_special_tokens=True)
@@ -398,6 +416,7 @@ def iter_inference_rows(
             for row, prediction in zip(row_batch, predictions):
                 if prediction != "error":
                     continue
+                # Only error rows are emitted because PCAP analysis consumes failures.
                 yield {
                     "timestamp": row["timestamp"],
                     "log": row["log"],
@@ -405,6 +424,7 @@ def iter_inference_rows(
                     "mac_addresses": extract_mac_addresses(row["log"]),
                 }
             if empty_cache_between_batches and torch.cuda.is_available():
+                # Optional for debugging fragmentation; usually leave disabled for speed.
                 torch.cuda.empty_cache()
             if print_memory_every and processed_batches % print_memory_every == 0:
                 print_cuda_memory(f"after batch {processed_batches}")
@@ -464,6 +484,7 @@ def run_flan_t5_inference(config: InferenceConfig) -> InferenceResult:
         )
     except RuntimeError as error:
         if torch.cuda.is_available():
+            # Preserve CUDA diagnostics before clearing cache and re-raising.
             print_cuda_memory("at runtime error")
             torch.cuda.empty_cache()
         raise error

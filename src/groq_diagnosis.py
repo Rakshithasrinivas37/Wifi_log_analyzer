@@ -40,6 +40,8 @@ PSK/security-mode checks, PMF compatibility, RADIUS checks, DHCP pool/VLAN/relay
 checks, RF checks, firmware/driver checks, or AP capacity checks when supported
 by evidence.
 """
+# Keep the system prompt strict: Groq should reason over structured evidence,
+# while parsing and correlation stay deterministic in Python.
 
 
 @dataclass
@@ -73,6 +75,7 @@ def load_jsonl(path: Path, limit: int | None = None) -> list[dict[str, Any]]:
             except json.JSONDecodeError as exc:
                 raise ValueError(f"{path}:{line_no} is not valid JSON") from exc
             if limit is not None and len(records) >= limit:
+                # Limit is useful for smoke tests and controlling Groq spend.
                 break
     return records
 
@@ -114,6 +117,7 @@ def trim_record(
         trimmed_session = dict(session)
         teardown_events = list(trimmed_session.get("teardown_events", []))
         if max_teardown_events >= 0 and len(teardown_events) > max_teardown_events:
+            # Keep the earliest teardown events and record how many were omitted.
             trimmed_session["teardown_events"] = teardown_events[:max_teardown_events]
             trimmed_session["teardown_events_truncated"] = (
                 len(teardown_events) - max_teardown_events
@@ -126,6 +130,7 @@ def trim_record(
 
     if max_error_logs > 4:
         logs = list(trimmed.get("error_logs", []))
+        # If the serialized prompt is still too large, trim logs more aggressively.
         trimmed["error_logs"] = logs[:4]
         trimmed["error_logs_truncated"] = max(
             trimmed.get("error_logs_truncated", 0),
@@ -168,6 +173,7 @@ def call_groq(
     except ImportError as exc:
         raise ImportError("Install the Groq SDK first: pip install groq") from exc
 
+    # Groq reads the API key from GROQ_API_KEY in the environment.
     client = Groq()
     for attempt in range(retries + 1):
         try:
@@ -185,6 +191,7 @@ def call_groq(
             return choice.message.content or "", finish_reason
         except Exception as exc:
             message = str(exc).lower()
+            # Retry only transient provider/rate-limit failures.
             retryable = any(
                 token in message
                 for token in (
@@ -197,6 +204,7 @@ def call_groq(
             )
             if not retryable or attempt >= retries:
                 raise
+            # Linear backoff keeps retries simple and predictable in RunPod logs.
             time.sleep(retry_sleep_seconds * (attempt + 1))
 
     raise RuntimeError("Groq request failed after retries")
@@ -207,6 +215,7 @@ def parse_llm_json(text: str) -> dict[str, Any]:
 
     cleaned = text.strip()
     if cleaned.startswith("```"):
+        # Models sometimes wrap JSON in fenced markdown despite the instruction.
         cleaned = cleaned.strip("`")
         if cleaned.lower().startswith("json"):
             cleaned = cleaned[4:].strip()
@@ -216,6 +225,7 @@ def parse_llm_json(text: str) -> dict[str, Any]:
         start = cleaned.find("{")
         end = cleaned.rfind("}")
         if start != -1 and end != -1 and end > start:
+            # Last attempt: recover a JSON object embedded in surrounding text.
             return json.loads(cleaned[start : end + 1])
         raise
 
@@ -285,6 +295,7 @@ def diagnose_record(
     try:
         diagnosis = parse_llm_json(raw_text)
     except json.JSONDecodeError as error:
+        # Preserve the failed raw text so the operator can debug prompt/token issues.
         diagnosis = parse_error_diagnosis(record, raw_text, error, finish_reason)
 
     return {
@@ -301,9 +312,10 @@ def diagnose_records(
     """Diagnose records sequentially."""
 
     output_rows: list[dict[str, Any]] = []
-    for record in records[:25]:
+    for record in records:
         output_rows.append(diagnose_record(record, config))
         if config.sleep_seconds:
+            # Optional pacing helps avoid provider-side rate limits.
             time.sleep(config.sleep_seconds)
     return output_rows
 

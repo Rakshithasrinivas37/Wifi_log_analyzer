@@ -8,7 +8,6 @@ RunPod serverless handler.
 
 - Use a PyTorch/Jupyter template for quick setup.
 - Pick at least a T4/A10 for FLAN-T5 inference and testing.
-- Pick A10/A40/A100 if you want to run larger local LLM diagnosis models.
 - Use a persistent volume mounted at `/workspace` so outputs and model files
   survive Pod restarts.
 
@@ -163,7 +162,6 @@ curl https://<your-runpod-proxy-url>/health
 - `POST /pcap/analyze`: correlate error logs with PCAP teardown packets.
 - `POST /jobs/pcap/analyze/upload`: upload inference JSONL and PCAP files.
 - `POST /diagnosis/groq`: run Groq diagnosis.
-- `POST /diagnosis/local-llm`: run local open-source LLM diagnosis.
 - `POST /pipeline/groq`: run FLAN-T5 inference, PCAP analysis, and Groq diagnosis.
 - `POST /jobs/...`: run the same long-running operations in the background.
 - `GET /jobs/{job_id}`: poll a background job.
@@ -371,25 +369,6 @@ curl -X POST https://<your-runpod-proxy-url>/diagnosis/groq \
 
 If Groq returns token/rate-limit errors, lower `max_tokens`, reduce
 `max_error_logs`/`max_teardown_events`, or set `sleep_seconds`.
-
-## Run Local Open-Source LLM Diagnosis
-
-On a single T4, run one local LLM request at a time because each request loads
-the model into memory.
-
-```bash
-curl -X POST https://<your-runpod-proxy-url>/diagnosis/local-llm \
-  -H "Content-Type: application/json" \
-  -d '{
-    "input": "diagnosis.jsonl",
-    "output": "local_llm_diagnosis.jsonl",
-    "model": "Qwen/Qwen2.5-7B-Instruct",
-    "load_in_4bit": true,
-    "max_new_tokens": 512
-  }'
-```
-
-For larger models, use a larger GPU or keep diagnosis on Groq.
 
 ## Keep Outputs
 

@@ -142,10 +142,12 @@ def load_error_logs(path: Path) -> list[ErrorLog]:
             if not line.strip():
                 continue
             row = json.loads(line)
+            # PCAP correlation only needs the model-predicted failures.
             if row.get("prediction") != "error":
                 continue
             log = str(row.get("log", ""))
             macs = [str(mac).lower() for mac in row.get("mac_addresses", []) if mac]
+            # Rows without MAC addresses cannot be joined to station packets.
             if not macs:
                 continue
             try:
@@ -173,6 +175,7 @@ def parse_pcap(path: Path) -> dict[str, PcapSession]:
                 continue
 
             dot11 = packet[Dot11]
+            # Select the client/station MAC, not the AP/BSSID.
             station = station_from_packet(packet, dot11, EAPOL)
             if not station:
                 continue
@@ -185,6 +188,7 @@ def parse_pcap(path: Path) -> dict[str, PcapSession]:
             session.observe(ts)
 
             if Dot11Deauth in packet:
+                # Deauth frames often carry the reason code closest to root cause.
                 session.teardown_events.append(
                     TeardownEvent(
                         ts=ts,
@@ -196,6 +200,7 @@ def parse_pcap(path: Path) -> dict[str, PcapSession]:
                     )
                 )
             if Dot11Disas in packet:
+                # Disassociation frames are also teardown evidence for diagnosis.
                 session.teardown_events.append(
                     TeardownEvent(
                         ts=ts,
@@ -214,6 +219,7 @@ def station_from_packet(packet: Any, dot11: Any, eapol_layer: Any) -> str | None
     """Return the client/station MAC for supported 802.11 frame layouts."""
 
     if eapol_layer in packet:
+        # EAPOL key exchange packets are data frames in infrastructure mode.
         return station_from_data(dot11)
     if int(getattr(dot11, "type", 0)) == 2:
         return station_from_data(dot11)
@@ -226,6 +232,7 @@ def station_from_management(dot11: Any) -> str | None:
     bssid = normalize_mac(getattr(dot11, "addr3", None))
     for attr in ("addr2", "addr1"):
         mac = normalize_mac(getattr(dot11, attr, None))
+        # Ignore the AP/BSSID and broadcast address; keep the station endpoint.
         if mac and mac != bssid and not is_broadcast_mac(mac):
             return mac
     return None
@@ -239,8 +246,10 @@ def station_from_data(dot11: Any) -> str | None:
     from_ds = bool(fcfield & 0x2)
 
     if to_ds and not from_ds:
+        # Client to AP: source address is the station.
         return normalize_mac(getattr(dot11, "addr2", None))
     if from_ds and not to_ds:
+        # AP to client: destination address is the station.
         return normalize_mac(getattr(dot11, "addr1", None))
 
     bssid = normalize_mac(getattr(dot11, "addr3", None))
@@ -272,6 +281,7 @@ def group_errors_by_mac(
     grouped: dict[str, list[ErrorLog]] = defaultdict(list)
     unmatched: list[ErrorLog] = []
     for error in errors:
+        # A log may contain client and AP MACs; only keep MACs present in the PCAP.
         station_macs = [mac for mac in error.macs if mac in known_station_macs]
         if not station_macs:
             unmatched.append(error)
@@ -290,6 +300,7 @@ def nearby_errors(
 
     if session is None:
         return errors
+    # Expand the session boundaries so logs just before/after teardown are included.
     start = session.first_seen - window_seconds
     end = session.last_seen + window_seconds
     return [error for error in errors if start <= error.ts <= end]
@@ -313,6 +324,7 @@ def reason_code_hints(reason_codes: list[int]) -> list[dict[str, object]]:
 
     hints: list[dict[str, object]] = []
     for code in unique_values(reason_codes):
+        # Unknown reason codes still get included so the LLM can see the raw value.
         hint = REASON_CODE_HINTS.get(
             code,
             {
@@ -341,6 +353,7 @@ def build_evidence_record(
     """Build one neutral evidence record for downstream LLM diagnosis."""
 
     first_teardown = session.teardown_events[0]
+    # Use the first teardown timestamp as the evidence anchor for this client.
     return {
         "mac": mac,
         "timestamp": f"{first_teardown.ts:.6f}",
@@ -356,6 +369,7 @@ def session_summary(session: PcapSession | None) -> dict[str, Any] | None:
     if session is None:
         return None
     reason_codes = [event.reason_code for event in session.teardown_events]
+    # Keep only JSON-serializable packet facts; no Scapy objects leave this layer.
     return {
         "first_seen": session.first_seen,
         "last_seen": session.last_seen,
@@ -393,6 +407,7 @@ def analyze(
             continue
         correlated_errors = nearby_errors(mac_errors, session, window_seconds)
         if not correlated_errors:
+            # Fallback keeps diagnosis possible when timestamps are slightly skewed.
             correlated_errors = mac_errors
         records.append(build_evidence_record(mac, correlated_errors, session))
 

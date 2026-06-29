@@ -1,3 +1,5 @@
+"""Tests for PCAP/log correlation and evidence record construction."""
+
 from __future__ import annotations
 
 import json
@@ -7,6 +9,8 @@ from src import pcap_analysis as pcap
 
 
 def test_load_error_logs_keeps_only_error_rows_with_macs(tmp_path: Path) -> None:
+    """Only predicted error rows with MAC addresses should feed PCAP analysis."""
+
     input_path = tmp_path / "output.jsonl"
     rows = [
         {
@@ -41,6 +45,8 @@ def test_load_error_logs_keeps_only_error_rows_with_macs(tmp_path: Path) -> None
 
 
 def test_reason_code_hints_maps_known_and_unknown_codes() -> None:
+    """Known reason codes should get friendly hints; unknown codes still pass through."""
+
     hints = pcap.reason_code_hints([15, 15, 999])
 
     assert hints[0]["reason_code"] == 15
@@ -50,6 +56,8 @@ def test_reason_code_hints_maps_known_and_unknown_codes() -> None:
 
 
 def test_nearby_errors_uses_session_window() -> None:
+    """Error logs should match PCAP sessions inside the configured time window."""
+
     session = pcap.PcapSession(
         mac="3c:22:fb:10:24:38",
         first_seen=100.0,
@@ -68,6 +76,8 @@ def test_nearby_errors_uses_session_window() -> None:
 
 
 def test_build_evidence_record_contains_teardown_summary() -> None:
+    """Evidence records should include nearby errors and teardown packet details."""
+
     session = pcap.PcapSession(
         mac="3c:22:fb:10:24:38",
         first_seen=100.0,
@@ -98,6 +108,8 @@ def test_run_pcap_analysis_writes_records_with_mocked_parser(
     tmp_path: Path,
     monkeypatch,
 ) -> None:
+    """End-to-end PCAP analysis should write JSONL evidence rows."""
+
     errors_path = tmp_path / "output.jsonl"
     output_path = tmp_path / "diagnosis.jsonl"
     mac = "3c:22:fb:10:24:38"

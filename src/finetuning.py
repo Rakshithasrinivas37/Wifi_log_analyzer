@@ -98,6 +98,7 @@ def load_csv(path: Path, text_field: str, label_field: str) -> list[dict[str, st
         reader = csv.DictReader(file)
         if reader.fieldnames is None:
             raise ValueError(f"{path} has no CSV header")
+        # Validate schema early so bad training files fail with a useful error.
         missing = {text_field, label_field} - set(reader.fieldnames)
         if missing:
             missing_text = ", ".join(sorted(missing))
@@ -108,6 +109,7 @@ def load_csv(path: Path, text_field: str, label_field: str) -> list[dict[str, st
             label = (row.get(label_field) or "").strip().lower()
             if not text:
                 continue
+            # Keep the task strictly binary so metric calculation stays meaningful.
             if label not in VALID_LABELS:
                 valid = ", ".join(sorted(VALID_LABELS))
                 raise ValueError(f"{path}:{line_no} label must be one of: {valid}")
@@ -128,6 +130,7 @@ def split_train_validation(
     if not 0.0 < validation_ratio < 0.5:
         raise ValueError("validation_ratio must be greater than 0 and less than 0.5")
 
+    # Shuffle with a local RNG so the global random state is not changed.
     shuffled = rows.copy()
     random.Random(seed).shuffle(shuffled)
     validation_count = max(1, int(len(shuffled) * validation_ratio))
@@ -144,6 +147,7 @@ def compute_metrics(eval_pred: Any, tokenizer: Any) -> dict[str, float]:
     predictions, labels = eval_pred
     if isinstance(predictions, tuple):
         predictions = predictions[0]
+    # Hugging Face uses -100 to mask label tokens; restore pad IDs before decoding.
     labels = np.where(labels != -100, labels, tokenizer.pad_token_id)
 
     decoded_predictions = [
@@ -173,6 +177,7 @@ def compute_metrics(eval_pred: Any, tokenizer: Any) -> dict[str, float]:
         for prediction, label in zip(decoded_predictions, decoded_labels)
     )
 
+    # Use max denominators to avoid divide-by-zero when a split has no errors.
     precision = true_positive / max(1, true_positive + false_positive)
     recall = true_positive / max(1, true_positive + false_negative)
     f1 = 2 * precision * recall / max(1e-12, precision + recall)
@@ -192,11 +197,13 @@ def tokenize_batch(
 ) -> dict[str, Any]:
     """Tokenize source prompts and target labels."""
 
+    # Source tokens are the instruction prompts shown to the encoder.
     model_inputs = tokenizer(
         batch["source"],
         max_length=max_source_length,
         truncation=True,
     )
+    # Target tokens are short labels such as "normal" or "error".
     labels = tokenizer(
         text_target=batch["target"],
         max_length=max_target_length,
@@ -214,12 +221,14 @@ def build_datasets(
 
     train_rows = load_csv(config.train_csv, config.text_field, config.label_field)
     if config.validation_csv:
+        # Prefer an explicit validation file when one is provided.
         validation_rows = load_csv(
             config.validation_csv,
             config.text_field,
             config.label_field,
         )
     else:
+        # Otherwise make a deterministic split from the training CSV.
         train_rows, validation_rows = split_train_validation(
             train_rows,
             config.validation_ratio,
@@ -258,6 +267,7 @@ def prediction_preview(
     labels = prediction_output.label_ids
     if isinstance(predictions, tuple):
         predictions = predictions[0]
+    # Replace masked label positions before decoding labels for preview.
     labels = np.where(labels != -100, labels, tokenizer.pad_token_id)
 
     decoded_predictions = tokenizer.batch_decode(
@@ -329,6 +339,7 @@ def build_training_args(
         "dataloader_pin_memory": True,
     }
     training_arg_params = inspect.signature(Seq2SeqTrainingArguments).parameters
+    # Transformers renamed CPU/eval arguments across versions; support both APIs.
     if "use_cpu" in training_arg_params:
         training_kwargs["use_cpu"] = device == "cpu"
     elif "no_cuda" in training_arg_params:
@@ -349,6 +360,7 @@ def build_training_args(
 def fine_tune_flan_t5(config: FineTuningConfig) -> dict[str, Any]:
     """Train and save a FLAN-T5 LoRA adapter."""
 
+    # Seed all supported libraries for reproducible train/validation behavior.
     set_seed(config.seed)
     device = resolve_device(config.device)
     use_fp16 = resolve_fp16(config.fp16, device)
@@ -369,6 +381,7 @@ def fine_tune_flan_t5(config: FineTuningConfig) -> dict[str, Any]:
         tokenizer,
     )
 
+    # Load the base seq2seq model, then train only LoRA adapter weights.
     base_model = AutoModelForSeq2SeqLM.from_pretrained(config.model)
     lora_config = LoraConfig(
         task_type=TaskType.SEQ_2_SEQ_LM,
@@ -406,6 +419,7 @@ def fine_tune_flan_t5(config: FineTuningConfig) -> dict[str, Any]:
         validation_dataset=validation_dataset,
     )
 
+    # Save everything needed for later inference: adapter, tokenizer, labels, metrics.
     config.output_dir.mkdir(parents=True, exist_ok=True)
     trainer.save_model(str(config.output_dir))
     tokenizer.save_pretrained(config.output_dir)

@@ -1,3 +1,5 @@
+"""Tests for FLAN-T5 fine-tuning data preparation helpers."""
+
 from __future__ import annotations
 
 from pathlib import Path
@@ -12,6 +14,8 @@ from src import finetuning
 
 
 def test_load_csv_builds_prompt_and_targets(tmp_path: Path) -> None:
+    """CSV rows should become instruction prompts and target labels."""
+
     csv_path = tmp_path / "training.csv"
     csv_path.write_text(
         "label,input\n"
@@ -29,6 +33,8 @@ def test_load_csv_builds_prompt_and_targets(tmp_path: Path) -> None:
 
 
 def test_load_csv_rejects_unknown_label(tmp_path: Path) -> None:
+    """Invalid labels should fail before they reach training."""
+
     csv_path = tmp_path / "training.csv"
     csv_path.write_text("label,input\nbad,EAPOL timeout\nnormal,ok\n", encoding="utf-8")
 
@@ -37,6 +43,8 @@ def test_load_csv_rejects_unknown_label(tmp_path: Path) -> None:
 
 
 def test_split_train_validation_is_deterministic() -> None:
+    """The same seed should produce the same train/validation split."""
+
     rows = [{"source": f"log {index}", "target": "normal"} for index in range(10)]
 
     train_a, validation_a = finetuning.split_train_validation(rows, 0.2, seed=42)
@@ -49,12 +57,16 @@ def test_split_train_validation_is_deterministic() -> None:
 
 
 def test_normalize_label_maps_generated_prefixes() -> None:
+    """Generated text should normalize to the binary label when possible."""
+
     assert finetuning.normalize_label("normal connection") == "normal"
     assert finetuning.normalize_label("ERROR timeout") == "error"
     assert finetuning.normalize_label("unknown") == "unknown"
 
 
 def test_resolve_device_rejects_cuda_when_unavailable(monkeypatch) -> None:
+    """Explicit CUDA requests should fail clearly when CUDA is unavailable."""
+
     monkeypatch.setattr(finetuning.torch.cuda, "is_available", lambda: False)
 
     with pytest.raises(RuntimeError, match="CUDA was requested"):
@@ -62,6 +74,8 @@ def test_resolve_device_rejects_cuda_when_unavailable(monkeypatch) -> None:
 
 
 def test_resolve_fp16_only_enables_on_cuda() -> None:
+    """fp16 should only be auto-enabled when the selected device is CUDA."""
+
     assert finetuning.resolve_fp16(None, "cuda") is False
     assert finetuning.resolve_fp16(None, "cpu") is False
     assert finetuning.resolve_fp16(True, "cuda") is True

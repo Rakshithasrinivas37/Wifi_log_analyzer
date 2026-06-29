@@ -70,6 +70,22 @@ class InferenceOptions(BaseModel):
     dtype: Literal["auto", "fp16", "fp32"] = "auto"
 
 
+class TrtInferenceRequest(BaseModel):
+    """Request body for TensorRT-LLM log inference."""
+
+    logfile: str
+    engine_dir: str = "/workspace/trt_engine/t5-small"
+    tokenizer: str | None = None
+    output: str = "outputs/trt_output.jsonl"
+    max_source_length: int = 128
+    max_new_tokens: int = 2
+    batch_size: int = 8
+    num_beams: int = 1
+    include_all_predictions: bool = False
+    log_level: str = "error"
+    debug_mode: bool = False
+
+
 class FineTuningRequest(BaseModel):
     """Request body for FLAN-T5 LoRA fine-tuning."""
 
@@ -166,6 +182,17 @@ class InferenceResponse(BaseModel):
     elapsed_seconds: float
     generation_seconds: float
     memory_summary: str
+    preview: list[dict[str, Any]]
+
+
+class TrtInferenceResponse(BaseModel):
+    """Response from TensorRT-LLM inference."""
+
+    output: str
+    row_count: int
+    elapsed_seconds: float
+    engine_metadata: dict[str, Any]
+    tokenizer: str
     preview: list[dict[str, Any]]
 
 
@@ -277,6 +304,35 @@ def resolve_model_dir(path_text: str) -> Path:
         status_code=400,
         detail=(
             "model_dir does not exist or is outside allowed roots. "
+            f"Checked: {', '.join(checked)}"
+        ),
+    )
+
+
+def resolve_trt_engine_dir(path_text: str) -> Path:
+    """Resolve a TensorRT-LLM engine directory from app/workspace locations."""
+
+    path = Path(path_text)
+    workspace_parent = WORKSPACE_ROOT.parent.resolve()
+    candidates = [path.resolve()] if path.is_absolute() else [
+        (WORKSPACE_ROOT / path).resolve(),
+        (APP_ROOT / path).resolve(),
+        (workspace_parent / path).resolve(),
+    ]
+    allowed_roots = (WORKSPACE_ROOT, APP_ROOT, workspace_parent)
+
+    checked: list[str] = []
+    for candidate in candidates:
+        checked.append(str(candidate))
+        if not any(candidate == root or root in candidate.parents for root in allowed_roots):
+            continue
+        if candidate.is_dir():
+            return candidate
+
+    raise HTTPException(
+        status_code=400,
+        detail=(
+            "engine_dir does not exist or is outside allowed roots. "
             f"Checked: {', '.join(checked)}"
         ),
     )
@@ -438,6 +494,43 @@ def execute_flan_t5_inference(request: InferenceRequest) -> InferenceResponse:
         elapsed_seconds=result.elapsed_seconds,
         generation_seconds=result.generation_seconds,
         memory_summary=result.memory_summary,
+        preview=result.rows[:5],
+    )
+
+
+def execute_trt_llm_inference(request: TrtInferenceRequest) -> TrtInferenceResponse:
+    """Execute TensorRT-LLM inference from a request object."""
+
+    logfile = resolve_read_path(request.logfile, "logfile", want_dir=False)
+    engine_dir = resolve_trt_engine_dir(request.engine_dir)
+    output = resolve_path(request.output)
+
+    from scripts.inference_trt_llm import (
+        TrtInferenceConfig,
+        run_trt_llm_inference as run_trt_llm_inference_service,
+    )
+
+    result = run_trt_llm_inference_service(
+        TrtInferenceConfig(
+            logfile=logfile,
+            engine_dir=engine_dir,
+            tokenizer=request.tokenizer,
+            output=output,
+            max_source_length=request.max_source_length,
+            max_new_tokens=request.max_new_tokens,
+            batch_size=request.batch_size,
+            num_beams=request.num_beams,
+            include_all_predictions=request.include_all_predictions,
+            log_level=request.log_level,
+            debug_mode=request.debug_mode,
+        )
+    )
+    return TrtInferenceResponse(
+        output=str(output),
+        row_count=len(result.rows),
+        elapsed_seconds=result.elapsed_seconds,
+        engine_metadata=result.engine_metadata.to_dict(),
+        tokenizer=result.tokenizer,
         preview=result.rows[:5],
     )
 
@@ -653,6 +746,13 @@ def run_flan_t5_inference(request: InferenceRequest) -> InferenceResponse:
     return run_service(lambda: execute_flan_t5_inference(request))
 
 
+@app.post("/inference/trt-llm", response_model=TrtInferenceResponse)
+def run_trt_llm_inference(request: TrtInferenceRequest) -> TrtInferenceResponse:
+    """Run TensorRT-LLM inference and write predictions JSONL."""
+
+    return run_service(lambda: execute_trt_llm_inference(request))
+
+
 @app.post("/finetune/flan-t5", response_model=FineTuningResponse)
 def run_flan_t5_finetuning(request: FineTuningRequest) -> FineTuningResponse:
     """Fine-tune FLAN-T5 with LoRA and save an adapter."""
@@ -722,6 +822,46 @@ def submit_flan_t5_inference_upload_job(
         dtype=dtype,
     )
     return submit_job("inference/flan-t5/upload", lambda: execute_flan_t5_inference(request))
+
+
+@app.post("/jobs/inference/trt-llm", response_model=JobSubmitResponse)
+def submit_trt_llm_inference_job(request: TrtInferenceRequest) -> JobSubmitResponse:
+    """Submit TensorRT-LLM inference as a background job."""
+
+    return submit_job("inference/trt-llm", lambda: execute_trt_llm_inference(request))
+
+
+@app.post("/jobs/inference/trt-llm/upload", response_model=JobSubmitResponse)
+def submit_trt_llm_inference_upload_job(
+    logfile: UploadFile = File(...),
+    engine_dir: str = Form("/workspace/trt_engine/t5-small"),
+    tokenizer: str | None = Form(None),
+    output: str = Form("outputs/trt_output.jsonl"),
+    max_source_length: int = Form(128),
+    max_new_tokens: int = Form(2),
+    batch_size: int = Form(8),
+    num_beams: int = Form(1),
+    include_all_predictions: bool = Form(False),
+    log_level: str = Form("error"),
+    debug_mode: bool = Form(False),
+) -> JobSubmitResponse:
+    """Upload a log file and submit TensorRT-LLM inference as a background job."""
+
+    logfile_path = save_upload_file(logfile, "trt-inference")
+    request = TrtInferenceRequest(
+        logfile=logfile_path,
+        engine_dir=engine_dir,
+        tokenizer=tokenizer,
+        output=output,
+        max_source_length=max_source_length,
+        max_new_tokens=max_new_tokens,
+        batch_size=batch_size,
+        num_beams=num_beams,
+        include_all_predictions=include_all_predictions,
+        log_level=log_level,
+        debug_mode=debug_mode,
+    )
+    return submit_job("inference/trt-llm/upload", lambda: execute_trt_llm_inference(request))
 
 
 @app.post("/jobs/finetune/flan-t5", response_model=JobSubmitResponse)

@@ -157,7 +157,9 @@ curl https://<your-runpod-proxy-url>/health
 
 - `POST /finetune/flan-t5`: fine-tune FLAN-T5 and save a LoRA adapter.
 - `POST /inference/flan-t5`: classify log lines and write `output.jsonl`.
+- `POST /inference/trt-llm`: classify log lines with a TensorRT-LLM engine.
 - `POST /jobs/inference/flan-t5/upload`: upload a log file and run inference.
+- `POST /jobs/inference/trt-llm/upload`: upload a log file and run TensorRT-LLM inference.
 - `POST /pcap/analyze`: correlate error logs with PCAP teardown packets.
 - `POST /jobs/pcap/analyze/upload`: upload inference JSONL and PCAP files.
 - `POST /diagnosis/groq`: run Groq diagnosis.
@@ -294,6 +296,44 @@ curl -X POST https://<your-runpod-proxy-url>/inference/flan-t5 \
 ```
 
 If CUDA memory is low, reduce `batch_size` to `8`, then `4`, then `1`.
+
+## Run TensorRT-LLM Log Inference Through The API
+
+First extract the TensorRT-LLM engine under `/workspace`:
+
+```bash
+cd /workspace
+tar -xzf trt_engine.tar.gz
+```
+
+Then call the API:
+
+```bash
+curl -X POST https://<your-runpod-proxy-url>/inference/trt-llm \
+  -H "Content-Type: application/json" \
+  -d '{
+    "logfile": "data/inputs/wifi_logs.txt",
+    "engine_dir": "/workspace/trt_engine/t5-small",
+    "output": "outputs/trt_output.jsonl",
+    "batch_size": 16,
+    "max_source_length": 128,
+    "max_new_tokens": 2,
+    "include_all_predictions": true
+  }'
+```
+
+For long runs, submit it as a background job:
+
+```bash
+curl -X POST https://<your-runpod-proxy-url>/jobs/inference/trt-llm \
+  -H "Content-Type: application/json" \
+  -d '{
+    "logfile": "data/inputs/wifi_logs.txt",
+    "engine_dir": "/workspace/trt_engine/t5-small",
+    "output": "outputs/trt_output.jsonl",
+    "batch_size": 16
+  }'
+```
 
 ## Run PCAP Correlation Through The API
 

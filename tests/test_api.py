@@ -55,6 +55,23 @@ def test_resolve_read_path_uses_app_root_when_workspace_file_is_missing(
     assert api.resolve_read_path("data/inputs/wifi_events_3600.txt", "logfile") == logfile.resolve()
 
 
+def test_resolve_trt_engine_dir_allows_workspace_sibling(
+    monkeypatch,
+    tmp_path: Path,
+) -> None:
+    workspace = tmp_path / "workspace" / "wifi-log-analyzer"
+    app = tmp_path / "app"
+    engine = tmp_path / "workspace" / "trt_engine" / "t5-small"
+    workspace.mkdir(parents=True)
+    app.mkdir()
+    engine.mkdir(parents=True)
+
+    monkeypatch.setattr(api, "WORKSPACE_ROOT", workspace)
+    monkeypatch.setattr(api, "APP_ROOT", app)
+
+    assert api.resolve_trt_engine_dir(str(engine)) == engine.resolve()
+
+
 def test_background_job_endpoint(monkeypatch) -> None:
     def fake_execute_groq_diagnosis(request):
         return api.JsonlResponse(
@@ -115,6 +132,86 @@ def test_inference_upload_job_endpoint(monkeypatch, tmp_path: Path) -> None:
             "model_dir": "models/flan-t5-log-lora-model",
             "output": "outputs/output.jsonl",
             "device": "cpu",
+        },
+        files={
+            "logfile": (
+                "wifi_logs.txt",
+                b"2026-06-22T10:30:00+08:00 hostapd: test\n",
+                "text/plain",
+            )
+        },
+    )
+
+    assert submit_response.status_code == 200
+    job_id = submit_response.json()["job_id"]
+
+    for _ in range(100):
+        status_response = client.get(f"/jobs/{job_id}")
+        assert status_response.status_code == 200
+        status = status_response.json()
+        if status["status"] == "succeeded":
+            break
+        sleep(0.01)
+
+    assert status["status"] == "succeeded"
+    assert status["result"]["row_count"] == 1
+
+
+def test_trt_inference_endpoint(monkeypatch) -> None:
+    def fake_execute_trt_llm_inference(request):
+        assert request.engine_dir == "/workspace/trt_engine/t5-small"
+        assert request.batch_size == 16
+        return api.TrtInferenceResponse(
+            output="outputs/trt_output.jsonl",
+            row_count=1,
+            elapsed_seconds=0.1,
+            engine_metadata={"is_enc_dec_model": True},
+            tokenizer="google/flan-t5-small",
+            preview=[{"prediction": "error"}],
+        )
+
+    monkeypatch.setattr(api, "execute_trt_llm_inference", fake_execute_trt_llm_inference)
+    client = TestClient(api.app)
+
+    response = client.post(
+        "/inference/trt-llm",
+        json={
+            "logfile": "data/inputs/wifi_logs.txt",
+            "engine_dir": "/workspace/trt_engine/t5-small",
+            "batch_size": 16,
+        },
+    )
+
+    assert response.status_code == 200
+    assert response.json()["row_count"] == 1
+
+
+def test_trt_inference_upload_job_endpoint(monkeypatch, tmp_path: Path) -> None:
+    monkeypatch.setattr(api, "WORKSPACE_ROOT", tmp_path)
+
+    def fake_execute_trt_llm_inference(request):
+        uploaded_log = tmp_path / request.logfile
+        assert uploaded_log.is_file()
+        assert request.engine_dir == "/workspace/trt_engine/t5-small"
+        assert request.include_all_predictions is True
+        return api.TrtInferenceResponse(
+            output="outputs/trt_output.jsonl",
+            row_count=1,
+            elapsed_seconds=0.1,
+            engine_metadata={"is_enc_dec_model": True},
+            tokenizer="google/flan-t5-small",
+            preview=[{"prediction": "error"}],
+        )
+
+    monkeypatch.setattr(api, "execute_trt_llm_inference", fake_execute_trt_llm_inference)
+    client = TestClient(api.app)
+
+    submit_response = client.post(
+        "/jobs/inference/trt-llm/upload",
+        data={
+            "engine_dir": "/workspace/trt_engine/t5-small",
+            "output": "outputs/trt_output.jsonl",
+            "include_all_predictions": "true",
         },
         files={
             "logfile": (

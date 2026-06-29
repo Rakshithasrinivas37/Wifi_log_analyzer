@@ -166,6 +166,34 @@ class EngineMetadata:
         }
 
 
+@dataclass(frozen=True)
+class TrtInferenceConfig:
+    """Settings for TensorRT-LLM log inference."""
+
+    logfile: Path
+    engine_dir: Path | None = None
+    tokenizer: str | None = None
+    output: Path | None = None
+    max_source_length: int = 128
+    max_new_tokens: int = 2
+    batch_size: int = 8
+    num_beams: int = 1
+    include_all_predictions: bool = False
+    log_level: str = "error"
+    debug_mode: bool = False
+
+
+@dataclass(frozen=True)
+class TrtInferenceResult:
+    """Result returned by ``run_trt_llm_inference``."""
+
+    rows: list[dict[str, object]]
+    elapsed_seconds: float
+    output: str | None
+    engine_metadata: EngineMetadata
+    tokenizer: str
+
+
 def read_json(path: Path) -> dict[str, Any]:
     """Read one JSON file."""
 
@@ -453,6 +481,44 @@ def iter_trt_log_rows(
                 }
 
 
+def run_trt_llm_inference(config: TrtInferenceConfig) -> TrtInferenceResult:
+    """Load a TensorRT-LLM engine, run logfile inference, and optionally write JSONL."""
+
+    if config.batch_size < 1:
+        raise ValueError("batch_size must be at least 1")
+
+    engine_dir = resolve_engine_dir(config.engine_dir)
+    engine_metadata = validate_enc_dec_engine(engine_dir)
+    tokenizer = resolve_tokenizer(config.tokenizer)
+    started_at = perf_counter()
+    generator = TrtLlmEncDecGenerator(
+        engine_dir=engine_dir,
+        tokenizer_name_or_path=tokenizer,
+        max_source_length=config.max_source_length,
+        max_new_tokens=config.max_new_tokens,
+        num_beams=config.num_beams,
+        log_level=config.log_level,
+        debug_mode=config.debug_mode,
+    )
+    rows = list(
+        iter_trt_log_rows(
+            logfile=config.logfile,
+            generator=generator,
+            batch_size=config.batch_size,
+            include_all_predictions=config.include_all_predictions,
+        )
+    )
+    if config.output:
+        write_jsonl(rows, config.output)
+    return TrtInferenceResult(
+        rows=rows,
+        elapsed_seconds=perf_counter() - started_at,
+        output=str(config.output) if config.output else None,
+        engine_metadata=engine_metadata,
+        tokenizer=tokenizer,
+    )
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Run inference with TensorRT-LLM encoder-decoder engines."
@@ -521,19 +587,17 @@ def main() -> int:
         print(json.dumps(engine_metadata.to_dict(), sort_keys=True))
         return 0
 
-    tokenizer = resolve_tokenizer(args.tokenizer)
-    started_at = perf_counter()
-    generator = TrtLlmEncDecGenerator(
-        engine_dir=engine_dir,
-        tokenizer_name_or_path=tokenizer,
-        max_source_length=args.max_source_length,
-        max_new_tokens=args.max_new_tokens,
-        num_beams=args.num_beams,
-        log_level=args.log_level,
-        debug_mode=args.debug_mode,
-    )
-
     if args.text:
+        tokenizer = resolve_tokenizer(args.tokenizer)
+        generator = TrtLlmEncDecGenerator(
+            engine_dir=engine_dir,
+            tokenizer_name_or_path=tokenizer,
+            max_source_length=args.max_source_length,
+            max_new_tokens=args.max_new_tokens,
+            num_beams=args.num_beams,
+            log_level=args.log_level,
+            debug_mode=args.debug_mode,
+        )
         outputs = generator.generate_batch(args.text)
         for prompt, output in zip(args.text, outputs):
             print(
@@ -548,29 +612,34 @@ def main() -> int:
             )
         return 0
 
-    rows = list(
-        iter_trt_log_rows(
+    result = run_trt_llm_inference(
+        TrtInferenceConfig(
             logfile=args.logfile,
-            generator=generator,
+            engine_dir=args.engine_dir,
+            tokenizer=args.tokenizer,
+            output=args.output,
+            max_source_length=args.max_source_length,
+            max_new_tokens=args.max_new_tokens,
             batch_size=args.batch_size,
+            num_beams=args.num_beams,
             include_all_predictions=args.include_all_predictions,
+            log_level=args.log_level,
+            debug_mode=args.debug_mode,
         )
     )
-    if args.output:
-        write_jsonl(rows, args.output)
-    else:
-        for row in rows:
+    if not args.output:
+        for row in result.rows:
             print(json.dumps(row, sort_keys=True))
 
     summary = {
-        "engine_dir": str(engine_dir),
-        "is_enc_dec_model": engine_metadata.is_enc_dec_model,
-        "encoder_architecture": engine_metadata.encoder_architecture,
-        "decoder_architecture": engine_metadata.decoder_architecture,
+        "engine_dir": result.engine_metadata.engine_dir,
+        "is_enc_dec_model": result.engine_metadata.is_enc_dec_model,
+        "encoder_architecture": result.engine_metadata.encoder_architecture,
+        "decoder_architecture": result.engine_metadata.decoder_architecture,
         "logfile": str(args.logfile),
         "output": str(args.output) if args.output else None,
-        "rows": len(rows),
-        "elapsed_seconds": perf_counter() - started_at,
+        "rows": len(result.rows),
+        "elapsed_seconds": result.elapsed_seconds,
     }
     print(json.dumps(summary, sort_keys=True), file=sys.stderr)
     return 0

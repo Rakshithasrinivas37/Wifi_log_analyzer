@@ -8,6 +8,9 @@ Run locally or on RunPod:
 ```
 uvicorn src.api:app --host 0.0.0.0 --port 8000
 ```
+
+RunPod load-balancing serverless images start the same app on port 80 and use
+``/ping`` for health checks.
 """
 
 from __future__ import annotations
@@ -739,6 +742,13 @@ def health() -> dict[str, Any]:
         "workspace_root": str(WORKSPACE_ROOT),
         "python": sys.version,
     }
+
+
+@app.get("/ping")
+def ping() -> dict[str, str]:
+    """Return the lightweight health response expected by RunPod load balancing."""
+
+    return {"status": "healthy"}
 
 
 @app.post("/inference/flan-t5", response_model=InferenceResponse)

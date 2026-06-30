@@ -32,7 +32,8 @@ a Docker image to GitHub Container Registry:
 ghcr.io/<owner>/<repo>:latest
 ```
 
-Use that image in a RunPod custom template and expose port `8000`.
+Use that image in a RunPod Pod custom template or a Serverless load-balancing
+endpoint. Expose port `80` for the Docker image.
 
 The image does not include `data/`, `models/`, or generated outputs. Mount a
 persistent volume at `/workspace` and upload/download those files there.
@@ -46,19 +47,19 @@ In the Docker image, project code lives in:
 Runtime data lives in:
 
 ```text
-/workspace/wifi-log-analyzer
+/workspace/Wifi_log_analyzer
 ```
 
 This prevents the `/workspace` network volume from hiding the application code.
 The Docker image also includes bundled `data/` and `models/` under `/app`.
-Generated outputs should still be written under `/workspace/wifi-log-analyzer`
+Generated outputs should still be written under `/workspace/Wifi_log_analyzer`
 so they survive pod restarts.
 
 Readable input files are checked under the workspace first and then under the
 app directory:
 
 ```text
-/workspace/wifi-log-analyzer/data/inputs/wifi_events_3600.txt
+/workspace/Wifi_log_analyzer/data/inputs/wifi_events_3600.txt
 /app/data/inputs/wifi_events_3600.txt
 ```
 
@@ -67,7 +68,7 @@ the image app directory. A relative value such as
 `models/flan-t5-log-lora-model` is checked in this order:
 
 ```text
-/workspace/wifi-log-analyzer/models/flan-t5-log-lora-model
+/workspace/Wifi_log_analyzer/models/flan-t5-log-lora-model
 /app/models/flan-t5-log-lora-model
 ```
 
@@ -120,19 +121,21 @@ they are safe to run as deployment checks.
 
 ## Start The FastAPI Server
 
-Expose HTTP port `8000` in your RunPod Pod/template, then start:
+For a manually managed Pod, expose HTTP port `8000` in your RunPod Pod/template,
+then start:
 
 ```bash
-cd /workspace/wifi-log-analyzer
-export WIFI_ANALYZER_WORKSPACE=/workspace/wifi-log-analyzer
+cd /workspace/Wifi_log_analyzer
+export WIFI_ANALYZER_WORKSPACE=/workspace/Wifi_log_analyzer
 export WIFI_ANALYZER_JOB_WORKERS=1
 uvicorn src.api:app --host 0.0.0.0 --port 8000
 ```
 
-If you are using the custom Docker image, the API starts automatically from
-`/app`. You should not need to run `uvicorn` manually. If you open a shell in
-that container, run code checks from `/app`, while keeping inputs, models, and
-outputs under `/workspace/wifi-log-analyzer`.
+For a RunPod Serverless load-balancing endpoint, use the custom Docker image.
+The API starts automatically from `/app` on port `80`, and RunPod checks
+`/ping` before routing requests. If you open a shell in that container, run code
+checks from `/app`, while keeping inputs, models, and outputs under
+`/workspace/Wifi_log_analyzer`.
 
 Open the RunPod HTTP service URL and visit:
 
@@ -150,6 +153,7 @@ Health check:
 
 ```bash
 curl https://<your-runpod-proxy-url>/health
+curl https://<your-runpod-proxy-url>/ping
 ```
 
 ## FastAPI Endpoints

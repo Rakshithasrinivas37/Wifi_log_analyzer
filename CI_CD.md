@@ -196,17 +196,17 @@ ghcr.io/<github-owner>/<repo-name>:latest
 
 In RunPod:
 
-1. Create a GPU Pod.
+1. Create a GPU Pod or a Serverless load-balancing endpoint.
 2. Choose **Custom Image**.
 3. Paste the GHCR image name.
-4. Expose HTTP port `8000`.
+4. Expose HTTP port `80` for the Docker image.
 5. Mount a persistent volume at `/workspace`.
 6. Set environment variables.
 
 Recommended environment variables:
 
 ```bash
-WIFI_ANALYZER_WORKSPACE=/workspace/wifi-log-analyzer
+WIFI_ANALYZER_WORKSPACE=/workspace/Wifi_log_analyzer
 WIFI_ANALYZER_JOB_WORKERS=1
 GROQ_API_KEY=<your_groq_api_key>
 ```

@@ -26,6 +26,17 @@ def test_health_endpoint() -> None:
     assert response.json()["status"] == "ok"
 
 
+def test_ping_endpoint() -> None:
+    """RunPod load-balancing health endpoint should return a lightweight status."""
+
+    client = TestClient(api.app)
+
+    response = client.get("/ping")
+
+    assert response.status_code == 200
+    assert response.json() == {"status": "healthy"}
+
+
 def test_resolve_model_dir_uses_app_root_when_workspace_model_is_missing(
     monkeypatch,
     tmp_path: Path,

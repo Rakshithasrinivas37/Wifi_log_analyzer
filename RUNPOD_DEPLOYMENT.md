@@ -156,7 +156,7 @@ curl https://<your-runpod-proxy-url>/health
 
 - `POST /finetune/flan-t5`: fine-tune FLAN-T5 and save a LoRA adapter.
 - `POST /inference/flan-t5`: classify log lines and write `output.jsonl`.
-- `POST /inference/trt-llm`: classify log lines with a TensorRT-LLM engine.
+- `POST /inference/trt-llm`: classify log lines with a TensorRT-LLM engine and write error rows to `output.jsonl`.
 - `POST /jobs/inference/flan-t5/upload`: upload a log file and run inference.
 - `POST /jobs/inference/trt-llm/upload`: upload a log file and run TensorRT-LLM inference.
 - `POST /pcap/analyze`: correlate error logs with PCAP teardown packets.
@@ -312,11 +312,10 @@ curl -X POST https://<your-runpod-proxy-url>/inference/trt-llm \
   -d '{
     "logfile": "data/inputs/wifi_logs.txt",
     "engine_dir": "/workspace/trt_engine/t5-small",
-    "output": "outputs/trt_output.jsonl",
+    "output": "outputs/output.jsonl",
     "batch_size": 16,
     "max_source_length": 128,
-    "max_new_tokens": 2,
-    "include_all_predictions": true
+    "max_new_tokens": 2
   }'
 ```
 
@@ -328,7 +327,7 @@ curl -X POST https://<your-runpod-proxy-url>/jobs/inference/trt-llm \
   -d '{
     "logfile": "data/inputs/wifi_logs.txt",
     "engine_dir": "/workspace/trt_engine/t5-small",
-    "output": "outputs/trt_output.jsonl",
+    "output": "outputs/output.jsonl",
     "batch_size": 16
   }'
 ```
@@ -339,7 +338,7 @@ curl -X POST https://<your-runpod-proxy-url>/jobs/inference/trt-llm \
 curl -X POST https://<your-runpod-proxy-url>/pcap/analyze \
   -H "Content-Type: application/json" \
   -d '{
-    "errors_jsonl": "output.jsonl",
+    "errors_jsonl": "outputs/output.jsonl",
     "pcap": "data/samples/wifi_events_3600.pcap",
     "output": "diagnosis.jsonl"
   }'

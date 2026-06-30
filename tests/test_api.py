@@ -166,13 +166,15 @@ def test_inference_upload_job_endpoint(monkeypatch, tmp_path: Path) -> None:
 
 
 def test_trt_inference_endpoint(monkeypatch) -> None:
-    """TRT inference endpoint should pass request fields to the executor."""
+    """TRT inference endpoint should default to writing error-only output.jsonl."""
 
     def fake_execute_trt_llm_inference(request):
         assert request.engine_dir == "/workspace/trt_engine/t5-small"
         assert request.batch_size == 16
+        assert request.output == "outputs/output.jsonl"
+        assert request.include_all_predictions is False
         return api.TrtInferenceResponse(
-            output="outputs/trt_output.jsonl",
+            output="outputs/output.jsonl",
             row_count=1,
             elapsed_seconds=0.1,
             engine_metadata={"is_enc_dec_model": True},
@@ -205,9 +207,10 @@ def test_trt_inference_upload_job_endpoint(monkeypatch, tmp_path: Path) -> None:
         uploaded_log = tmp_path / request.logfile
         assert uploaded_log.is_file()
         assert request.engine_dir == "/workspace/trt_engine/t5-small"
-        assert request.include_all_predictions is True
+        assert request.output == "outputs/output.jsonl"
+        assert request.include_all_predictions is False
         return api.TrtInferenceResponse(
-            output="outputs/trt_output.jsonl",
+            output="outputs/output.jsonl",
             row_count=1,
             elapsed_seconds=0.1,
             engine_metadata={"is_enc_dec_model": True},
@@ -222,8 +225,7 @@ def test_trt_inference_upload_job_endpoint(monkeypatch, tmp_path: Path) -> None:
         "/jobs/inference/trt-llm/upload",
         data={
             "engine_dir": "/workspace/trt_engine/t5-small",
-            "output": "outputs/trt_output.jsonl",
-            "include_all_predictions": "true",
+            "output": "outputs/output.jsonl",
         },
         files={
             "logfile": (

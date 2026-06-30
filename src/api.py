@@ -86,11 +86,12 @@ class TrtInferenceRequest(BaseModel):
     logfile: str
     engine_dir: str = "/workspace/trt_engine/t5-small"
     tokenizer: str | None = None
-    output: str = "outputs/trt_output.jsonl"
+    output: str = "outputs/output.jsonl"
     max_source_length: int = 128
     max_new_tokens: int = 2
     batch_size: int = 8
     num_beams: int = 1
+    # Keep the normal API output focused on error rows for PCAP correlation.
     include_all_predictions: bool = False
     log_level: str = "error"
     debug_mode: bool = False
@@ -831,7 +832,7 @@ def submit_trt_llm_inference_upload_job(
     logfile: UploadFile = File(...),
     engine_dir: str = Form("/workspace/trt_engine/t5-small"),
     tokenizer: str | None = Form(None),
-    output: str = Form("outputs/trt_output.jsonl"),
+    output: str = Form("outputs/output.jsonl"),
     max_source_length: int = Form(128),
     max_new_tokens: int = Form(2),
     batch_size: int = Form(8),

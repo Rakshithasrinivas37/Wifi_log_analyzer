@@ -1,0 +1,58 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: wifi-cluster-inference
+spec:
+  completions: 2
+  parallelism: 2
+  completionMode: Indexed
+  backoffLimit: 1
+  template:
+    metadata:
+      labels:
+        app: wifi-cluster-inference
+    spec:
+      restartPolicy: Never
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchLabels:
+                  app: wifi-cluster-inference
+              topologyKey: kubernetes.io/hostname
+      containers:
+        - name: worker
+          image: ghcr.io/rakshithasrinivas37/wifi_log_analyzer:latest
+          imagePullPolicy: Always
+          command: ["python", "-u", "/app/scripts/cluster_handler.py"]
+          env:
+            - name: WORLD_SIZE
+              value: "2"
+            - name: WIFI_ANALYZER_APP_DIR
+              value: /app
+            - name: WIFI_ANALYZER_WORKSPACE
+              value: /workspace
+            - name: CLUSTER_LOG_FILES
+              value: data/inputs/wifi_logs.txt,data/inputs/wifi_logs-1.txt
+            - name: CLUSTER_PCAP_FILES
+              value: data/inputs/wifi_logs.pcap,data/inputs/wifi_logs-1.pcap
+            - name: CLUSTER_MODEL_DIR
+              value: models/flan-t5-log-lora-model
+            - name: CLUSTER_INFERENCE_DEVICE
+              value: cpu
+            - name: CLUSTER_INFERENCE_DTYPE
+              value: fp32
+            - name: CLUSTER_BATCH_SIZE
+              value: "4"
+            - name: CLUSTER_RUN_PCAP
+              value: "true"
+            - name: CLUSTER_RUN_GROQ
+              value: "false"
+            - name: CLUSTER_MERGE_OUTPUTS
+              value: "false"
+          volumeMounts:
+            - name: workspace
+              mountPath: /workspace
+      volumes:
+        - name: workspace
+          emptyDir: {}

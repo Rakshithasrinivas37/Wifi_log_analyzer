@@ -47,6 +47,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY src ./src
 COPY tests ./tests
 COPY scripts ./scripts
+COPY k8s ./k8s
 COPY data ./data
 COPY models ./models
 COPY README.md RUNPOD_DEPLOYMENT.md CI_CD.md ./

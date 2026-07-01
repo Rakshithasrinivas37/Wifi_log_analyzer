@@ -32,6 +32,7 @@ models/
 tests/                   RunPod-safe smoke/unit tests
 RUNPOD_DEPLOYMENT.md     RunPod deployment notes
 CI_CD.md                 GitHub Actions and Docker image notes
+GKE_CLUSTER.md           Google Kubernetes Engine cluster job notes
 requirements.txt         Python dependencies
 ```
 
@@ -168,6 +169,9 @@ https://<your-runpod-url>/docs
 
 See [RUNPOD_DEPLOYMENT.md](RUNPOD_DEPLOYMENT.md) for the full RunPod setup.
 See [CI_CD.md](CI_CD.md) for GitHub Actions and Docker image publishing.
+See [GKE_CLUSTER.md](GKE_CLUSTER.md) for a two-node Google Kubernetes Engine
+cluster job that runs the bundled `data/inputs/wifi_logs.txt` and
+`data/inputs/wifi_logs-1.txt` files in parallel.
 
 With the custom Docker image, application code runs from `/app`. Bundled
 `data/` and `models/` are also copied under `/app`, so requests can use those

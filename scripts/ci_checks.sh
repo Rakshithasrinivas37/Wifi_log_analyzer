@@ -11,6 +11,7 @@ export PYTHONPYCACHEPREFIX="${PYTHONPYCACHEPREFIX:-${TMPDIR:-/tmp}/wifi-analyzer
   src/groq_diagnosis.py \
   src/inference_flan_t5.py \
   src/pcap_analysis.py \
+  scripts/cluster_handler.py \
   scripts/inference_trt_llm.py \
   scripts/merge_flan_t5_lora.py
 
